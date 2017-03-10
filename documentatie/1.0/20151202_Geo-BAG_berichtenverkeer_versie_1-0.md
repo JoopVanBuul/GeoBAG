@@ -172,6 +172,7 @@ Daarnaast bevat de geometrieLevering in de eigen functionele identificatie <BG:i
 [^19] De functionele identificatie is ook nodig voor het corrigeren en intrekken van eerder verzonden bericht, omdat een geometrieVerzoek en geometrieLevering geen StUF:crossReferencenummer in de stuurgegevens hebben. 
 
 *Tabel 1. Voorbeeld logistieke en functionele identificatie in een geometrieVerzoek.*
+
 | «leeg» | geometrieVerzoek | geometrieLevering | 
 |--------|------------------|-------------------|
 | StUF:referentienummer | BAG12345678 | GEO23456789 |
@@ -189,6 +190,7 @@ Voor het intrekken van een StUF-Geo BAG bericht wordt een nieuw bericht gestuurd
 Voor het corrigeren van een StUF-Geo BAG bericht wordt eerst het vorige bericht ingetrokken en vervolgens een nieuw bericht met een nieuwe functionele identificatie verstuurd. Bijvoorbeeld, na het intrekken van een geometrieVerzoek met functionele identificatie GMV09876543 stuurt BAG een nieuw geometrieVerzoek met functionele identificatie GMV09876544. 
 
 *Tabel 2. Voorbeeld intrekken en corrigeren van een geometrieVerzoek*
+
 |«leeg» | origineel | intrekken | nieuw bericht t.b.v. corrigeren |
 |-------|-----------|-----------|---------------------------------|
 |StUF:referentienummer | BAG12345678 | BAG12345679 | BAG12345680 |
