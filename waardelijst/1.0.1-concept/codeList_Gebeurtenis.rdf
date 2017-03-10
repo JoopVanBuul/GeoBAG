@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:geoBAG="http://www.geostandaarden.nl/geoBAG/def/1.0#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+ <ConceptScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+ </ConceptScheme>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-OBA">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-OBA</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Ontvangst bouwaanvraag</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-VBN">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-VBN</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Verlenen bouwvergunning</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-MGB">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-MGB</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Melding gebruiksgereed</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-KVO">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-KVO</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Kleine verbouwing object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-VBI">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-VBI</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Verlenen bouwvergunning ingrijpende verbouwing</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-VTP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-VTP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Verblijfsobject toevoegen aan pand*</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-VG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-VG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Verbouwing gereed</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-SSV">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSV</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Samenvoegen verblijfsobjecten*</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-SSV">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSV</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Splitsen verblijfsobjecten*</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-BSLSP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-BSLSP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Benoemen standplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-BSLLP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-BSLLP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Benoemen ligplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-BWP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-BWP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Benoemen woonplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-KWGW">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-KWGW</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Kleine wijziging grens woonplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-WGW">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-WGW</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Wijzigen grens woonplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-COR">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-COR</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Correctie naar aanleiding van een signalering</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-MUT">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-MUT</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Mutatie naar aanleiding van een signalering</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-COG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-COG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Constatering nieuw object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-HLG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-HLG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Heropname legitiem gegeven</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-NEG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-NEG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Negeer eerder gestuurd GeometrieVerzoek</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_GEO-COG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">GEO-COG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Constatering nieuw object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_GEO-AOC">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">GEO-AOC</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Constatering gesloopt object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_GEO-MUT">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">GEO-MUT</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Constatering afwijkende geometrie</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_GEO-NEG">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">GEO-NEG</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Negeer eerder gestuurd geometrielevering</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-MAB">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-MAB</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Afzien van bouw</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-IBV">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-IBV</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken bouwvergunning</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-MAV">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-MAV</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Afzien van verbouwing</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-HNU">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-HNU</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Hernummeren adresseerbaar object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-OHN">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-OHN</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Hoofdadres en nevenadres van een adresseerbaar object omdraaien</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-MGS">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-MGS</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Melding sloop afgerond</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-VOC">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-VOC</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Geheel verdwijnen objecten door calamiteit</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-ISLSP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-ISLSP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken standplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-ISLLP">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-ISLLP</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken ligplaats</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-BOR">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-BOR</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Benoemen openbare ruimte</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-HOR">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-HOR</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Hernoemen openbare ruimte</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-IOR">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-IOR</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken openbare ruimte</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BRA-GHO">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BRA-GHO</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Gedeeltelijk hernoemen openbare ruimte</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-HMO">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-HMO</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Historisch maken onterecht opgevoerd pand</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-AOC">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-AOC</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Archivering bestaand object na constatering</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+ <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-AGO">
+  <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-AGO</prefLabel>
+  <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Archivering geconstateerd object</definition>
+  <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+ </Concept>
+</RDF>
