@@ -1,5 +1,4 @@
 # Hoofdstuk 1 Inleiding 
-
 Dit hoofdstuk geeft een inleiding op het StUF-Geo BAG berichtenverkeer. 
 
 ## 1.1 Waarom dit koppelvlak? 
@@ -42,7 +41,8 @@ naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA.
 ![GEMMA Referentiecomponenten](afbeeldingen/fig2-overzicht-gemma-referentiecomponenten.png)
  *Figuur 2: Gemma Referentiecomponenten*
 
- Geonovum | GEMMA  |
+|Geonovum | GEMMA |
+|---------|-------|
 | Registratie BAG | BAG-administratie |
 | Registratie GEO | BGT-administratie |
 | Registratie GEO | GIS (Geografisch Informatie Systeem) |
@@ -55,221 +55,105 @@ leveranciers instaat om de geoBAG-koppeling op de juiste manier in te voeren in 
 
 [^3] https://www.softwarecatalogus.nl 
 
-##1.4 Referenties 
+## 1.4 Referenties 
 Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer is gebaseerd op de volgende standaarden: 
 
 
 | Afkorting | Document | Versie | Datum | Auteur c.q. beheerder |
 |-----------|----------|--------|-------|-----------------------|
 | [BGT] | Gegevenscatalogus BGT | 1.1.1 | Juli 2013 | Geonovum | 
-| [IMGeo] | Gegevenscatalogus IMGeo  2.1.1 | Juli 2013 | Geonovum  |
-| [BAG-P] BAG processenhandboek | 2013 | 11 februari 2014 | Kadaster | 
+| [IMGeo] | Gegevenscatalogus IMGeo |  2.1.1 | Juli 2013 | Geonovum  |
+| [BAG-P] | BAG processenhandboek | 2013 | 11 februari 2014 | Kadaster | 
 | [StUF] | StUF 03.01: In Gebruik  | 22  | 1 juli 2015  |KING |
 
-
-
 Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer hanteert verder de volgende documenten 
 en bestanden die toegepast dienen te worden bij de implementatie: 
 
- 
+| Afkorting | Document / bestand  | Versie | Datum | Auteur c.q. beheerder |
+|-----------|---------------------|--------|-------|-----------------------|
+| [XSD] | Berichtenschema StUF-Geo BAG | ‡‡‡ | ‡‡‡ | Geonovum |
+| [WSDL] | Servicebeschrijving StUF-Geo BAG  | ‡‡‡ | ‡‡‡ | Geonovum |
 
-Afkorting 
-
-Document / bestand 
-
-Versie 
-
-Datum 
-
-Auteur 
-c.q. 
-beheerder 
-
-[XSD] 
-
-Berichtenschema StUF-Geo 
-BAG 
-
-‡‡‡ 
-
-‡‡‡ 
-
-Geonovum 
-
-[WSDL] 
-
-Servicebeschrijving StUF-Geo 
-BAG 
-
-‡‡‡ 
-
-‡‡‡ 
-
-Geonovum 
-
-
-
- 
-
-‡‡‡ Voor de vigerende versie van de StUF-Geo BAG implementatietoolkit, zie de website van Geonovum: 
-http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden. 
-
- 
+‡‡‡ Voor de vigerende versie van de StUF-Geo BAG implementatietoolkit, zie de website van Geonovum: http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden. 
 
 Bij deze documenten en bestanden zijn, ter ondersteuning van de implementatie, werkafspraken 
 gepubliceerd op de website van Geonovum: 
 
 http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden/werkafspraken-geobag 
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-
-Hoofdstuk 2 
-
-
-Uitgangspunten 
-
+# Hoofdstuk 2 Uitgangspunten 
 Dit hoofdstuk beschrijft de uitgangspunten voor uitwisseling van gegevens tussen BAG en Geo 
 via StUF-Geo BAG berichtenverkeer. 
 
-2.1 Actoren en verantwoordelijkheden: Geo en BAG 
-
-
-
-
-Het StUF-Geo BAG berichtenverkeer kent twee actoren4: (het registratiesysteem5 van) BAG en (het 
+# 2.1 Actoren en verantwoordelijkheden: Geo en BAG 
+Het StUF-Geo BAG berichtenverkeer kent twee actoren[^4}: (het registratiesysteem[^5] van) BAG en (het 
 registratiesysteem van) Geo, hierna respectievelijk BAG en Geo. 
-
-4 In het geval dat BAG zelf de inwinning en vastlegging van de geometrie verzorgt, is een deel van het in dit koppelvlak 
-beschreven berichtenverkeer niet van toepassing. Geo heeft dan voldoende aan de kennisgevingsberichten vanuit BAG voor 
-de bijhouding van de gegevens van BGT objecten. 
-
-5 Registratiesysteem wordt hierna “applicatie” genoemd. 
-
-6 In praktijk zijn dit de medewerkers van Geo, danwel de ambtenaar die belast is me de uitbesteding van inwinning van de 
-geometrie voor Geo. 
-
-7 Naast geometrie worden ook enkele administratieve gegevens uitgewisseld; zie H4 Berichten. 
-
- 
 
 BAG is eindverantwoordelijk voor de volledigheid van de BAG-objecten, het op een correcte manier 
 afbakenen van BAG-objecten en de vastlegging en distributie van de juiste BAG-gegevens volgens de 
 hiervoor geldende wettelijke eisen. 
 
- 
-
 Geo is veelal faciliterend voor de geometrische inwinning en vastlegging van de geometrie van BAG-objecten 
 conform de eisen van de BAG. Voorts is Geo verantwoordelijk voor de afstemming van de BGT met de BAG. 
 
- 
-
-De beheerder van Geo6 kan vanuit BAG gemandateerd zijn voor de vaststelling van de definitieve geometrie 
+De beheerder van Geo[^6] kan vanuit BAG gemandateerd zijn voor de vaststelling van de definitieve geometrie 
 van BAG-panden en BAG-verblijfsobjecten. Het brondocument voor de geometrische mutaties voor BAG-
 objecten kan en mag opgemaakt en ondertekend worden door de beheerder van Geo. 
 
-2.2 Berichten 
+[^4] In het geval dat BAG zelf de inwinning en vastlegging van de geometrie verzorgt, is een deel van het in dit koppelvlak 
+beschreven berichtenverkeer niet van toepassing. Geo heeft dan voldoende aan de kennisgevingsberichten vanuit BAG voor 
+de bijhouding van de gegevens van BGT objecten. 
 
+[^5] Registratiesysteem wordt hierna “applicatie” genoemd. 
 
+[^6] In praktijk zijn dit de medewerkers van Geo, danwel de ambtenaar die belast is me de uitbesteding van inwinning van de 
+geometrie voor Geo. 
 
-
+## 2.2 Berichten 
 Het berichtenverkeer tussen Geo en BAG maakt gebruik van de volgende typen berichten: 
 
-. StUF-Geo BAG berichten: specifiek voor dit koppelvlak gedefinieerde dienstberichten t.w. 
-. geometrieVerzoek (gmvDi01): een asynchroon inkomend vrij bericht als verzoek tot levering 
-van geometrie7 voor een bepaald object. 
-. geometrieLevering (gmlDi01): een asynchroon inkomend vrij bericht met de te leveren 
-geometrie7 voor een bepaald object. 
-. goedkeuringsbericht (bevestigingDu01): een asynchroon responsbericht met de goedkeuring 
-van (een deel van de inhoud van) een geometrieVerzoek of geometrieLevering. 
-. afkeuringsbericht (foutDu01): een asynchroon responsbericht met een afkeuring van (een deel 
-van de inhoud van) een geometrieVerzoek of geometrieLevering. 
-
-
-
-
- 
-
-. StUF-BG / BAG-kennisgevingsberichten 
-
-
- 
-
- 
-
-
-. Logistieke StUF bevestigings- en foutberichten, o.a. 
-. Bv038: een bevestigingsbericht als technische synchrone respons op een asynchroon bericht 
-waarbij het bericht op basis van berichtstuurgegevens verwerkbaar wordt geacht9 
-. Fo03: een foutbericht als technische synchrone respons op een asynchroon bericht waarbij het 
+* StUF-Geo BAG berichten: specifiek voor dit koppelvlak gedefinieerde dienstberichten t.w. 
+  * geometrieVerzoek (gmvDi01): een asynchroon inkomend vrij bericht als verzoek tot levering van geometrie[^7] voor een bepaald object. 
+  * geometrieLevering (gmlDi01): een asynchroon inkomend vrij bericht met de te leveren geometrie[^7] voor een bepaald object. 
+  * goedkeuringsbericht (bevestigingDu01): een asynchroon responsbericht met de goedkeuring van (een deel van de inhoud van) een geometrieVerzoek of geometrieLevering. 
+  * afkeuringsbericht (foutDu01): een asynchroon responsbericht met een afkeuring van (een deel van de inhoud van) een geometrieVerzoek of geometrieLevering. 
+* StUF-BG / BAG-kennisgevingsberichten 
+* Logistieke StUF bevestigings- en foutberichten, o.a. 
+  * Bv03[^8]: een bevestigingsbericht als technische synchrone respons op een asynchroon bericht 
+waarbij het bericht op basis van berichtstuurgegevens verwerkbaar wordt geacht[^9] 
+  * Fo03: een foutbericht als technische synchrone respons op een asynchroon bericht waarbij het 
 bericht niet verwerkbaar wordt geacht. 
 
+[^7] Naast geometrie worden ook enkele administratieve gegevens uitgewisseld; zie H4 Berichten. 
 
+[^8] Of Bv04: een servicebus stuurt een Bv04 als technisch synchrone respons op een asynchroon bericht 
 
-
-8 Of Bv04: een servicebus stuurt een Bv04 als technisch synchrone respons op een asynchroon bericht 
-
-9 Een technische synchrone respons wordt op elk samengesteld of kennisgevingsbericht teruggeven cf. StUF conventies, en 
+[^9] Een technische synchrone respons wordt op elk samengesteld of kennisgevingsbericht teruggeven cf. StUF conventies, en 
 is dan ook verder niet opgenomen in de uitwerking van het berichtenverkeer. 
 
-10 Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
-
-11 Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
-
-12 Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
-
- 
 
 De StUF-Geo BAG berichten zijn gespecifieerd in §4.1. 
 
-2.3 Uitwisselen van gegevens van BAG-objecten 
-
-
-
-
+## 2.3 Uitwisselen van gegevens van BAG-objecten 
 In het StUF-Geo BAG berichtenverkeer worden gegevens uitgewisseld van BAG-objecten. 
 
-2.3.1 Objecttypen 
-
+###2.3.1 Objecttypen 
 De volgende BAG-objecttypen worden ondersteund in het Geo-BAG berichtenverkeer: 
+* Pand 
+* Verblijfsobject 
+* Stand-/ligplaats 
+* Woonplaats 
+* Nummeraanduiding[^10]
+* OpenbareRuimte11[^11]
 
-- Pand 
-- Verblijfsobject 
-- Stand-/ligplaats 
-- Woonplaats 
-- Nummeraanduiding10 
-- OpenbareRuimte11 
+Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid met de optionele objecttypen OverigGebouwdObject en OverigTerrein voor aansluiting met RSGB. Overig optionele BAG+-objecttypen worden in het Geo-BAG berichtenverkeer niet ondersteund. In de StUF-Geo BAG berichten worden alleen de gegevens opgenomen die noodzakelijk zijn voor een goede verwerking van dit bericht door de ontvanger (zie gegevensmodel in Bijlage 3.). 
 
+[^10] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
+[^11] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
 
- 
-
-Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid met de optionele objecttypen 
-OverigGebouwdObject en OverigTerrein voor aansluiting met RSGB. Overig optionele BAG+-objecttypen 
-worden in het Geo-BAG berichtenverkeer niet ondersteund. In de StUF-Geo BAG berichten worden alleen de 
-gegevens opgenomen die noodzakelijk zijn voor een goede verwerking van dit bericht door de ontvanger 
-(zie gegevensmodel in Bijlage 3.). 
-
-2.3.1 Geometrie 
-
-
-
-
-
-
+### 2.3.1 Geometrie 
 Voor dit koppelvlak geldt dat de geometrie conform de inwinningsregels ten aanzien van nauwkeurigheid en 
 inwinningswijze van de BAG wordt opgenomen. Een BAG-object kan een vlak- of puntgeometrie hebben. 
-
- 
 
 De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaanzicht. In het kader van 
 de BGT is Geo ook verantwoordelijk voor de geometrische inwinning van grootschalige topografie. Voor de 
@@ -279,25 +163,16 @@ aanzienlijk kan afwijken van de geometrie van een pand op een ander niveau. De g
 van een Pand kan in de StUF-BG kennisgevingsberichten als optionele geometrie bij dit object worden 
 opgenomen naast de verplichte geometrie van bovenaanzicht. 
 
- 
+* In dit koppelvlak wordt in de StUF-Geo BAG dienstberichten[^12] de geometrie van objecten als volgt opgenomen: objecttype Verblijfsobject wordt uitgewisseld met puntgeometrie, en optioneel met vlakgeometrie. 
+* objecttype Pand wordt uitgewisseld met geometrie van het bovenaanzicht, en optioneel met geometrie op het maaiveld. 
+* alle overige objecttypen[^13] in §2.3.1. met vlakgeometrie. 
 
-- In dit koppelvlak wordt in de StUF-Geo BAG dienstberichten12 de geometrie van objecten als volgt 
-opgenomen: objecttype Verblijfsobject wordt uitgewisseld met puntgeometrie, en optioneel met 
-vlakgeometrie. 
-- objecttype Pand wordt uitgewisseld met geometrie van het bovenaanzicht, en optioneel met 
-geometrie op het maaiveld. 
+[^12] Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
+[^13] M.u.v. Nummeraanduiding en OpenbareRuimte, deze objecttypen hebben geen geometrie. 
 
-
-
-- alle overige objecttypen13 in §2.3.1. met vlakgeometrie. 
-2.3.2 Samengesteld uitwisselen en alleen actuele stand 
+### 2.3.2 Samengesteld uitwisselen en alleen actuele stand 
 
 
-
-
-
-
-13 M.u.v. Nummeraanduiding en OpenbareRuimte, deze objecttypen hebben geen geometrie. 
 
 14 Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
 
