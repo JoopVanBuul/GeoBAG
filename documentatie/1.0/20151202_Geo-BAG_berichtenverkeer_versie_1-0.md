@@ -42,11 +42,11 @@ naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA.
 ![GEMMA Referentiecomponenten](afbeeldingen/fig2-overzicht-gemma-referentiecomponenten.png)
  *Figuur 2: Gemma Referentiecomponenten*
 
-| Geonovum | GEMMA  |
-| Registratie BAG | BAG-administratie |
-| Registratie GEO | BGT-administratie |
-| Registratie GEO | GIS (Geografisch Informatie Systeem) |
-| Registratie GEO  | CAD (Computer-Aided Design) | 
+ Geonovum | GEMMA  |
+ Registratie BAG | BAG-administratie |
+ Registratie GEO | BGT-administratie |
+ Registratie GEO | GIS (Geografisch Informatie Systeem) |
+ Registratie GEO  | CAD (Computer-Aided Design) | 
 
 De GEMMA Softwarecatalogus[^3] is een online informatiesysteem dat het (verwachte) softwareaanbod voor 
 gemeenten en het gebruik door gemeenten in kaart brengt. Deze catalogus is gebaseerd op de naamgeving 
