@@ -1,280 +1,26 @@
- 
-
- 
-
- 
-
- 
-
- 
-
-Koppelvlakspecificatie 
-
-Geo-BAG berichtenverkeer 
-
-Beschrijving koppelvlak tussen de 
-registratiesystemen van Geo en BAG 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-Geonovum 
-
-versie 
-
-v1.0 
-
-datum 
-
-2 december 2015 
-
-
-Colofon 
-
- 
-
-Auteur: Arnoud de Boer 
-
-Beheer: Geonovum 
-
- 
-
- 
-
- Geonovum 
-
- Barchman Wuytierslaan 10, 
-
-3818 LH Amersfoort 
-
-Postbus 508 
-
-3800 AM Amersfoort 
-
-Email: info@geonovum.nl 
-
- 
-
-De sequentiediagrammen in dit functioneel ontwerp zijn gemaakt met de online 
-modelleersoftware van www.websequencediagrams.com. 
-
- 
-
-Licentie 
-
-Dit document is beschikbaar onder de volgende Creative Commons licentie: 
-
-http://creativecommons.org/licenses/by-nd/3.0/nl/ 
-
- 
-
-
- 
-
-Inhoudsopgave 
-
- 
-1 Inleiding 5 
-
-
-1.1 Waarom dit koppelvlak? 5 
-1.2 Leeswijzer 5 
-1.3 Verbinding met de GEMMA Informatiearchitectuur 6 
-1.4 Referenties 8 
-2 Uitgangspunten 10 
-
-
-2.1 Actoren en verantwoordelijkheden: Geo en BAG 10 
-2.2 Berichten 10 
-2.3 Uitwisselen van gegevens van BAG-objecten 11 
-2.3.1 Objecttypen 11 
-2.3.1 Geometrie 11 
-2.3.2 Samengesteld uitwisselen en alleen actuele stand 12 
-2.4 Gebeurtenissen als aanleiding voor berichtenverkeer 12 
-2.5 Identificaties van en relaties tussen berichten 13 
-2.6 Corrigeren en intrekken van berichten 13 
-2.7 Identificaties van en relaties tussen objecten 14 
-2.8 Verzenden en verwerken van berichten 15 
-2.8.1 Transacties en bundeling van berichten 15 
-2.8.2 Verplichte of niet-verplichte overname 15 
-2.8.3 Volgorde van verzenden en verwerken 15 
-2.8.4 Synchroniteit 16 
-3 Scenario’s 17 
-
-
-3.1 Verzoek om geometrie door BAG 18 
-3.1.1 Basisscenario 18 
-3.1.2 Alternatief scenario: BAG keurt levering af 19 
-3.1.3 Alternatief scenario: BAG wil eerder verzonden geometrieVerzoek intrekken 19 
-3.1.4 Alternatief scenario: Geo keurt geometrieVerzoek af 20 
-3.2 Constatering en/of signalering door Geo 21 
-3.2.1 Basisscenario 21 
-3.2.2 Alternatief scenario: BAG keurt geometrie af 21 
-3.2.3 Alternatief scenario: Geo wil eerder verzonden geometrieLevering intrekken 22 
-3.3 Kennisgeving op object door BAG 23 
-4 Berichten 24 
-
-
-4.1 StUF-Geo BAG berichten 24 
-4.1.1 GeometrieVerzoek 24 
-4.1.2 GeometrieLevering 25 
-4.1.3 Goedkeuringsbericht 26 
-4.1.4 Afkeuringsbericht 27 
-4.2 BAG-kennisgevingen 29 
-
-5 Entiteiten 30 
-
-
-5.1 Entiteiten met objectgegevens 30 
-5.1.1 ligplaats 30 
-5.1.2 overigGebouwdObject 30 
-5.1.3 overigTerrein 30 
-5.1.4 pand 31 
-5.1.5 standplaats 32 
-5.1.6 verblijfsobject 32 
-5.1.7 woonplaats 32 
-6 Attributen 33 
-
-
-6.1 Parameters 33 
-6.1.1 idVerzoek 33 
-6.1.2 idLevering 33 
-6.1.3 gerelateerdVerzoek 33 
-6.1.4 gebeurtenisCode 33 
-6.1.5 documentverwijzing 34 
-6.1.6 toelichting 34 
-6.1.7 foutcode 34 
-6.1.8 foutomschrijving 34 
-6.1.9 plek 34 
-6.1.10 details 35 
-6.2 Elementen in entiteiten 35 
-6.2.1 identificatie 35 
-6.2.2 typering 35 
-6.2.3 adresAanduiding 35 
-6.2.4 geometrie 36 
-6.2.5 puntGeometrie 36 
-6.2.6 vlakGeometrie 36 
-6.2.7 status 36 
-6.2.8 geconstateerd 36 
-6.2.9 brondocument 37 
-6.2.10 tijdvakGeldigheid 37 
-6.2.11 maaktDeelUitVan 37 
-Bijlage 1 Gebeurtenissen 38 
-Bijlage 2 Activiteitenstroom koppelvlak Geo-BAG 40 
-Bijlage 3 Gegevensmodel koppelvlak Geo-BAG 42 
-Bijlage 4 Ontwerpbeslissingen en keuzes verStUFfing 43 
-
-
- 
-
- 
-
-
-Hoofdstuk 1 
-
-
-Inleiding 
+# Hoofdstuk 1 Inleiding 
 
 Dit hoofdstuk geeft een inleiding op het StUF-Geo BAG berichtenverkeer. 
 
-1.1 Waarom dit koppelvlak? 
+## 1.1 Waarom dit koppelvlak? 
+Voor het automatisch uitwisselen van gegevens tussen twee afdelingen binnen de organisatie zijn afspraken nodig welke worden vastgelegd in een koppelvlak-specificatie. Een koppelvlak is een interface die volgens een bepaalde standaard de uitwisseling van gegevens tussen informatiesystemen verzorgt. Een koppelvlak werkt met standaarden. Het aanleverende systeem is verantwoordelijk voor de vertaling van gegevens naar die standaard en het afnemende systeem zorgt voor omzetting naar haar eigen â€˜taalâ€™. 
 
+Dit koppelvlak beschrijft de gegevensuitwisseling tussen het registratiesysteem BAG en het registratiesysteem Geo binnen een gemeente. In het registratiesysteem BAG worden gebouw- en adresgegevens bijgehouden in het kader van de wet Basisregistraties Adressen en Gebouwen (BAG). In het registratiesysteem Geo worden de geometrie en attribuutgegevens van topografische objecten bijgehouden in het kader van de Basisregistratie Grootschalige Topografie (BGT) en ten behoeve van intern gebruik (o.a. beheer openbare ruimte). Voor het registratiesysteem Geo wordt ook geometrie van objecten in het registratiesysteem BAG ingewonnen en bijgehouden. 
 
-
-
-Voor het automatisch uitwisselen van gegevens tussen twee afdelingen binnen de organisatie zijn afspraken 
-nodig welke worden vastgelegd in een koppelvlak-specificatie. Een koppelvlak is een interface die volgens 
-een bepaalde standaard de uitwisseling van gegevens tussen informatiesystemen verzorgt. Een koppelvlak 
-werkt met standaarden. Het aanleverende systeem is verantwoordelijk voor de vertaling van gegevens naar 
-die standaard en het afnemende systeem zorgt voor omzetting naar haar eigen ‘taal’. 
-
- 
-
-Dit koppelvlak beschrijft de gegevensuitwisseling tussen het registratiesysteem BAG en het 
-registratiesysteem Geo binnen een gemeente. In het registratiesysteem BAG worden gebouw- en 
-adresgegevens bijgehouden in het kader van de wet Basisregistraties Adressen en Gebouwen (BAG). In het 
-registratiesysteem Geo worden de geometrie en attribuutgegevens van topografische objecten bijgehouden 
-in het kader van de Basisregistratie Grootschalige Topografie (BGT) en ten behoeve van intern gebruik (o.a. 
-beheer openbare ruimte). Voor het registratiesysteem Geo wordt ook geometrie van objecten in het 
-registratiesysteem BAG ingewonnen en bijgehouden. 
-
- 
-
-Om er voor te zorgen dat de registratiesystemen BAG en Geo, en de basisregistraties BAG en BGT onderling 
-consistent zijn, is een koppeling op basis van een standaard van groot belang. Het werkingsgebied van dit 
-koppelvlak is dan ook primair bedoeld voor optimalisatie van gegevensuitwisseling en het beheer van twee 
-wettelijke backoffice processen voor BAG en BGT. Als aanvulling hierop zijn voor aansluiting bij de bredere 
-gemeentelijke behoefte optionele objecttypen uit RSGB toegevoegd, zodat de inwinning van de geometrie 
-van deze objecttypen meegenomen kunnen worden in de bijhouding van de BAG en BGT objecttypen. 
-
- 
-
- 
+Om er voor te zorgen dat de registratiesystemen BAG en Geo, en de basisregistraties BAG en BGT onderling consistent zijn, is een koppeling op basis van een standaard van groot belang. Het werkingsgebied van dit koppelvlak is dan ook primair bedoeld voor optimalisatie van gegevensuitwisseling en het beheer van twee wettelijke backoffice processen voor BAG en BGT. Als aanvulling hierop zijn voor aansluiting bij de bredere gemeentelijke behoefte optionele objecttypen uit RSGB toegevoegd, zodat de inwinning van de geometrie van deze objecttypen meegenomen kunnen worden in de bijhouding van de BAG en BGT objecttypen. 
 
 De voordelen van deze koppelvlakstandaard zijn o.a. dat 
+* in een specifiek applicatielandschap verschillende BAG-applicaties met verschillende BGT-applicaties kunnen koppelen (via een gegevensdistributiecomponent). 
+* een geautomatiseerde koppeling voorkomt, ook op de plaats waar het maar door Ã©Ã©n persoon wordt uitgevoerd, overtikwerk en fouten in de administratie. 
+* het de onderlinge consistentie en de kwaliteit van de gegevens in de twee administraties vergroot wat tot betere informatievoorziening bij besluiten en fraudedetectie leidt. 
+* het zorgt voor een helder inzicht in de werkvoorraad aan beide zijden en de stroomlijning van de processen: zaken kunnen niet meer onzichtbaar lang blijven liggen; geometrie wordt niet vaker dan noodzakelijk ingemeten. 
 
- 
+## 1.2 Leeswijzer 
+Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG en het registratiesysteem Geo (hierna respectievelijk BAG en Geo). Deze koppelvlakspecificatie beschrijft de uitwisseling van geometrie voor BAG-objecten, waarbij BAG de partij is die een verzoek doet om geometrie en Geo de partij is die geometrie levert. BAG houdt Geo verder op de hoogte van wijzigingen (o.a. status en attribuutgegevens) op de BAG-objecten via notificaties (BAG-kennisgevingen) (zie Figuur 1). 
 
-. in een specifiek applicatielandschap verschillende BAG-applicaties met verschillende BGT-
-applicaties kunnen koppelen (via een gegevensdistributiecomponent). 
-. een geautomatiseerde koppeling voorkomt, ook op de plaats waar het maar door één persoon wordt 
-uitgevoerd, overtikwerk en fouten in de administratie. 
-. het de onderlinge consistentie en de kwaliteit van de gegevens in de twee administraties vergroot 
-wat tot betere informatievoorziening bij besluiten en fraudedetectie leidt. 
-. het zorgt voor een helder inzicht in de werkvoorraad aan beide zijden en de stroomlijning van de 
-processen: zaken kunnen niet meer onzichtbaar lang blijven liggen; geometrie wordt niet vaker 
-dan noodzakelijk ingemeten. 
+![Alt text](afbeeldingen/fig1-schema-geo-bag-berichtenverkeer.png)
+*Figuur 1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer.* 
 
-
- 
-
-1.2 Leeswijzer 
-
-
-
-
-Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG en het registratiesysteem 
-Geo (hierna respectievelijk BAG en Geo). Deze koppelvlakspecificatie beschrijft de uitwisseling van 
-geometrie voor BAG-objecten, waarbij BAG de partij is die een verzoek doet om geometrie en Geo de partij 
-
-
-is die geometrie levert. BAG houdt Geo verder op de hoogte van wijzigingen (o.a. status en 
-attribuutgegevens) op de BAG-objecten via notificaties (BAG-kennisgevingen) (zie Figuur 1). 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-Figuur 1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer. 
-
- 
 
 De standaard van berichten waarmee de gegevens tussen BAG en Geo worden uitgewisseld is gebaseerd op 
 het Standaard Uitwiselings Formaat (StUF). Naast bestaande berichten uit StUF 03.10 en de BAG-
@@ -285,8 +31,8 @@ binnen de BAG berichtencatalogus.
  
 
 De structuur van dit document is als volgt: o.b.v. een aantal uitgangspunten o.a. verantwoordelijkheden en 
-taken in Hoofdstuk 2 worden een drietal algemene scenario’s van de werkprocessen tussen BAG en Geo 
-geschetst in Hoofdstuk 3. In deze scenario’s worden bepaalde berichten zoals verzoeken en leveringen 
+taken in Hoofdstuk 2 worden een drietal algemene scenarioâ€™s van de werkprocessen tussen BAG en Geo 
+geschetst in Hoofdstuk 3. In deze scenarioâ€™s worden bepaalde berichten zoals verzoeken en leveringen 
 verstuurd. De inhoud van de berichten zijn nader gedefinieerd in Hoofdstuk 4 en Hoofdstuk 5. 
 
 1.3 Verbinding met de GEMMA Informatiearchitectuur 
@@ -298,7 +44,7 @@ De GEMMA Informatiearchitectuur1 geeft inrichting aan de informatiehuishouding v
 informatiehuishouding betreft de referentiecomponenten en applicatiefunctionaliteit waarmee de gegevens 
 kunnen worden opgeslagen, geraadpleegd en processen kunnen worden ondersteund etc. Ook de 
 informatiemodellen (RSGB, RGBZ, ImZTC, etc.) en berichtenstandaarden (StUF, StUF-BG, StUF-ZKN, etc.) 
-die zorgen voor een efficiënte en gestandaardiseerde manier van informatie-uitwisseling, zijn onderdeel van 
+die zorgen voor een efficiÃ«nte en gestandaardiseerde manier van informatie-uitwisseling, zijn onderdeel van 
 de informatiearchitectuur. 
 
 1 http://www.gemmaonline.nl/index.php/GEMMA_Informatiearchitectuur 
@@ -306,7 +52,7 @@ de informatiearchitectuur.
  
 
 
-Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten2 in gedeeld op beleidsthema’s zoals 
+Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten2 in gedeeld op beleidsthemaâ€™s zoals 
 Milieu & Mobiliteit en Ruimtelijke Ordening & Wonen. De referentiecomponenten die relevant zijn voor het 
 geoBAG-koppelvlak zijn omcirkeld in rood. In onderstaande tabel wordt een vertaling gegeven tussen de 
 naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA. 
@@ -444,9 +190,9 @@ beheerder
 Berichtenschema StUF-Geo 
 BAG 
 
-‡‡‡ 
+â€¡â€¡â€¡ 
 
-‡‡‡ 
+â€¡â€¡â€¡ 
 
 Geonovum 
 
@@ -455,9 +201,9 @@ Geonovum
 Servicebeschrijving StUF-Geo 
 BAG 
 
-‡‡‡ 
+â€¡â€¡â€¡ 
 
-‡‡‡ 
+â€¡â€¡â€¡ 
 
 Geonovum 
 
@@ -465,7 +211,7 @@ Geonovum
 
  
 
-‡‡‡ Voor de vigerende versie van de StUF-Geo BAG implementatietoolkit, zie de website van Geonovum: 
+â€¡â€¡â€¡ Voor de vigerende versie van de StUF-Geo BAG implementatietoolkit, zie de website van Geonovum: 
 http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden. 
 
  
@@ -508,7 +254,7 @@ registratiesysteem van) Geo, hierna respectievelijk BAG en Geo.
 beschreven berichtenverkeer niet van toepassing. Geo heeft dan voldoende aan de kennisgevingsberichten vanuit BAG voor 
 de bijhouding van de gegevens van BGT objecten. 
 
-5 Registratiesysteem wordt hierna “applicatie” genoemd. 
+5 Registratiesysteem wordt hierna â€œapplicatieâ€ genoemd. 
 
 6 In praktijk zijn dit de medewerkers van Geo, danwel de ambtenaar die belast is me de uitbesteding van inwinning van de 
 geometrie voor Geo. 
@@ -584,7 +330,7 @@ is dan ook verder niet opgenomen in de uitwerking van het berichtenverkeer.
 
  
 
-De StUF-Geo BAG berichten zijn gespecifieerd in §4.1. 
+De StUF-Geo BAG berichten zijn gespecifieerd in Â§4.1. 
 
 2.3 Uitwisselen van gegevens van BAG-objecten 
 
@@ -607,7 +353,7 @@ De volgende BAG-objecttypen worden ondersteund in het Geo-BAG berichtenverkeer:
 
  
 
-Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid met de optionele objecttypen 
+Dit berichtschemaâ€™s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid met de optionele objecttypen 
 OverigGebouwdObject en OverigTerrein voor aansluiting met RSGB. Overig optionele BAG+-objecttypen 
 worden in het Geo-BAG berichtenverkeer niet ondersteund. In de StUF-Geo BAG berichten worden alleen de 
 gegevens opgenomen die noodzakelijk zijn voor een goede verwerking van dit bericht door de ontvanger 
@@ -643,7 +389,7 @@ geometrie op het maaiveld.
 
 
 
-- alle overige objecttypen13 in §2.3.1. met vlakgeometrie. 
+- alle overige objecttypen13 in Â§2.3.1. met vlakgeometrie. 
 2.3.2 Samengesteld uitwisselen en alleen actuele stand 
 
 
@@ -655,7 +401,7 @@ geometrie op het maaiveld.
 
 14 Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
 
-15 Dit in afwijking van het StUF-BG en StUF-Geo IMGeo berichtenverkeer waar in een bericht WAS én WORDT van een 
+15 Dit in afwijking van het StUF-BG en StUF-Geo IMGeo berichtenverkeer waar in een bericht WAS Ã©n WORDT van een 
 object wordt uitgewisseld. 
 
 16 Dit overzicht is gebaseerd op de lijst met gebeurtenissen van het formele BAG-processenhandboek en aangevuld met de 
@@ -667,9 +413,9 @@ Geo-gebeurtenissen.
 kennisgevingsbericht. 
 
 In de StUF-Geo BAG berichten worden de gegevens van objecten samengesteld uitgewisseld, d.w.z. een 
-geometrieVerzoek of geometrieLevering bevat de gegevens van één of meerdere BAG-objecten welke tot 
-één bepaalde transactie of gebeurtenis behoren. Bijvoorbeeld, indien een door Geo uitgevoerde 
-mutatiesignalering uit luchtfoto’s mutaties oplevert op meerdere objecten, worden een of meer mutaties 
+geometrieVerzoek of geometrieLevering bevat de gegevens van Ã©Ã©n of meerdere BAG-objecten welke tot 
+Ã©Ã©n bepaalde transactie of gebeurtenis behoren. Bijvoorbeeld, indien een door Geo uitgevoerde 
+mutatiesignalering uit luchtfotoâ€™s mutaties oplevert op meerdere objecten, worden een of meer mutaties 
 van deze objecten in een bericht (geometrieLevering) door Geo aan BAG verstuurd. 
 
  
@@ -698,7 +444,7 @@ geometrie aan te leveren, ofwel een geometrieVerzoek.
  
 
 Naar aanleiding van een Geo-gebeurtenis (bijv. constatering17 nieuw pand door mutatiesignalering uit 
-luchtfoto’s) of de geometrische inwinning voor BAG na een geometrieVerzoek, stuurt Geo aan BAG een 
+luchtfotoâ€™s) of de geometrische inwinning voor BAG na een geometrieVerzoek, stuurt Geo aan BAG een 
 levering van nieuwe of gewijzigde geometrie, ofwel een geometrieLevering18 
 
  
@@ -872,10 +618,10 @@ ontvanger van het bericht (dus BAG of Geo).
 
 Het opnemen van de BAG-identificatie bij een object is verplicht, behalve in de volgende twee situaties: 
 
-- Bij het versturen van een geometrieVerzoek na gebeurtenis ‘BGR-OBA Ontvangst bouwaanvraag’, 
+- Bij het versturen van een geometrieVerzoek na gebeurtenis â€˜BGR-OBA Ontvangst bouwaanvraagâ€™, 
 waarbij het object nog niet is opgenomen in de applicatie van BAG en dus de BAG-identificatie voor 
 dit object nog niet is uitgedeeld. 
-- Bij het versturen van een geometrieLevering na gebeurtenis ‘GEO-COG Constatering nieuw object’ 
+- Bij het versturen van een geometrieLevering na gebeurtenis â€˜GEO-COG Constatering nieuw objectâ€™ 
 (bijvoorbeeld bij vergunningsvrije bouw) waarbij het object ontstaat in de applicatie van Geo. Het 
 object is nog niet opgenomen in de applicatie van BAG en dus is de BAG-identificatie voor dit object 
 nog niet uitgedeeld. 
@@ -922,12 +668,12 @@ de technische systeemsleutel van Geo mee.22
 
 
 
-21 Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd 
+21 Deze situatie komt alleen voor als een BAG-object een status â€˜vergunning aangevraagdâ€™ heeft, maar nog niet is opgevoerd 
 in de registratie (en dus nog een BAG-identificatie heeft). 
 
 22 Ofwel: Geo stuurt altijd de technische systeemsleutel mee. 
 
-23 Een transactie is een samenstelling / bundeling van (gewijzigde) gegevens van één of meer objecten wat tot een bepaalde 
+23 Een transactie is een samenstelling / bundeling van (gewijzigde) gegevens van Ã©Ã©n of meer objecten wat tot een bepaalde 
 gebeurtenis of eenheid van werk toebehoord. 
 
 24 Dit omdat alleen de actuele stand van een object wordt uitgewisseld en geen WAS/WORDT structuur. 
@@ -945,9 +691,9 @@ verwerkt.
 Bij bepaalde gebeurtenissen (bijv. bij het verlenen van een bouwvergunning voor een pand met meerdere 
 verblijfsobjecten en nummeraanduidingen) komt het voor dat gegevens van meerdere objecten uitgewisseld 
 gaan worden. Per transactie23 wordt een StUF-Geo BAG bericht met een eigen logistieke identificatie en een 
-gemeenschappelijke functionele identificatie (betreffende de gebeurtenis ‘bouwvergunning verleend’) voor 
+gemeenschappelijke functionele identificatie (betreffende de gebeurtenis â€˜bouwvergunning verleendâ€™) voor 
 deze transactie samengesteld en in willekeurige volgorde verstuurd. Het is niet de bedoeling om bijvoorbeeld 
-in één geometrieverzoek voor alle objecten die op die dag zijn opgevoerd in het hele gebied van een 
+in Ã©Ã©n geometrieverzoek voor alle objecten die op die dag zijn opgevoerd in het hele gebied van een 
 gemeente de geometrie te vragen. De eenheid van werk dient zo klein mogelijk gehouden te worden aan de 
 ontvangende kant, om snelle afhandeling van een verzoek of levering mogelijk te maken. 
 
@@ -961,18 +707,18 @@ ontvangende kant, om snelle afhandeling van een verzoek of levering mogelijk te 
 De gegevens van een object in het StUF-Geo BAG berichtenverkeer welke worden uitgewisseld met 
 asynchrone kennisgevingsberichten kunnen verplicht zijn om te verwerken in de ontvangende applicatie of 
 informatief bedoeld zijn. Of een BAG-kennisgeving in een bericht verplicht of informatief is, wordt 
-opgenomen in de parameter <StUF:indicatorOvername> met resp. “V” (Verplicht) of “I” (Informatief). 
+opgenomen in de parameter <StUF:indicatorOvername> met resp. â€œVâ€ (Verplicht) of â€œIâ€ (Informatief). 
 
  
 
-Voor het Geo-BAG berichtenverkeer heeft een BAG-kennisgeving een indicatorOvername “V” (Verplicht), 
+Voor het Geo-BAG berichtenverkeer heeft een BAG-kennisgeving een indicatorOvername â€œVâ€ (Verplicht), 
 omdat BAG eindverantwoordelijk is voor de (kwaliteit van) gegevens van de BAG-objecten. Geo neemt de 
 gegevens van BAG verplicht over in de eigen registratie. 
 
  
 
 In een StUF-Geo BAG bericht komt het element indicatorOvername niet voor, omdat geen gebruik wordt 
-gemaakt van kennisgevingen24 maar van elementen met een StUF:functie:”entiteit” (hierna: entiteit. De 
+gemaakt van kennisgevingen24 maar van elementen met een StUF:functie:â€entiteitâ€ (hierna: entiteit. De 
 objectgegevens in een geometrieLevering of geometrieVerzoek zijn niet verplicht om over te nemen, en 
 dienen enkel ter identificatie van het object waarvoor geometrie wordt gevraagd of geleverd. 
 
@@ -983,16 +729,16 @@ dienen enkel ter identificatie van het object waarvoor geometrie wordt gevraagd 
 
 
 
-Het verzenden van een bericht wordt geïnitieerd door zender en is eenrichtingsverkeer (push-mechanisme). 
+Het verzenden van een bericht wordt geÃ¯nitieerd door zender en is eenrichtingsverkeer (push-mechanisme). 
 De zendende applicatie kan meerdere berichten achter elkaar versturen, waarbij een volgend bericht niet 
-per sé verzonden wordt na bevestiging van ontvangst van het vorige bericht. 
+per sÃ© verzonden wordt na bevestiging van ontvangst van het vorige bericht. 
 
  
 
 De ontvanger bevestigt te allen tijde de ontvangst van een bericht met een technisch synchrone respons 
 t.b.v. de logistiek (Bv03/Bv04 of Fo03). Als op een bericht binnen een bepaalde termijn geen bevestiging 
 van ontvangst is teruggekomen, mag de zender veronderstellen dat het bericht niet is aangekomen. Omdat 
-het de verantwoordelijkheid van zender is dat berichten ‘aankomen’, dient de zender opnieuw het bericht te 
+het de verantwoordelijkheid van zender is dat berichten â€˜aankomenâ€™, dient de zender opnieuw het bericht te 
 versturen aan ontvanger. 
 
 
@@ -1021,15 +767,15 @@ bij het BGT-object Pand.
 Hoofdstuk 3 
 
 
-Scenario’s 
+Scenarioâ€™s 
 
-Dit hoofdstuk beschrijft drie algemene scenario’s waarvoor StUF-Geo BAG berichtenverkeer 
+Dit hoofdstuk beschrijft drie algemene scenarioâ€™s waarvoor StUF-Geo BAG berichtenverkeer 
 toegepast wordt, t.w. verzoek om geometrie door BAG (3.1), constatering en signalering door 
 Geo (3.2), en kennisgeving op object door BAG (3.3). 
 
-Onderstaand figuur toont een overzicht van de samenhang tussen de verschillende scenario’s (use cases) 
-en de initiërende actor (Geo of BAG) in het StUF-Geo BAG berichtenverkeer. Een volledig overzicht van de 
-samenhang van activiteiten in de scenario’s van het StUF-Geo BAG berichtenverkeer is opgenomen in Bijlage 
+Onderstaand figuur toont een overzicht van de samenhang tussen de verschillende scenarioâ€™s (use cases) 
+en de initiÃ«rende actor (Geo of BAG) in het StUF-Geo BAG berichtenverkeer. Een volledig overzicht van de 
+samenhang van activiteiten in de scenarioâ€™s van het StUF-Geo BAG berichtenverkeer is opgenomen in Bijlage 
 2. 
 
  
@@ -1044,13 +790,13 @@ geometrieLeveringVersturen BAG-
 kennisgevingGoedkeuren 
 geometrieVerzoekGoedkeuren 
 geometrieLevering
-«precedes»
-«precedes»
-«precedes»
-«precedes»
-«precedes»
-«precedes»
-«invokes»
+Â«precedesÂ»
+Â«precedesÂ»
+Â«precedesÂ»
+Â«precedesÂ»
+Â«precedesÂ»
+Â«precedesÂ»
+Â«invokesÂ»
 Figuur 3-1 Use case diagram van het StUF-Geo BAG berichtenverkeer 
 
  
@@ -1101,7 +847,7 @@ goedkeuringsbericht()
 
  
 
-Figuur 3-2 Sequentiediagram Verzoek om geometrie door BAG – Basisscenario26,27 
+Figuur 3-2 Sequentiediagram Verzoek om geometrie door BAG â€“ Basisscenario26,27 
 
  
 
@@ -1114,7 +860,7 @@ Figuur 3-2 Sequentiediagram Verzoek om geometrie door BAG – Basisscenario26,27
 
 
 Indien BAG de gegegevens in een geometrieLevering afkeurt, stuurt BAG de reden van afkeuring aan Geo 
-in één of meer afkeuringsberichten. Indien BAG een gecorrigeerde (geometrie)levering voor dit object wenst 
+in Ã©Ã©n of meer afkeuringsberichten. Indien BAG een gecorrigeerde (geometrie)levering voor dit object wenst 
 te ontvangen, stuurt BAG een nieuw geometrieVerzoek aan Geo28. 
 
 28 De gevolgen voor de BGT worden beoordeeld door de BGT operator. Hiermee is de afhandeling van het geometrieVerzoek 
@@ -1130,7 +876,7 @@ geometrieVerzoek(BAG-***)
 
  
 
-Figuur 3-3 Sequentiediagram Verzoek om geometrie door BAG – Alt 1. BAG keurt levering af. 
+Figuur 3-3 Sequentiediagram Verzoek om geometrie door BAG â€“ Alt 1. BAG keurt levering af. 
 
 3.1.3 Alternatief scenario: BAG wil eerder verzonden geometrieVerzoek intrekken 
 
@@ -1141,7 +887,7 @@ Figuur 3-3 Sequentiediagram Verzoek om geometrie door BAG – Alt 1. BAG keurt lev
 
 Indien BAG een eerder verzonden geometrieVerzoek wil intrekken (bijv. indien een vergunning niet wordt 
 verleend, terwijl de aanvraag voor geometrie al was uitgezet door BAG), stuurt BAG een nieuw 
-geometrieVerzoek met gebeurtenis ‘Negeren eerder verzonden geometrieVerzoek’ (BAG-NEG) naar Geo. 
+geometrieVerzoek met gebeurtenis â€˜Negeren eerder verzonden geometrieVerzoekâ€™ (BAG-NEG) naar Geo. 
 
  
 
@@ -1158,7 +904,7 @@ goedkeuringsbericht aan BAG.
 
  
 
-Figuur 3-5 Sequentiediagram Verzoek om geometrie door BAG – Alt 2. BAG wil eerder verzoek intrekken 
+Figuur 3-5 Sequentiediagram Verzoek om geometrie door BAG â€“ Alt 2. BAG wil eerder verzoek intrekken 
 
 3.1.4 Alternatief scenario: Geo keurt geometrieVerzoek af 
 
@@ -1168,7 +914,7 @@ Figuur 3-5 Sequentiediagram Verzoek om geometrie door BAG – Alt 2. BAG wil eerde
 
 
 Indien Geo een geometrieVerzoek van BAG niet kan verwerken (bijv. BAG-geometrie van object is recent al 
-uitgeleverd), keurt Geo het geometrieVerzoek af. Geo stuurt de reden van afkeuring aan BAG in één of meer 
+uitgeleverd), keurt Geo het geometrieVerzoek af. Geo stuurt de reden van afkeuring aan BAG in Ã©Ã©n of meer 
 afkeuringsberichten30. 
 
 30 De gevolgen voor de BGT worden beoordeeld door de BGT operator. Geo kan op eigen initiatief en met de kennis van de 
@@ -1184,7 +930,7 @@ geometrieVerzoek(BAG-***)
 
  
 
-Figuur 3-6 Sequentiediagram Verzoek om geometrie door BAG – Alt 3. Geo keurt verzoek af 
+Figuur 3-6 Sequentiediagram Verzoek om geometrie door BAG â€“ Alt 3. Geo keurt verzoek af 
 
  
 
@@ -1199,7 +945,7 @@ Figuur 3-6 Sequentiediagram Verzoek om geometrie door BAG – Alt 3. Geo keurt ver
 
 Op enig moment heeft Geo naar aanleiding van een Geo-gebeurtenis (Geo-***) nieuwe objecten 
 geconstateerd en/of wijzigingen op bestaande BAG-objecten gesignaleerd (bijv. na het signaleren van 
-mutaties van BAG-objecten in luchtfoto’s). Geo stelt voor ieder gewijzigd of nieuw object een bericht 
+mutaties van BAG-objecten in luchtfotoâ€™s). Geo stelt voor ieder gewijzigd of nieuw object een bericht 
 geometrieLevering op en stuurt deze aan BAG. Aan de gebeurteniscode kan BAG afleiden dat het een levering 
 betreft naar aanleiding van een constatering of (mutatie)signalering. 
 
@@ -1228,7 +974,7 @@ een BAG-kennisgeving aan Geo32. Geo verwerkt de gegevens in de BAG-kennisgeving 
 
  
 
-Figuur 3-7 Sequentiediagram Constatering en/of signalering door Geo – Basisscenario 
+Figuur 3-7 Sequentiediagram Constatering en/of signalering door Geo â€“ Basisscenario 
 
 3.2.2 Alternatief scenario: BAG keurt geometrie af 
 
@@ -1238,7 +984,7 @@ Figuur 3-7 Sequentiediagram Constatering en/of signalering door Geo – Basisscena
 
 
 Indien BAG de gegevens in een geometrieLevering afkeurt, stuurt BAG de reden van afkeuring aan Geo in 
-een afkeuringsbericht33. Eventueel met de reden of toelichting in het vrije tekstveld van “Details”. 
+een afkeuringsbericht33. Eventueel met de reden of toelichting in het vrije tekstveld van â€œDetailsâ€. 
 
 Indien nodig, stuurt Geo een nieuwe Geometrielevering. 
 
@@ -1249,7 +995,7 @@ Indien nodig, stuurt Geo een nieuwe Geometrielevering.
 
 sd Constatering en/of signalering door Geo - Alt 1. BAG keurt levering afBAGGeogeometrieLevering(GEO-***)
 afkeuringsbericht()
-Figuur 3-8 Sequentiediagram Constatering en/of signalering door Geo – Alt 1. BAG keurt levering af 
+Figuur 3-8 Sequentiediagram Constatering en/of signalering door Geo â€“ Alt 1. BAG keurt levering af 
 
 3.2.3 Alternatief scenario: Geo wil eerder verzonden geometrieLevering intrekken 
 
@@ -1260,13 +1006,13 @@ Figuur 3-8 Sequentiediagram Constatering en/of signalering door Geo – Alt 1. BAG
 
 Indien Geo een eerder verzonden geometrieLevering wil intrekken (bijv. na kwaliteitscontrole door Geo blijkt 
 een object niet juist geclassificeerd en relevant voor BAG), stuurt Geo een nieuwe geometrieLevering met 
-gebeurtenis ‘Negeren eerder verzonden geometrieLevering’ (GEO-NEG) naar BAG. 
+gebeurtenis â€˜Negeren eerder verzonden geometrieLeveringâ€™ (GEO-NEG) naar BAG. 
 
  
 
 Indien BAG de eerder verzonden geometrieLevering nog niet heeft verwerkt, kan het deze 
 geometrieLevering negeren. Indien BAG de eerder verzonden geometrieLevering wel heeft verwerkt, volgt 
-een afkeuringsbericht met reden van afkeuring aan Geo conform §3.2.2. 
+een afkeuringsbericht met reden van afkeuring aan Geo conform Â§3.2.2. 
 
  
 
@@ -1277,7 +1023,7 @@ BAGGeogoedkeuringsbericht()
 goedkeuringsbericht()
 geometrieLevering(GEO-***)
 geometrieLevering(GEO-NEG)
-Figuur 3-10 Sequentiediagram Verzoek om geometrie door BAG – Alt. 2 Geo wil eerder verzoek intrekken 
+Figuur 3-10 Sequentiediagram Verzoek om geometrie door BAG â€“ Alt. 2 Geo wil eerder verzoek intrekken 
 
  
 
@@ -1288,7 +1034,7 @@ Figuur 3-10 Sequentiediagram Verzoek om geometrie door BAG – Alt. 2 Geo wil eerd
 
 
 Op enig moment heeft BAG naar aanleiding van een BAG-gebeurtenis (BAG-***) mutaties zijnde toevoeging, 
-wijziging of beëindiging op één of meer BAG-objecten in de eigen applicatie, waarvan Geo op de hoogte 
+wijziging of beÃ«indiging op Ã©Ã©n of meer BAG-objecten in de eigen applicatie, waarvan Geo op de hoogte 
 gesteld moet worden. BAG stelt hiertoe voor iedere mutatie een apart BAG-kennisgevingsbericht samen en 
 stuurt deze aan Geo34. Geo verwerkt wat ze nodig hebben aan gegevens in de eigen applicatie. Geo 
 verstuurd geen functionele respons na succesvolle verwerking van de BAG-kennisgeving in de eigen 
@@ -1362,8 +1108,8 @@ en de bij BAG-aanwezige (schets)geometrie van een object wordt
 meegestuurd in het verzoek. 
 
 De BAG-identificatie van een betreffend object mag alleen leeg 
-zijn als het bericht wordt verstuurd na gebeurtenis ‘BGR-OBA 
-Ontvangst bouwaanvraag’. 
+zijn als het bericht wordt verstuurd na gebeurtenis â€˜BGR-OBA 
+Ontvangst bouwaanvraagâ€™. 
 
 Zender 
 
@@ -1391,7 +1137,7 @@ Parameters
 
 Inhoud 
 
-Keuze uit één of meer entiteiten (choice [1..n]): 
+Keuze uit Ã©Ã©n of meer entiteiten (choice [1..n]): 
 
 . ligplaats [1-1] 
 . overigGebouwdObject [1-1] 
@@ -1432,7 +1178,7 @@ Di01
 
 Omschrijving 
 
-Een geometrieLevering bevat levering van de geometrie van één 
+Een geometrieLevering bevat levering van de geometrie van Ã©Ã©n 
 of meer BAG-objecten35. 
 
 De levering is op verzoek van BAG of op initiatief van Geo na 
@@ -1444,12 +1190,12 @@ De BAG-identificatie (indien beschikbaar) en de door Geo
 ingewonnen en gekarteerde of ingetekende geometrie van het 
 object wordt meegestuurd in de levering. 
 
-De BAG-identificatie mag alleen leeg zijn na gebeurtenis ‘GEO-
-COG Constatering nieuw object’ of als een levering wordt gedaan 
-op verzoek na gebeurtenis ‘BGR-OBA Ontvangst bouwaanvraag’. 
+De BAG-identificatie mag alleen leeg zijn na gebeurtenis â€˜GEO-
+COG Constatering nieuw objectâ€™ of als een levering wordt gedaan 
+op verzoek na gebeurtenis â€˜BGR-OBA Ontvangst bouwaanvraagâ€™. 
 
 De geometrie van het betreffende object mag alleen leeg zijn na 
-gebeurtenis ‘GEO-AOC Constatering gesloopt object’. 
+gebeurtenis â€˜GEO-AOC Constatering gesloopt objectâ€™. 
 
  
 
@@ -1480,7 +1226,7 @@ Parameters
 
 Inhoud 
 
-Keuze uit één of meer entiteiten (choice [1..n]): 
+Keuze uit Ã©Ã©n of meer entiteiten (choice [1..n]): 
 
 . ligplaats [1-1] 
 . overigGebouwdObject [1-1] 
@@ -1564,7 +1310,7 @@ Parameters
 
 Inhoud 
 
-Keuze uit één of meer entiteiten (choice [1..n]): 
+Keuze uit Ã©Ã©n of meer entiteiten (choice [1..n]): 
 
 . ligplaats [1-1] 
 . overigGebouwdObject [1-1] 
@@ -1620,7 +1366,7 @@ objecten worden in een separaat goedkeuringsbericht
 opgenomen. 
 
 Per soort reden van afkeuring (fout) wordt een afkeuringsbericht 
-met één of meer identificatie van objecten verstuurd. 
+met Ã©Ã©n of meer identificatie van objecten verstuurd. 
 
 In het afkeuringsbericht worden de code, omschrijving, plek en 
 details van de fout opgenomen. 
@@ -1656,7 +1402,7 @@ Parameters
 
 Inhoud 
 
-Keuze uit één of meer entiteiten (choice [1..n]): 
+Keuze uit Ã©Ã©n of meer entiteiten (choice [1..n]): 
 
 . ligplaats [1-1] 
 . overigGebouwdObject [1-1] 
@@ -1702,7 +1448,7 @@ GB010
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieLevering is 
 afgekeurd; BAG-identificatie 
@@ -1714,7 +1460,7 @@ GB011
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieLevering is 
 afgekeurd; SleutelOntvanger 
@@ -1724,7 +1470,7 @@ GB012
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieLevering is 
 afgekeurd; - Object is 
@@ -1734,7 +1480,7 @@ GB013
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieLevering kan niet 
 gecorrigeerd/ingetrokken 
@@ -1745,7 +1491,7 @@ GB020
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieVerzoek is 
 afgekeurd; 
@@ -1754,7 +1500,7 @@ GB030
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieVerzoek is 
 afgekeurd; SleutelOntvanger 
@@ -1764,7 +1510,7 @@ GB031
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 geometrieVerzoek kan niet 
 gecorrigeerd/ingetrokken 
@@ -1775,7 +1521,7 @@ GB040
 
 Client 
 
-«vrij tekst» 
+Â«vrij tekstÂ» 
 
 
 
@@ -2483,7 +2229,7 @@ String()
 
 Waardenverzameling 
 
-“client”, “server” 
+â€œclientâ€, â€œserverâ€ 
 
 
 
@@ -3708,8 +3454,8 @@ adresseerbaar object feitelijk ligt.
 
  
 
-De objectkennisgevingen in hoofdstuk 5 van het functionele ontwerp zijn niet geïmplementeerd als 
-kennisgevingen maar als elementen met StUF:functie=”entiteit” binnen de vrije berichten gmvDi01 en 
+De objectkennisgevingen in hoofdstuk 5 van het functionele ontwerp zijn niet geÃ¯mplementeerd als 
+kennisgevingen maar als elementen met StUF:functie=â€entiteitâ€ binnen de vrije berichten gmvDi01 en 
 gmlDi01. Hiervoor is gekozen, omdat in het geometrieverzoek de semantiek is het identificeren van het 
 object waarvoor de geometrie wordt gevraagd. In de geometrielevering worden alleen de nieuwe waarden 
 geleverd en dat kan niet met de semantiek van een StUF-kennisgeving. Het element 
