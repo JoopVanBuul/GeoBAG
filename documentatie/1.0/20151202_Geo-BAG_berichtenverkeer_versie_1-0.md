@@ -18,6 +18,7 @@ De voordelen van deze koppelvlakstandaard zijn o.a. dat
 Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG en het registratiesysteem Geo (hierna respectievelijk BAG en Geo). Deze koppelvlakspecificatie beschrijft de uitwisseling van geometrie voor BAG-objecten, waarbij BAG de partij is die een verzoek doet om geometrie en Geo de partij is die geometrie levert. BAG houdt Geo verder op de hoogte van wijzigingen (o.a. status en attribuutgegevens) op de BAG-objecten via notificaties (BAG-kennisgevingen) (zie Figuur 1). 
 
 ![Alt text](afbeeldingen/fig-schema-geo-bag-berichtenverkeer.png)
+
 *Figuur 1.1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer.* 
 
 De standaard van berichten waarmee de gegevens tussen BAG en Geo worden uitgewisseld is gebaseerd op het Standaard Uitwiselings Formaat (StUF). Naast bestaande berichten uit StUF 03.10 en de BAG-berichtencatalogus (als onderdeel van StUF-BG) worden voor dit koppelvlak specifieke berichten toepast, aangeduid met StUF-Geo BAG berichten. Dit koppelvlak is als apart sectormodel (geoBAG) gepositioneerd binnen de BAG berichtencatalogus. 
@@ -30,6 +31,7 @@ De GEMMA Informatiearchitectuur[^1] geeft inrichting aan de informatiehuishoudin
 Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten[^2] in gedeeld op beleidsthema’s zoals Milieu & Mobiliteit en Ruimtelijke Ordening & Wonen. De referentiecomponenten die relevant zijn voor het geoBAG-koppelvlak zijn omcirkeld in rood. In onderstaande tabel wordt een vertaling gegeven tussen de naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA. 
 
 ![GEMMA Referentiecomponenten](afbeeldingen/fig-overzicht-gemma-referentiecomponenten.png)
+
  *Figuur 1.2: Gemma Referentiecomponenten*
 
 |Geonovum | GEMMA |
@@ -258,6 +260,7 @@ Dit hoofdstuk beschrijft drie algemene scenario’s waarvoor StUF-Geo BAG berich
 Onderstaand figuur toont een overzicht van de samenhang tussen de verschillende scenario’s (use cases) en de initiërende actor (Geo of BAG) in het StUF-Geo BAG berichtenverkeer. Een volledig overzicht van de samenhang van activiteiten in de scenario’s van het StUF-Geo BAG berichtenverkeer is opgenomen in Bijlage 2. 
 
 ![Use case diagram StUF-Geo BAG berichtenverkeer](afbeeldingen/fig-use-case-diagram-stuf-geo-bag-berichtenverkeer.png)
+
 *Figuur 3.1 Use case diagram van het StUF-Geo BAG berichtenverkeer*
 
 ## 3.1 Verzoek om geometrie door BAG 
@@ -272,6 +275,7 @@ BAG gaat over tot de beoordeling van de geometrieLevering. Indien BAG de geometr
 Na succesvolle verwerking in de eigen applicatie stuurt BAG de actuele stand van het BAG-object middels een BAG-kennisgeving aan Geo[^25]. Geo verwerkt de gegevens in de BAG-kennisgeving in de eigen applicatie. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG](afbeeldingen/fig-sd_verzoek_geometrie-bag.png)
+
 *Figuur 3.2 Sequentiediagram Verzoek om geometrie door BAG – Basisscenario[^26][^27]*
 
 [^25] En ook naar andere afnemers in de organisatie. 
@@ -284,7 +288,8 @@ Na succesvolle verwerking in de eigen applicatie stuurt BAG de actuele stand van
 Indien BAG de gegegevens in een geometrieLevering afkeurt, stuurt BAG de reden van afkeuring aan Geo in één of meer afkeuringsberichten. Indien BAG een gecorrigeerde (geometrie)levering voor dit object wenst te ontvangen, stuurt BAG een nieuw geometrieVerzoek aan Geo[^28]. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG - Alt 1. BAG keurt levering af](afbeeldingen/fig-sd_verzoek_geometrie-bag-alt1.png)
-Figuur 3.3 Sequentiediagram Verzoek om geometrie door BAG – Alt 1. BAG keurt levering af. 
+
+*Figuur 3.3 Sequentiediagram Verzoek om geometrie door BAG – Alt 1. BAG keurt levering af.*
 
 [^28] De gevolgen voor de BGT worden beoordeeld door de BGT operator. Hiermee is de afhandeling van het geometrieVerzoek 
 voor Geo afgerond. 
@@ -295,6 +300,7 @@ Indien BAG een eerder verzonden geometrieVerzoek wil intrekken (bijv. indien een
 Indien Geo het eerder verzonden geometrieVerzoek nog niet heeft afgehandeld[^29], kan het dit geometrieVerzoek negeren. Geo stuurt een bevestiging dat het geometrieVerzoek wordt genegeerd in een goedkeuringsbericht aan BAG. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG - Alt 2.  BAG wil eerder verzoek intrekken](afbeeldingen/fig-sd_verzoek_geometrie-bag-alt2.png)
+
 *Figuur 3.4 Sequentiediagram Verzoek om geometrie door BAG – Alt 2. BAG wil eerder verzoek intrekken*
 
 [^29] D.w.z. dat een geometrieLevering is teruggestuurd
@@ -306,7 +312,8 @@ Indien Geo een geometrieVerzoek van BAG niet kan verwerken (bijv. BAG-geometrie 
 reden van afkeuring opnieuw een geometrieLevering doen aan BAG. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG - Alt 3.   Geo keurt verzoek af](afbeeldingen/fig-sd_verzoek_geometrie-bag-alt2.png)
-Figuur 3.5 Sequentiediagram Verzoek om geometrie door BAG – Alt 3. Geo keurt verzoek af 
+
+*Figuur 3.5 Sequentiediagram Verzoek om geometrie door BAG – Alt 3. Geo keurt verzoek af*
 
 ## 3.2 Constatering en/of signalering door Geo
 
@@ -319,7 +326,8 @@ Na succesvolle verwerking in de eigen applicatie stuurt BAG de actuele stand van
 een BAG-kennisgeving aan Geo[^32]. Geo verwerkt de gegevens in de BAG-kennisgeving in de eigen applicatie. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG](afbeeldingen/fig-sd_constatering_signalering_geo.png)
-Figuur 3.6 Sequentiediagram Constatering en/of signalering door Geo – Basisscenario 
+
+*Figuur 3.6 Sequentiediagram Constatering en/of signalering door Geo – Basisscenario*
 
 [^31] zijnde een bevestigingsbericht als asynchrone functionele respons (Bv01) 
 
@@ -332,7 +340,8 @@ een afkeuringsbericht[^33]. Eventueel met de reden of toelichting in het vrije t
 Indien nodig, stuurt Geo een nieuwe Geometrielevering. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG – Alt 1. BAG keurt levering af](afbeeldingen/fig-sd_constatering_signalering_geo_alt1.png)
-Figuur 3.7 Sequentiediagram Constatering en/of signalering door Geo – Alt 1. BAG keurt levering af 
+
+*Figuur 3.7 Sequentiediagram Constatering en/of signalering door Geo – Alt 1. BAG keurt levering af*
 
 [^33] De gevolgen voor de BGT worden beoordeeld door de BGT operator. Geo kan op eigen initiatief en met de kennis van de 
 reden van afkeuring opnieuw een geometrieLevering doen aan BAG. 
@@ -343,7 +352,8 @@ Indien Geo een eerder verzonden geometrieLevering wil intrekken (bijv. na kwalit
 Indien BAG de eerder verzonden geometrieLevering nog niet heeft verwerkt, kan het deze geometrieLevering negeren. Indien BAG de eerder verzonden geometrieLevering wel heeft verwerkt, volgt een afkeuringsbericht met reden van afkeuring aan Geo conform §3.2.2. 
 
 ![Sequentiediagram Verzoek om geometrie door BAG – Alt. 2 Geo wil eerder verzoek intrekken](afbeeldingen/fig-sd_constatering_signalering_geo_alt2.png)
-Figuur 3.8 Sequentiediagram Verzoek om geometrie door BAG – Alt. 2 Geo wil eerder verzoek intrekken 
+
+*Figuur 3.8 Sequentiediagram Verzoek om geometrie door BAG – Alt. 2 Geo wil eerder verzoek intrekken*
 
 ## 3.3 Kennisgeving op object door BAG 
 Op enig moment heeft BAG naar aanleiding van een BAG-gebeurtenis (BAG-***) mutaties zijnde toevoeging, wijziging of beëindiging op één of meer BAG-objecten in de eigen applicatie, waarvan Geo op de hoogte gesteld moet worden. BAG stelt hiertoe voor iedere mutatie een apart BAG-kennisgevingsbericht samen en stuurt deze aan Geo[^34]. Geo verwerkt wat ze nodig hebben aan gegevens in de eigen applicatie. Geo verstuurd geen functionele respons na succesvolle verwerking van de BAG-kennisgeving in de eigen applicatie. 
