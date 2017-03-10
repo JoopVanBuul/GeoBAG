@@ -1,8 +1,6 @@
-# Koppelvlakspecificatie
+# Koppelvlakspecificatie Geo-BAG berichtenverkeer
 
-# Geo-BAG berichtenverkeer
-
-## Beschrijving koppelvlak tussen de registratiesystemen van Geo en BAG
+__Beschrijving koppelvlak tussen de registratiesystemen van Geo en BAG__
 
 Geonovum
 
