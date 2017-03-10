@@ -21,151 +21,50 @@ Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG e
 ![Alt text](afbeeldingen/fig1-schema-geo-bag-berichtenverkeer.png)
 *Figuur 1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer.* 
 
+De standaard van berichten waarmee de gegevens tussen BAG en Geo worden uitgewisseld is gebaseerd op het Standaard Uitwiselings Formaat (StUF). Naast bestaande berichten uit StUF 03.10 en de BAG-berichtencatalogus (als onderdeel van StUF-BG) worden voor dit koppelvlak specifieke berichten toepast, aangeduid met StUF-Geo BAG berichten. Dit koppelvlak is als apart sectormodel (geoBAG) gepositioneerd binnen de BAG berichtencatalogus. 
 
-De standaard van berichten waarmee de gegevens tussen BAG en Geo worden uitgewisseld is gebaseerd op 
-het Standaard Uitwiselings Formaat (StUF). Naast bestaande berichten uit StUF 03.10 en de BAG-
-berichtencatalogus (als onderdeel van StUF-BG) worden voor dit koppelvlak specifieke berichten toepast, 
-aangeduid met StUF-Geo BAG berichten. Dit koppelvlak is als apart sectormodel (geoBAG) gepositioneerd 
-binnen de BAG berichtencatalogus. 
+De structuur van dit document is als volgt: o.b.v. een aantal uitgangspunten o.a. verantwoordelijkheden en taken in Hoofdstuk 2 worden een drietal algemene scenario’s van de werkprocessen tussen BAG en Geo geschetst in Hoofdstuk 3. In deze scenario’s worden bepaalde berichten zoals verzoeken en leveringen verstuurd. De inhoud van de berichten zijn nader gedefinieerd in Hoofdstuk 4 en Hoofdstuk 5. 
 
- 
+## 1.3 Verbinding met de GEMMA Informatiearchitectuur 
+De GEMMA Informatiearchitectuur[^1] geeft inrichting aan de informatiehuishouding van gemeenten. De informatiehuishouding betreft de referentiecomponenten en applicatiefunctionaliteit waarmee de gegevens kunnen worden opgeslagen, geraadpleegd en processen kunnen worden ondersteund etc. Ook de informatiemodellen (RSGB, RGBZ, ImZTC, etc.) en berichtenstandaarden (StUF, StUF-BG, StUF-ZKN, etc.) 
+die zorgen voor een efficiënte en gestandaardiseerde manier van informatie-uitwisseling, zijn onderdeel van de informatiearchitectuur. 
 
-De structuur van dit document is als volgt: o.b.v. een aantal uitgangspunten o.a. verantwoordelijkheden en 
-taken in Hoofdstuk 2 worden een drietal algemene scenario’s van de werkprocessen tussen BAG en Geo 
-geschetst in Hoofdstuk 3. In deze scenario’s worden bepaalde berichten zoals verzoeken en leveringen 
-verstuurd. De inhoud van de berichten zijn nader gedefinieerd in Hoofdstuk 4 en Hoofdstuk 5. 
+[^1] http://www.gemmaonline.nl/index.php/GEMMA_Informatiearchitectuur 
 
-1.3 Verbinding met de GEMMA Informatiearchitectuur 
-
-
-
-
-De GEMMA Informatiearchitectuur1 geeft inrichting aan de informatiehuishouding van gemeenten. De 
-informatiehuishouding betreft de referentiecomponenten en applicatiefunctionaliteit waarmee de gegevens 
-kunnen worden opgeslagen, geraadpleegd en processen kunnen worden ondersteund etc. Ook de 
-informatiemodellen (RSGB, RGBZ, ImZTC, etc.) en berichtenstandaarden (StUF, StUF-BG, StUF-ZKN, etc.) 
-die zorgen voor een efficiënte en gestandaardiseerde manier van informatie-uitwisseling, zijn onderdeel van 
-de informatiearchitectuur. 
-
-1 http://www.gemmaonline.nl/index.php/GEMMA_Informatiearchitectuur 
-
- 
-
-
-Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten2 in gedeeld op beleidsthema’s zoals 
+Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten[^2] in gedeeld op beleidsthema’s zoals 
 Milieu & Mobiliteit en Ruimtelijke Ordening & Wonen. De referentiecomponenten die relevant zijn voor het 
 geoBAG-koppelvlak zijn omcirkeld in rood. In onderstaande tabel wordt een vertaling gegeven tussen de 
 naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA. 
 
-2 http://www.gemmaonline.nl/index.php/GEMMA_Applicatielandschap 
-
- 
-
-3 https://www.softwarecatalogus.nl 
-
- 
-
- 
-
-Geonovum 
-
-GEMMA 
-
-Registratie BAG 
-
-BAG-administratie 
-
-Registratie GEO 
-
-BGT-administratie 
-
-Registratie GEO 
-
-GIS (Geografisch Informatie Systeem) 
-
-Registratie GEO 
-
-CAD (Computer-Aided Design) 
+[^2] http://www.gemmaonline.nl/index.php/GEMMA_Applicatielandschap 
 
 
+![GEMMA Referentiecomponenten](afbeeldingen/fig2-overzicht-gemma-referentiecomponenten.png)
+ *Figuur 2: Gemma Referentiecomponenten*
 
- 
+| Geonovum | GEMMA  |
+| Registratie BAG | BAG-administratie |
+| Registratie GEO | BGT-administratie |
+| Registratie GEO | GIS (Geografisch Informatie Systeem) |
+| Registratie GEO  | CAD (Computer-Aided Design) | 
 
-De GEMMA Softwarecatalogus3 is een online informatiesysteem dat het (verwachte) softwareaanbod voor 
+De GEMMA Softwarecatalogus[^3] is een online informatiesysteem dat het (verwachte) softwareaanbod voor 
 gemeenten en het gebruik door gemeenten in kaart brengt. Deze catalogus is gebaseerd op de naamgeving 
 en structuur van de GEMMA Referentiecomponenten. Met de bovenstaande mapping zijn software 
 leveranciers instaat om de geoBAG-koppeling op de juiste manier in te voeren in de software catalogus. 
 
-
- Figuur 2: Gemma Referentiecomponenten 
+[^3] https://www.softwarecatalogus.nl 
 
- 
-
-1.4 Referenties 
-
-
-
-
+##1.4 Referenties 
 Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer is gebaseerd op de volgende standaarden: 
 
- 
 
-Afkorting 
+| Afkorting | Document | Versie | Datum | Auteur c.q. beheerder |
+| [BGT] | Gegevenscatalogus BGT | 1.1.1 | Juli 2013 | Geonovum | 
+| [IMGeo] | Gegevenscatalogus IMGeo  2.1.1 | Juli 2013 | Geonovum  |
+| [BAG-P] BAG processenhandboek | 2013 | 11 februari 2014 | Kadaster | 
+| [StUF] | StUF 03.01: In Gebruik  | 22  | 1 juli 2015  |KING |
 
-Document 
-
-Versie 
-
-Datum 
-
-Auteur c.q. 
-beheerder 
-
-[BGT] 
-
-Gegevenscatalogus BGT 
-
-1.1.1 
-
-Juli 2013 
-
-Geonovum 
-
-[IMGeo] 
-
-Gegevenscatalogus IMGeo 
-
-2.1.1 
-
-Juli 2013 
-
-Geonovum 
-
-[BAG-P] 
-
-BAG processenhandboek 
-
-2013 
-
-11 februari 2014 
-
-Kadaster 
-
-[StUF] 
-
-StUF 03.01: In Gebruik 
-
-22 
-
-1 juli 2015 
-
-KING 
-
-
-
- 
-
- 
 
 
 Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer hanteert verder de volgende documenten 
