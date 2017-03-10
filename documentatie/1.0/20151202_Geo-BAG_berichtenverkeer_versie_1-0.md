@@ -60,6 +60,7 @@ Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer is gebaseerd op de
 
 
 | Afkorting | Document | Versie | Datum | Auteur c.q. beheerder |
+|-----------|----------|--------|-------|-----------------------|
 | [BGT] | Gegevenscatalogus BGT | 1.1.1 | Juli 2013 | Geonovum | 
 | [IMGeo] | Gegevenscatalogus IMGeo  2.1.1 | Juli 2013 | Geonovum  |
 | [BAG-P] BAG processenhandboek | 2013 | 11 februari 2014 | Kadaster | 
