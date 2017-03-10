@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:geoBAG="http://register.geostandaarden.nl/xmlschema/geobag/1.0" xmlns:StUF="http://www.egem.nl/StUF/StUF0301" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" targetNamespace="http://register.geostandaarden.nl/xmlschema/geobag/1.0">
+	<import namespace="http://www.egem.nl/StUF/StUF0301" location="../0301/stuf0301_types.wsdl"/>
+	<documentation>
+		Dit document definieert de operations en bindings voor het portType OntvangAsynchroon tbv het binnengemeentelijke koppelvlak BAG
+		
+		Versie 010002, wijzigingen vergeleken met 010001:
+		- location in import statements aangepast aan nieuwe naamgeving bestanden
+	</documentation>
+	<types>
+		<xs:schema>
+			<xs:import namespace="http://register.geostandaarden.nl/xmlschema/geobag/1.0" schemaLocation="geoBAG0100_msg.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="gmvDi01" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+		<part name="body" element="geoBAG:gmvDi01"/>
+	</message>
+	<message name="bevestigingDu01" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+		<part name="body" element="geoBAG:bevestigingDu01"/>
+	</message>
+	<message name="foutDu01" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+		<part name="body" element="geoBAG:foutDu01"/>
+	</message>
+	<portType name="OntvangAsynchroon" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+		<documentation>
+		Dit portType ondersteunt als operaties alle asynchrone berichten gedefinieerd binnen het koppelvlak geaBAG aan de Geo-kant
+	</documentation>
+		<operation name="gmvDi01">
+			<input message="geoBAG:gmvDi01"/>
+			<output message="StUF:Bv03"/>
+			<fault name="fout" message="StUF:Fo03"/>
+		</operation>
+		<operation name="bevestigingDu01">
+			<input message="geoBAG:bevestigingDu01"/>
+			<output message="StUF:Bv03"/>
+			<fault name="fout" message="StUF:Fo03"/>
+		</operation>
+		<operation name="foutDu01">
+			<input message="geoBAG:foutDu01"/>
+			<output message="StUF:Bv03"/>
+			<fault name="fout" message="StUF:Fo03"/>
+		</operation>
+	</portType>
+	<binding name="SOAPOntvangAsynchroon" type="geoBAG:OntvangAsynchroon" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+		<documentation>
+			Omdat de uit te wisselen berichten volledig gedefinieerd zijn in het sectormodel cq de StUF-standaard, kunnen we ze zonder verdere encoding (“literal”) opnemen in de body.
+Niet ondersteunde berichten kunnen uit de binding en portType worden verwijderd.
+		</documentation>
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="gmvDi01">
+			<soap:operation soapAction="http://www.egem.nl/StUF/sector/bg/0310/gmvDi01"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+			<fault name="fout">
+				<soap:fault name="fout" use="literal"/>
+			</fault>
+		</operation>
+		<operation name="bevestigingDu01">
+			<soap:operation soapAction="http://www.egem.nl/StUF/sector/bg/0310/bevestigingDu01"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+			<fault name="fout">
+				<soap:fault name="fout" use="literal"/>
+			</fault>
+		</operation>
+		<operation name="foutDu01">
+			<soap:operation soapAction="http://www.egem.nl/StUF/sector/bg/0310/foutDu01"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+			<fault name="fout">
+				<soap:fault name="fout" use="literal"/>
+			</fault>
+		</operation>
+	</binding>
+	<service name="OntvangAsynchroon">
+		<documentation>
+	Hieronder wordt gedefinieerd de concreet aan te roepen service voor het ontvangen door een Geo-applicatie van asynchrone berichten uit het geoBAG-koppelvlak. 
+		</documentation>
+		<port name="OntvangAsynchroon" binding="geoBAG:SOAPOntvangAsynchroon">
+			<documentation>
+				<wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soap:address location="http://example.com/OntvangAsynchroon"/>
+		</port>
+	</service>
+</definitions>
