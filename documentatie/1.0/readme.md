@@ -30,28 +30,29 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 
 ##Inhoudsopgave
 
-1. Inleiding 5
-  1.1. Waarom dit koppelvlak? 5 \s
-  1.2. Leeswijzer 5 \s
-  1.3. Verbinding met de GEMMA Informatiearchitectuur 6 \s
-  1.4. Referenties 8 
 
-2. Uitgangspunten 10
-  2.1 Actoren en verantwoordelijkheden: Geo en BAG 10 
-  2.2 Berichten 10 
-  2.3 Uitwisselen van gegevens van BAG-objecten 11 
-  2.3.1 Objecttypen 11 
-  2.3.1 Geometrie 11 
-  2.3.2 Samengesteld uitwisselen en alleen actuele stand 12 
-  2.4 Gebeurtenissen als aanleiding voor berichtenverkeer 12 
-  2.5 Identificaties van en relaties tussen berichten 13 
-  2.6 Corrigeren en intrekken van berichten 13 
-  2.7 Identificaties van en relaties tussen objecten 14 
-  2.8 Verzenden en verwerken van berichten 15 
-  2.8.1 Transacties en bundeling van berichten 15
-  2.8.2 Verplichte of niet-verplichte overname 15 
-  2.8.3 Volgorde van verzenden en verwerken 15 
-  2.8.4 Synchroniteit 16 
+1. Inleiding 5<br />
+1.1. Waarom dit koppelvlak? 5<br />
+1.2. Leeswijzer 5<br />
+1.3. Verbinding met de GEMMA Informatiearchitectuur 6<br />
+1.4. Referenties 8<br />
+<br />
+2. Uitgangspunten 10<br />
+  2.1 Actoren en verantwoordelijkheden: Geo en BAG 10 <br />
+  2.2 Berichten 10 <br />
+  2.3 Uitwisselen van gegevens van BAG-objecten 11 <br />
+  2.3.1 Objecttypen 11 <br />
+  2.3.1 Geometrie 11 <br />
+  2.3.2 Samengesteld uitwisselen en alleen actuele stand 12 <br />
+  2.4 Gebeurtenissen als aanleiding voor berichtenverkeer 12 <br />
+  2.5 Identificaties van en relaties tussen berichten 13 <br />
+  2.6 Corrigeren en intrekken van berichten 13 <br />
+  2.7 Identificaties van en relaties tussen objecten 14 <br />
+  2.8 Verzenden en verwerken van berichten 15 <br />
+  2.8.1 Transacties en bundeling van berichten 15<br />
+  2.8.2 Verplichte of niet-verplichte overname 15 <br />
+  2.8.3 Volgorde van verzenden en verwerken 15 <br />
+  2.8.4 Synchroniteit 16 <br />
 3. Scenario’s 17
 3.1 Verzoek om geometrie door BAG 18 
 3.1.1 Basisscenario 18 
