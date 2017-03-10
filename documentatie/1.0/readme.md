@@ -30,12 +30,11 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 
 ##Inhoudsopgave
 
-1 Inleiding 5\s
-1.1 Waarom dit koppelvlak? 5 \s
-1.2 Leeswijzer 5 \s
-1.3 Verbinding met de GEMMA Informatiearchitectuur 6 \s
-
-1.4 Referenties 8 
+1. Inleiding 5
+  1.1. Waarom dit koppelvlak? 5 \s
+  1.2. Leeswijzer 5 \s
+  1.3. Verbinding met de GEMMA Informatiearchitectuur 6 \s
+  1.4. Referenties 8 
 
 2. Uitgangspunten 10
   2.1 Actoren en verantwoordelijkheden: Geo en BAG 10 
