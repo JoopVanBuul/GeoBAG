@@ -30,14 +30,14 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 
 ##Inhoudsopgave
 
-1 Inleiding 5
+1. Inleiding 5
 
 1.1 Waarom dit koppelvlak? 5 
 1.2 Leeswijzer 5 
 1.3 Verbinding met de GEMMA Informatiearchitectuur 6 
 1.4 Referenties 8 
 
-2 Uitgangspunten 10
+2. Uitgangspunten 10
 2.1 Actoren en verantwoordelijkheden: Geo en BAG 10 
 2.2 Berichten 10 
 2.3 Uitwisselen van gegevens van BAG-objecten 11 
@@ -54,7 +54,7 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 2.8.3 Volgorde van verzenden en verwerken 15 
 2.8.4 Synchroniteit 16 
 
-3 Scenario’s 17
+3. Scenario’s 17
 3.1 Verzoek om geometrie door BAG 18 
 3.1.1 Basisscenario 18 
 3.1.2 Alternatief scenario: BAG keurt levering af 19 
@@ -66,7 +66,7 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 3.2.3 Alternatief scenario: Geo wil eerder verzonden geometrieLevering intrekken 22 
 3.3 Kennisgeving op object door BAG 23 
 
-4 Berichten 24
+4. Berichten 24
 4.1 StUF-Geo BAG berichten 24 
 4.1.1 GeometrieVerzoek 24 
 4.1.2 GeometrieLevering 25 
@@ -74,7 +74,7 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 4.1.4 Afkeuringsbericht 27 
 4.2 BAG-kennisgevingen 29 
 
-5 Entiteiten 30
+5. Entiteiten 30
 5.1 Entiteiten met objectgegevens 30 
 5.1.1 ligplaats 30 
 5.1.2 overigGebouwdObject 30 
@@ -84,7 +84,7 @@ http://creativecommons.org/licenses/by-nd/3.0/nl/
 5.1.6 verblijfsobject 32 
 5.1.7 woonplaats 32 
 
-6 Attributen 33
+6. Attributen 33
 6.1 Parameters 33 
 6.1.1 idVerzoek 33 
 6.1.2 idLevering 33 
