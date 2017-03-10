@@ -64,9 +64,7 @@ Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer hanteert verder de
 
 ‡‡‡ Voor de vigerende versie van de StUF-Geo BAG implementatietoolkit, zie de website van Geonovum: http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden. 
 
-Bij deze documenten en bestanden zijn, ter ondersteuning van de implementatie, werkafspraken gepubliceerd op de website van Geonovum: 
-
-http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden/werkafspraken-geobag 
+Bij deze documenten en bestanden zijn, ter ondersteuning van de implementatie, werkafspraken gepubliceerd op de website van Geonovum: http://www.geonovum.nl/onderwerpen/bgt-imgeo-standaarden/werkafspraken-geobag 
 
 # Hoofdstuk 2 Uitgangspunten 
 Dit hoofdstuk beschrijft de uitgangspunten voor uitwisseling van gegevens tussen BAG en Geo via StUF-Geo BAG berichtenverkeer. 
@@ -98,7 +96,9 @@ Het berichtenverkeer tussen Geo en BAG maakt gebruik van de volgende typen beric
   * Fo03: een foutbericht als technische synchrone respons op een asynchroon bericht waarbij het bericht niet verwerkbaar wordt geacht. 
 
 [^7] Naast geometrie worden ook enkele administratieve gegevens uitgewisseld; zie H4 Berichten. 
+
 [^8] Of Bv04: een servicebus stuurt een Bv04 als technisch synchrone respons op een asynchroon bericht 
+
 [^9] Een technische synchrone respons wordt op elk samengesteld of kennisgevingsbericht teruggeven cf. StUF conventies, en 
 is dan ook verder niet opgenomen in de uitwerking van het berichtenverkeer. 
 
@@ -119,6 +119,7 @@ De volgende BAG-objecttypen worden ondersteund in het Geo-BAG berichtenverkeer:
 Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid met de optionele objecttypen OverigGebouwdObject en OverigTerrein voor aansluiting met RSGB. Overig optionele BAG+-objecttypen worden in het Geo-BAG berichtenverkeer niet ondersteund. In de StUF-Geo BAG berichten worden alleen de gegevens opgenomen die noodzakelijk zijn voor een goede verwerking van dit bericht door de ontvanger (zie gegevensmodel in Bijlage 3.). 
 
 [^10] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
+
 [^11] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
 
 ### 2.3.1 Geometrie 
@@ -131,6 +132,7 @@ De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaan
 * alle overige objecttypen[^13] in §2.3.1. met vlakgeometrie. 
 
 [^12] Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
+
 [^13] M.u.v. Nummeraanduiding en OpenbareRuimte, deze objecttypen hebben geen geometrie. 
 
 ### 2.3.2 Samengesteld uitwisselen en alleen actuele stand 
@@ -139,6 +141,7 @@ In de StUF-Geo BAG berichten worden de gegevens van objecten samengesteld uitgew
 In dit Geo-BAG berichtenverkeer wordt in een StUF-Geo BAG dienstbericht[^14] alleen de actuele stand (WORDT) van een BAG-object uitgewisseld, en niet in combinatie met de vorige stand (WAS) van het BAG-object[^15]. Zowel BAG als Geo hebben de gegevens van een vorige stand van een object niet nodig voor het overnemen van de gegevens uit een bericht. In het bijzonder geval dat op enig moment de gegevens van een bepaald object bij Geo en BAG verschillen (asynchroniteit), zijn de gegevens van de actuele stand in de applicatie van BAG leidend voor dit object. 
 
 [^14] Dus niet van toepassing voor de StUF-BG kennisgevingsberichten. 
+
 [^15] Dit in afwijking van het StUF-BG en StUF-Geo IMGeo berichtenverkeer waar in een bericht WAS én WORDT van een 
 object wordt uitgewisseld. 
 
@@ -154,7 +157,9 @@ Naar aanleiding van een levering van nieuwe of gewijzigde geometrie door Geo, st
 Naar aanleiding van een doorgevoerde mutatie op een BAG-object , stuurt BAG een kennisgeving van deze wijziging aan Geo, ofwel een BAG-kennisgevingsbericht (= StUF-BG). Geo filtert hieruit de voor de Geo/BGT relevante mutaties (bijv. wijziging van een nummeraanduiding door BAG) en verwerkt deze in de eigen applicatie. 
 
 [^16] Dit overzicht is gebaseerd op de lijst met gebeurtenissen van het formele BAG-processenhandboek en aangevuld met de Geo-gebeurtenissen.  
+
 [^17] Dit is een vorm van terugmelding op de registratie van BAG. 
+
 [^18] Geo krijgt de BAG-identificatie van een geconstateerd nieuw pand retour na overname van BAG via een BAG-kennisgevingsbericht. 
 
 2.5 Identificaties van en relaties tussen berichten 
@@ -167,8 +172,8 @@ Daarnaast bevat de geometrieLevering in de eigen functionele identificatie <BG:i
 [^19] De functionele identificatie is ook nodig voor het corrigeren en intrekken van eerder verzonden bericht, omdat een geometrieVerzoek en geometrieLevering geen StUF:crossReferencenummer in de stuurgegevens hebben. 
 
 *Tabel 1. Voorbeeld logistieke en functionele identificatie in een geometrieVerzoek.*
-| | geometrieVerzoek | geometrieLevering | 
-|------------------|-------------------|-----------------------|
+| «leeg» | geometrieVerzoek | geometrieLevering | 
+|--------|------------------|-------------------|
 | StUF:referentienummer | BAG12345678 | GEO23456789 |
 | StUF:crossRefnummer | | BAG12345678 | 
 | BG:identificatie | GMV09876543 | GMV09876543 |
@@ -184,8 +189,8 @@ Voor het intrekken van een StUF-Geo BAG bericht wordt een nieuw bericht gestuurd
 Voor het corrigeren van een StUF-Geo BAG bericht wordt eerst het vorige bericht ingetrokken en vervolgens een nieuw bericht met een nieuwe functionele identificatie verstuurd. Bijvoorbeeld, na het intrekken van een geometrieVerzoek met functionele identificatie GMV09876543 stuurt BAG een nieuw geometrieVerzoek met functionele identificatie GMV09876544. 
 
 *Tabel 2. Voorbeeld intrekken en corrigeren van een geometrieVerzoek*
-| | origineel | intrekken | nieuw bericht t.b.v. corrigeren |
-|-|-----------|-----------|---------------------------------|
+|«leeg» | origineel | intrekken | nieuw bericht t.b.v. corrigeren |
+|-------|-----------|-----------|---------------------------------|
 |StUF:referentienummer | BAG12345678 | BAG12345679 | BAG12345680 |
 |BG:identificatie | GMV09876543 | GMV09876543 | GMV09876544 | 
 | BG:gebeurtenisCode[^20] | BAG-*** | BAG-NEG | BAG-*** |
@@ -214,7 +219,8 @@ In zijn algemeenheid geldt dat als de functionele BAG-identificatie bekend is de
 4. Indien geen BAG-identificatie bij Geo bekend en object is ontstaan bij BAG[^21], stuurt Geo de technische systeemsleutel van BAG en Geo mee. 
 5. Indien geen BAG-identificatie bij Geo bekend en een object is ontstaan bij Geo, stuurt Geo alleen de technische systeemsleutel van Geo mee[^22].
 
-[^21] Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd in de registratie (en dus nog een BAG-identificatie heeft). 
+[^21] Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd in de registratie (en dus nog een BAG-identificatie heeft).
+
 [^22] Ofwel: Geo stuurt altijd de technische systeemsleutel mee. 
 
 ##2.8 Verzenden en verwerken van berichten 
