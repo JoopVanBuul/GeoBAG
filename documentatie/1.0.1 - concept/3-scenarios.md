@@ -64,7 +64,7 @@ reden van afkeuring opnieuw een geometrieLevering doen aan BAG.
 ### 3.2.1 Basisscenario 
 Op enig moment heeft Geo naar aanleiding van een Geo-gebeurtenis (Geo-***) nieuwe objecten geconstateerd en/of wijzigingen op bestaande BAG-objecten gesignaleerd (bijv. na het signaleren van mutaties van BAG-objecten in luchtfoto’s). Geo stelt voor ieder gewijzigd of nieuw object een bericht geometrieLevering op en stuurt deze aan BAG. Aan de gebeurteniscode kan BAG afleiden dat het een levering betreft naar aanleiding van een constatering of (mutatie)signalering. 
 
-BAG gaat over tot de beoordeling van de geometrieLevering. Indien BAG de geometrie in de geometrieLevering goedkeurt, stuurt BAG een bevestiging van acceptatie/overname van de geometrie aan Geo middels een goedkeuringsbericht[^31]. 
+BAG gaat over tot de beoordeling van de geometrieLevering. Indien BAG de geometrie in de geometrieLevering goedkeurt, stuurt BAG een bevestiging van acceptatie/overname van de geometrie aan Geo middels een goedkeuringsbericht. 
 
 Na succesvolle verwerking in de eigen applicatie stuurt BAG de actuele stand van het BAG-object middels 
 een BAG-kennisgeving aan Geo[^32]. Geo verwerkt de gegevens in de BAG-kennisgeving in de eigen applicatie. 
@@ -73,7 +73,6 @@ een BAG-kennisgeving aan Geo[^32]. Geo verwerkt de gegevens in de BAG-kennisgevi
 
 *Figuur 3.6 Sequentiediagram Constatering en/of signalering door Geo – Basisscenario*
 
-[^31] zijnde een bevestigingsbericht als asynchrone functionele respons (Bv01) 
 
 [^32] En ook naar andere afnemers in de organisatie.
 
