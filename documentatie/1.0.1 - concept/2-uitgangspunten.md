@@ -39,7 +39,7 @@ De StUF-Geo BAG berichten zijn gespecifieerd in §4.1.
 ## 2.3 Uitwisselen van gegevens van BAG-objecten 
 In het StUF-Geo BAG berichtenverkeer worden gegevens uitgewisseld van BAG-objecten. 
 
-###2.3.1 Objecttypen 
+### 2.3.1 Objecttypen 
 De volgende BAG-objecttypen worden ondersteund in het Geo-BAG berichtenverkeer: 
 * Pand 
 * Verblijfsobject 
@@ -54,7 +54,7 @@ Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid m
 
 [^11] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
 
-### 2.3.1 Geometrie 
+### 2.3.2 Geometrie 
 Voor dit koppelvlak geldt dat de geometrie conform de inwinningsregels ten aanzien van nauwkeurigheid en inwinningswijze van de BAG wordt opgenomen. Een BAG-object kan een vlak- of puntgeometrie hebben. 
 
 De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaanzicht. In het kader van de BGT is Geo ook verantwoordelijk voor de geometrische inwinning van grootschalige topografie. Voor de BGT is de keuze gemaakt om van een pand de geometrie op maaiveldniveau op te nemen. Door modernere bouwvormen komt het daarbij steeds vaker voor dat de geometrie van een pand op maaiveldniveau aanzienlijk kan afwijken van de geometrie van een pand op een ander niveau. De geometrie op maaiveld van een Pand kan in de StUF-BG kennisgevingsberichten als optionele geometrie bij dit object worden opgenomen naast de verplichte geometrie van bovenaanzicht. 
@@ -67,7 +67,7 @@ De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaan
 
 [^13] M.u.v. Nummeraanduiding en OpenbareRuimte, deze objecttypen hebben geen geometrie. 
 
-### 2.3.2 Samengesteld uitwisselen en alleen actuele stand 
+### 2.3.3 Samengesteld uitwisselen en alleen actuele stand 
 In de StUF-Geo BAG berichten worden de gegevens van objecten samengesteld uitgewisseld, d.w.z. een geometrieVerzoek of geometrieLevering bevat de gegevens van één of meerdere BAG-objecten welke tot één bepaalde transactie of gebeurtenis behoren. Bijvoorbeeld, indien een door Geo uitgevoerde mutatiesignalering uit luchtfoto’s mutaties oplevert op meerdere objecten, worden een of meer mutaties van deze objecten in een bericht (geometrieLevering) door Geo aan BAG verstuurd. 
 
 In dit Geo-BAG berichtenverkeer wordt in een StUF-Geo BAG dienstbericht[^14] alleen de actuele stand (WORDT) van een BAG-object uitgewisseld, en niet in combinatie met de vorige stand (WAS) van het BAG-object[^15]. Zowel BAG als Geo hebben de gegevens van een vorige stand van een object niet nodig voor het overnemen van de gegevens uit een bericht. In het bijzonder geval dat op enig moment de gegevens van een bepaald object bij Geo en BAG verschillen (asynchroniteit), zijn de gegevens van de actuele stand in de applicatie van BAG leidend voor dit object. 
