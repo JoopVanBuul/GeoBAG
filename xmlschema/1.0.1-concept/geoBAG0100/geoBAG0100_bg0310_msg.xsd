@@ -160,10 +160,10 @@
 	</complexType>
 	<complexType name="GmlDi01">
 		<annotation>
-			<documentation>ComplexType voor een vrij bericht voor een geometrieverzoek vanuit de BAG aan de Geo</documentation>
+			<documentation>ComplexType voor een vrij bericht voor een geometrielevering vanuit Geo aan BAG</documentation>
 		</annotation>
 		<sequence>
-			<element name="stuurgegevens" type="StUF:Stuurgegevens-geometrieVerzoek"/>
+			<element name="stuurgegevens" type="StUF:Stuurgegevens-geometrieLevering"/>
 			<element name="parameters" type="BG:ParametersLevering"/>
 			<choice maxOccurs="unbounded">
 				<element name="ligplaats">
