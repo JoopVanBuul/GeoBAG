@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2016 (x64) (http://www.altova.com) by Maarten van den Broek (messageDesign B.V.) -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:StUF="http://www.egem.nl/StUF/StUF0301" xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310" targetNamespace="http://www.egem.nl/StUF/sector/bg/0310" elementFormDefault="qualified" attributeFormDefault="unqualified" version="010001">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:StUF="http://www.egem.nl/StUF/StUF0301" xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310" targetNamespace="http://www.egem.nl/StUF/sector/bg/0310" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0101">
 	<annotation>
 		<documentation>
-			Wijzigingen vergeleken met versie 010000:
-			- bestandsnaam aangepast aan best practice en waar nodig import/includes aangepast
-			- in de choices binnen de complexTypes BevestigingDu01, FoutDu01, GmlDi01 en GmvDi01 elementen voor overigGebouwdObject en overigTerrein toegevoegd
+			Vergeleken met versie 0100 zijn de volgende wijzigingen doorgevoerd:
+			- Issue #8 opgelost: Stuurgegevens voor een geometrieLevering zijn gedefinieerd als stuurgegevens voor een geometrieVerzoek
+			
 	</documentation>
 	</annotation>
-	<import namespace="http://www.egem.nl/StUF/StUF0301" schemaLocation="geoBAG0100_stuf0301_msg.xsd"/>
-	<include schemaLocation="geoBAG0100_bg0310_ent.xsd"/>
+	<import namespace="http://www.egem.nl/StUF/StUF0301" schemaLocation="geoBAG0101_stuf0301_msg.xsd"/>
+	<include schemaLocation="geoBAG0101_bg0310_ent.xsd"/>
 	<complexType name="BevestigingDu01">
 		<annotation>
 			<documentation>ComplexType voor vrij bericht dat als een respons op een gmlDi01 of gmvDi01 bericht aangeeft dat de levering succesvol verwerkt is c.q. dat het verzoek zal worden uitgevoerd</documentation>
