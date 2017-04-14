@@ -13,8 +13,8 @@ geachte gebeurtenissen op basis van de vigerende versie van het landelijk vastge
 | BGR-VBI | Verlenen bouwvergunning ingrijpende verbouwing | BAG | geometrieVerzoek |
 | BAG-VTP | Verblijfsobject toevoegen aan pand\* | BAG | geometrieVerzoek |
 | BAG-VG | Verbouwing gereed | BAG | geometrieVerzoek |
-| BGR-SSV | Samenvoegen verblijfsobjecten\* | BAG | geometrieVerzoek |
-| BGR-SSV | Splitsen verblijfsobjecten\* | BAG | geometrieVerzoek |
+| BGR-SSVSAMEN | Samenvoegen verblijfsobjecten\* | BAG | geometrieVerzoek |
+| BGR-SSVSPLITS | Splitsen verblijfsobjecten\* | BAG | geometrieVerzoek |
 | BGR-BSLSP | Benoemen standplaats | BAG | geometrieVerzoek |
 | BGR-BSLLP | Benoemen ligplaats | BAG | geometrieVerzoek |
 | BRA-BWP | Benoemen woonplaats | BAG | geometrieVerzoek |
