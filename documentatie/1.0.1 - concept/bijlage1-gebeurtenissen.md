@@ -31,7 +31,7 @@ geachte gebeurtenissen op basis van de vigerende versie van het landelijk vastge
 | GEO-NEG | Negeer eerder gestuurd geometrielevering | GEO | geometrielevering |
 | BGR-MAB | Afzien van bouw | BAG | BAG-kennisgeving |
 | BGR-IBV | Intrekken bouwvergunning | BAG | BAG-kennisgeving |
-| BGR-MAV | Afzien van verbouwing | BAG | BAG-kennisgeving |
+| BGR-MAB | Afzien van verbouwing | BAG | BAG-kennisgeving |
 | BRA-HNU | Hernummeren adresseerbaar object | BAG | BAG-kennisgeving |
 | BRA-OHN | Hoofdadres en nevenadres van een adresseerbaar object omdraaien | BAG | BAG-kennisgeving |
 | BGR-MGS | Melding sloop afgerond | BAG | BAG-kennisgeving |
@@ -42,6 +42,8 @@ geachte gebeurtenissen op basis van de vigerende versie van het landelijk vastge
 | BRA-HOR | Hernoemen openbare ruimte | BAG | BAG-kennisgeving |
 | BRA-IOR | Intrekken openbare ruimte | BAG | BAG-kennisgeving |
 | BRA-GHO | Gedeeltelijk hernoemen openbare ruimte | BAG | BAG-kennisgeving |
-| BGR-HMO | Historisch maken onterecht opgevoerd pand | BAG | BAG-kennisgeving |
 | BAG-AOC | Archivering bestaand object na constatering | BAG | BAG-kennisgeving |
 | BAG-AGO | Archivering geconstateerd object | BAG | BAG-kennisgeving |
+
+
+
