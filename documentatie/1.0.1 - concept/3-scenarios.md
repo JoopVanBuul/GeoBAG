@@ -24,7 +24,7 @@ Na succesvolle verwerking in de eigen applicatie stuurt BAG de actuele stand van
 
 [^25] En ook naar andere afnemers in de organisatie. 
 
-[^26] *** is jokerteken voor gebeurteniscode. BAG-*** betekent elke gebeurtenis die ontstaat bij BAG. 
+[^26] ### is jokerteken voor gebeurteniscode. BAG-### betekent elke gebeurtenis die ontstaat bij BAG. 
 
 [^27] xxxLk03 betekent voor elke BAG-kennisgeving zijnde een Lk03-bericht. 
 
