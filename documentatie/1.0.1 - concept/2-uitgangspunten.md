@@ -155,7 +155,7 @@ In zijn algemeenheid geldt dat als de functionele BAG-identificatie bekend is de
 
 Ofwel: Geo stuurt altijd de technische systeemsleutel mee. 
 
-[^21] Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd in de registratie (en dus nog een BAG-identificatie heeft).
+[^21] Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd in de registratie (en dus nog geen BAG-identificatie heeft).
 
 [^22] Deze situatie komt voor indien een object geconstateerd wordt door Geo. 
 
