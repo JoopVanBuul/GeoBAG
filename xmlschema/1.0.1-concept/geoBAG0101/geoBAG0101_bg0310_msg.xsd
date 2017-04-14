@@ -4,9 +4,15 @@
 	<annotation>
 		<documentation>
 			Vergeleken met versie 0100 zijn de volgende wijzigingen doorgevoerd:
-			- Issue #8 opgelost: Stuurgegevens voor een geometrieLevering zijn gedefinieerd als stuurgegevens voor een geometrieVerzoek
-			
-	</documentation>
+			- Bij gmlDi01 element stuurgegevens type gewijzigd naar geometrie "StUF:Stuurgegevens-geometrieLevering".  (tevens documentation aangepast naar geometrieLevering i.p.v. -Verzoek) (issue #8)
+			- In gmlDi01 bij element 'ligplaats' de extension gewijzigd van 'LIG-geoBAG-basis' naar 'LIG-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'overigGebouwObject' de extension gewijzigd van 'OGO-geoBAG-basis' naar 'OGO-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'overigTerrein' de extension gewijzigd van 'OTR-geoBAG-basis' naar 'OTR-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'pand' de extension gewijzigd van 'PND-geoBAG-basis' naar 'PND-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'standplaats' de extension gewijzigd van 'STA-geoBAG-basis' naar 'STA-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'verblijfsobject' de extension gewijzigd van 'VBO-geoBAG-basis' naar 'VBO-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- In gmlDi01 bij element 'woonplaats' de extension gewijzigd van 'WPL-geoBAG-basis' naar 'WPL-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+		</documentation>
 	</annotation>
 	<import namespace="http://www.egem.nl/StUF/StUF0301" schemaLocation="geoBAG0101_stuf0301_msg.xsd"/>
 	<include schemaLocation="geoBAG0101_bg0310_ent.xsd"/>
@@ -169,16 +175,16 @@
 				<element name="ligplaats">
 					<complexType>
 						<complexContent>
-							<extension base="BG:LIG-geoBAG-basis">
+							<extension base="BG:LIG-geoBAG-basis-geometrieLevering">									
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
-							</extension>
+							</extension>														
 						</complexContent>
 					</complexType>
 				</element>
 				<element name="overigGebouwdObject">
 					<complexType>
 						<complexContent>
-							<extension base="BG:OGO-geoBAG-basis">
+							<extension base="BG:OGO-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
@@ -187,7 +193,7 @@
 				<element name="overigTerrein">
 					<complexType>
 						<complexContent>
-							<extension base="BG:OTR-geoBAG-basis">
+							<extension base="BG:OTR-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
@@ -196,7 +202,7 @@
 				<element name="pand">
 					<complexType>
 						<complexContent>
-							<extension base="BG:PND-geoBAG-basis">
+							<extension base="BG:PND-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
@@ -205,7 +211,7 @@
 				<element name="standplaats">
 					<complexType>
 						<complexContent>
-							<extension base="BG:STA-geoBAG-basis">
+							<extension base="BG:STA-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
@@ -214,7 +220,7 @@
 				<element name="verblijfsobject">
 					<complexType>
 						<complexContent>
-							<extension base="BG:VBO-geoBAG-basis">
+							<extension base="BG:VBO-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
@@ -223,7 +229,7 @@
 				<element name="woonplaats">
 					<complexType>
 						<complexContent>
-							<extension base="BG:WPL-geoBAG-basis">
+							<extension base="BG:WPL-geoBAG-basis-geometrieLevering">
 								<attribute ref="StUF:functie" use="required" fixed="entiteit"/>
 							</extension>
 						</complexContent>
