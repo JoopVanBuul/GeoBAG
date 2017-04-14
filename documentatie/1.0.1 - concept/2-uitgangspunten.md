@@ -153,9 +153,11 @@ In zijn algemeenheid geldt dat als de functionele BAG-identificatie bekend is de
 4. Indien geen BAG-identificatie bij Geo bekend en object is ontstaan bij BAG[^21], stuurt Geo de technische systeemsleutel van BAG en Geo mee. 
 5. Indien geen BAG-identificatie bij Geo bekend en een object is ontstaan bij Geo, stuurt Geo alleen de technische systeemsleutel van Geo mee[^22].
 
+Ofwel: Geo stuurt altijd de technische systeemsleutel mee. 
+
 [^21] Deze situatie komt alleen voor als een BAG-object een status ‘vergunning aangevraagd’ heeft, maar nog niet is opgevoerd in de registratie (en dus nog een BAG-identificatie heeft).
 
-[^22] Ofwel: Geo stuurt altijd de technische systeemsleutel mee. 
+[^22] Deze situatie komt voor indien een object geconstateerd wordt door Geo. 
 
 ## 2.8 Verzenden en verwerken van berichten 
 In StUF-Geo BAG berichtenverkeer kunnen berichten in willekeurige volgorde worden verzonden en verwerkt. 
