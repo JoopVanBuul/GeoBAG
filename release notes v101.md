@@ -3,13 +3,31 @@ De 1.0.1-release is een bug-fix release van de StUF-Geo BAG berichtenstandaard.
 De volgende issues zijn opgelost:
 
 #3 Koppelvlak Geo-BAG berichtenverkeer 1.0 onduidelijk voor goedkeuringsbericht bij constatering door Geo (MANTIS: 4740)
+
 #4 Voetnoot 21: 'geen BAG-identificatie' i.p.v. 'een BAG-identificatie' (MANTIS: 4695)
+
 #5 fout geo-bag berichtenverkeer t.a.v. voetnoot 31 (MANTIS: 4665)
+
 #7 fout geo-bag berichtenverkeer t.a.v. positionering pag. 6 (MANTIS: 4663)
+
 #8 Stuurgegevens voor een geometrieLevering zijn gedefinieerd als stuurgegevens voor een geometrieVerzoek
+
 #11 Gebeurtenis bgrSSVSAMEN en bgrSSVSPLITS hebben dezelfde code in Geo-BAG berichtenverkeer
 
-Gedeeltelijk opgelost is issue #10 Gebeurteniscode BGR-MAV en BGR-HMO komen niet voor in StUF-BG.
+#18 Multipliciteit Brondocument [1-1] niet juist
+
+#21 tijdvakGeldigheid/beginGeldigheid moet optioneel zijn bij geometrieLevering
+
+Gedeeltelijk opgelost is issue: 
+
+#10 Gebeurteniscode BGR-MAV en BGR-HMO komen niet voor in StUF-BG.
+
+
+_Nog op te lossen in deze versie:_
+
+#1 Statussen bij overigTerrein en overigGebouwdObject (MANTIS: 4936)
+
+#25 Specificeren welke BAG-kennisgevingen BGT relevante inhoud bevatten
 
 ***1-inleiding.md***
 
