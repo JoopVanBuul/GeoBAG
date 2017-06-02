@@ -4,7 +4,10 @@
 	<annotation>
 		<documentation>
 			Vergeleken met versie 0100 zijn de volgende wijzigingen doorgevoerd:
-			- 
+			- Bij Functie-Bevestiging is enumeration 'goedkeuring' toegevoegd. (oplossen issue #26)
+			- Bij Functie-Fout is enumeration gewijzigd naar 'afkeuring'. (oplossen issue #26)
+			- Bij Functie-GeometrieLevering is enumeration gewijzigd naar 'levering'. (oplossen issue #26)
+			- Bij Functie-GeometrieVerzoek is enumeration gewijzigd naar 'verzoek'. (oplossen issue #26)
 		</documentation>
 	</annotation>
 	<include schemaLocation="../bg0310/entiteiten/bg0310_stuf_simpleTypes.xsd"/>
@@ -70,20 +73,21 @@
 	<!--SimpleTypes-->
 	<simpleType name="Functie-GeometrieLevering">
 		<restriction base="StUF:Functie">
-			<enumeration value="geometrieLevering"/>
+			<enumeration value="levering"/>
 		</restriction>
 	</simpleType>
 	<simpleType name="Functie-GeometrieVerzoek">
 		<restriction base="StUF:Functie">
-			<enumeration value="geometrieVerzoek"/>
+			<enumeration value="verzoek"/>
 		</restriction>
 	</simpleType>
 	<simpleType name="Functie-Bevestiging">
 		<restriction base="StUF:Functie"/>
+		<enumeration value="goedkeuring"/>
 	</simpleType>
 	<simpleType name="Functie-Fout">
 		<restriction base="StUF:Functie">
-			<enumeration value="verzoekFout"/>
+			<enumeration value="afkeuring"/>
 		</restriction>
 	</simpleType>
 </schema>
