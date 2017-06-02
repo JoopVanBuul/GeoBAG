@@ -12,6 +12,7 @@
 			- In gmlDi01 bij element 'standplaats' de extension gewijzigd van 'STA-geoBAG-basis' naar 'STA-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
 			- In gmlDi01 bij element 'verblijfsobject' de extension gewijzigd van 'VBO-geoBAG-basis' naar 'VBO-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
 			- In gmlDi01 bij element 'woonplaats' de extension gewijzigd van 'WPL-geoBAG-basis' naar 'WPL-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+			- 
 		</documentation>
 	</annotation>
 	<import namespace="http://www.egem.nl/StUF/StUF0301" schemaLocation="geoBAG0101_stuf0301_msg.xsd"/>
@@ -345,7 +346,7 @@
 	<complexType name="ParametersVerzoek">
 		<sequence>
 			<element name="idVerzoek" type="StUF:Sleutel"/>
-			<element name="gebeurtenis" type="BG:CodeType-geoBAG"/>
+			<element name="gebeurtenisCode" type="BG:CodeType-geoBAG"/>
 			<element name="documentVerwijzing" type="BG:Url" minOccurs="0"/>
 			<element name="toelichting" type="BG:Toelichting-geoBAG" minOccurs="0"/>
 		</sequence>
