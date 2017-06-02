@@ -1,3 +1,5 @@
+# Release notes StUF-Geo BAG versie 1.0.1 (Geo-BAG koppelvlak)
+
 De 1.0.1-release is een bug-fix release van de StUF-Geo BAG berichtenstandaard.
 
 De volgende issues zijn opgelost:
@@ -30,7 +32,9 @@ Issue \#27 Veldlengte voor foutcode-geoBAG te kort.
 
 Issue \#28 Attribuutnaam niet gelijk: gmv: gebeurtenis && gml: gebeurtenisCode
 
-Gedeeltelijk opgelost is issue:
+Gedeeltelijk opgelost zijn issues:
+
+Issue \#1 Statussen bij overigTerrein en overigGebouwdObject (MANTIS: 4936)
 
 Issue \#10 Gebeurteniscode BGR-MAV en BGR-HMO komen niet voor in StUF-BG.
 
