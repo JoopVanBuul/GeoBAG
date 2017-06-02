@@ -86,3 +86,5 @@ In gmlDi01 is bij de enteiten de extension gewijzigd naar het toegevoegde comple
 - In gmlDi01 bij element 'standplaats' de extension gewijzigd van 'STA-geoBAG-basis' naar 'STA-geoBAG-basis-geometrieLevering'.
 - In gmlDi01 bij element 'verblijfsobject' de extension gewijzigd van 'VBO-geoBAG-basis' naar 'VBO-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
 - In gmlDi01 bij element 'woonplaats' de extension gewijzigd van 'WPL-geoBAG-basis' naar 'WPL-geoBAG-basis-geometrieLevering' (issue #18 en issue #21)
+
+Bij gmvDi01 is de naam van het element 'gebeurtenis' gewijzigd naar 'gebeurtenisCode' (issue #28).
