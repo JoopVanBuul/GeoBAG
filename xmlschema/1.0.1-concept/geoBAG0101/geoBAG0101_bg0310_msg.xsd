@@ -356,7 +356,7 @@
 	</simpleType>
 	<simpleType name="FoutCode-geoBAG">
 		<restriction base="string">
-			<pattern value="StUFGeoBAG[0-9]{5}"/>
+			<pattern value="[a-zA-Z0-9]{7}"/>
 		</restriction>
 	</simpleType>
 	<simpleType name="Toelichting-geoBAG">
