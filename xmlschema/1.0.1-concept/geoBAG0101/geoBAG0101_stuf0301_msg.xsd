@@ -82,8 +82,9 @@
 		</restriction>
 	</simpleType>
 	<simpleType name="Functie-Bevestiging">
-		<restriction base="StUF:Functie"/>
-		<enumeration value="goedkeuring"/>
+		<restriction base="StUF:Functie">
+			<enumeration value="goedkeuring"/>
+		</restriction>
 	</simpleType>
 	<simpleType name="Functie-Fout">
 		<restriction base="StUF:Functie">

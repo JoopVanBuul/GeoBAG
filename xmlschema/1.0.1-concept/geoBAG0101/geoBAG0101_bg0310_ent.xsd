@@ -4,20 +4,24 @@
 	<annotation>
 		<documentation xml:lang="nl">
 			Vergeleken met versie 0100 zijn de volgende wijzigingen doorgevoerd:
-			- Bij LIG-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd
-			- Bij OGO-geoBAG-basis  element gbo.puntGeometrie nillable="true" verwijderd
-			- Bij OTR-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd
-			- Bij PND-geoBAG-basis  element geometrie nillable="true" verwijderd
-			- Bij STA-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd
-			- Bij VBO-geoBAG-basis  element gbo.puntGeometrie nillable="true" verwijderd
-			- Bij WPL-geoBAG-basis  element geometrie nillable="true" verwijderd	
-			- ComplexType LIG-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben
-			- ComplexType OGO-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben
-			- ComplexType OTR-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben
-			- ComplexType PND-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben			
-			- ComplexType STA-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben
-			- ComplexType VBO-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben
-			- ComplexType WPL-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben			
+			- In LIG-geoBAG-basis en LIG-geoBAG-basis-geometrieLevering bij aot.status het type gewijzigd naar BG:StatusLigplaatsStandplaats-e (issue #1)
+			- In STA-geoBAG-basis en STA-geoBAG-basis-geometrieLevering bij aot.status het type gewijzigd naar BG:StatusLigplaatsStandplaats-e (issue #1)
+			- In VBO-geoBAG-basis en VBO-geoBAG-basis-geometrieLevering bij aot.status het type gewijzigd naar BG:StatusVerblijfsobject-e (issue #1)
+			- Bij LIG-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd (issue #5)
+			- Bij OGO-geoBAG-basis  element gbo.puntGeometrie nillable="true" verwijderd (issue #5)
+			- Bij OTR-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd (issue #5)
+			- Bij PND-geoBAG-basis  element geometrie nillable="true" verwijderd (issue #5)
+			- Bij STA-geoBAG-basis  element vlakGeometrie nillable="true" verwijderd (issue #5)
+			- Bij VBO-geoBAG-basis  element gbo.puntGeometrie nillable="true" verwijderd (issue #5)
+			- Bij WPL-geoBAG-basis  element geometrie nillable="true" verwijderd (issue #5)
+			- ComplexType LIG-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)
+			- ComplexType OGO-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)
+			- ComplexType OTR-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)
+			- ComplexType PND-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)	 		
+			- ComplexType STA-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)
+			- ComplexType VBO-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)
+			- ComplexType WPL-geoBAG-basis-geometrieLevering toegevoegd waarin brondocument en tijdvakGeldigheid een minOccurs="0" hebben (issue #18 en issue #21)	
+	
 		</documentation>
 	</annotation>
 	<include schemaLocation="../bg0310/entiteiten/bg0310_ent_basis.xsd"/>
@@ -63,7 +67,7 @@
 					<element name="typering" type="BG:TyperingLIG"/>
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG"/>
 					<element ref="StUF:tijdvakGeldigheid"/>
@@ -85,7 +89,7 @@
 					<element name="typering" type="BG:TyperingLIG"/>
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG" minOccurs="0"/>
 					<element ref="StUF:tijdvakGeldigheid" minOccurs="0"/>
@@ -306,7 +310,7 @@
 					<element name="typering" type="BG:TyperingSTA"/>
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG"/>
 					<element ref="StUF:tijdvakGeldigheid"/>
@@ -328,7 +332,7 @@
 					<element name="typering" type="BG:TyperingSTA"/>
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG" minOccurs="0"/>
 					<element ref="StUF:tijdvakGeldigheid" minOccurs="0"/>
@@ -367,7 +371,7 @@
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="gbo.puntGeometrie" type="BG:GeometriePunt-e"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true" minOccurs="0"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusVerblijfsobject-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG"/>
 					<element ref="StUF:tijdvakGeldigheid"/>
@@ -391,7 +395,7 @@
 					<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
 					<element name="gbo.puntGeometrie" type="BG:GeometriePunt-e"/>
 					<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true" minOccurs="0"/>
-					<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+					<element name="aot.status" type="BG:StatusVerblijfsobject-e" nillable="true"/>
 					<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
 					<element name="brondocument" type="BG:BrondocumentBAG" minOccurs="0"/>
 					<element ref="StUF:tijdvakGeldigheid" minOccurs="0"/>
