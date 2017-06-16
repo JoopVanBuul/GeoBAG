@@ -85,7 +85,6 @@ De BAG-kennisgevingsberichten uit StUF-BG worden in dit koppelvlak toegepast om 
 BAG stuurt na elke mutatie een kennisgevingsbericht aan Geo[^37]. Geo filtert en neemt de gegevens over indien het BAG-kennisgevingsbericht verstuurd wordt na een van de volgende gebeurtenissen[^38]: 
 * BGR-MAB Afzien van bouw 
 * BGR-IBV Intrekken bouwvergunning 
-* BGR-MAV Afzien van verbouwing 
 * BRA-HNU Hernummeren adresseerbaar object 
 * BRA-OHN Hoofdadres en nevenadres van een adresseerbaar object omdraaien 
 * BGR-MGS Melding sloop afgerond 
@@ -96,7 +95,6 @@ BAG stuurt na elke mutatie een kennisgevingsbericht aan Geo[^37]. Geo filtert en
 * BRA-HOR Hernoemen openbare ruimte 
 * BRA-IOR Intrekken openbare ruimte 
 * BRA-GHO Gedeeltelijk hernoemen openbare ruimte 
-* BGR-HMO Historisch maken onterecht opgevoerd pand 
 * BAG-AOC Archivering bestaand object na constatering 
 * BAG-AGO Archivering geconstateerd object 
 
