@@ -83,34 +83,75 @@ aangepast naar de juiste waardelijst (issue \#1):
 -   In VBO-geoBAG-basis en VBO-geoBAG-basis-geometrieLevering bij aot.status het
     type gewijzigd naar BG:StatusVerblijfsobject-e
 
-StUF:noValue toegevoegd voor voidable elementen (nillable=”true) om reden-leeg
-te kunnen invullen; nillable=”true” verwijderd bij optionele elementen met
-minOccurs=”0” (issue \#2 en issue \#32):
+Attribuut nillable="true" verwijderd bij alle verplichte geometrie (issue \#5):
 
--   ComplexType ObjectNummering-geoBAG toegevoegd met restrictie op
-    BG:Objectnummering-e voor toepassing attribuut StUF:noValue
+-   Bij LIG-geoBAG-basis element vlakGeometrie nillable="true" verwijderd
 
--   ComplexType GeometrieVlak-geoBAG toegevoegd met restrictie op
-    BG:GeometrieVlak-e voor toepassing attribuut StUF:noValue
+-   Bij OGO-geoBAG-basis element gbo.puntGeometrie nillable="true" verwijderd
 
--   ComplexType GeometriePunt-geoBAG toegevoegd met restrictie op
-    BG:GeometriePunt-e voor toepassing attribuut StUF:noValue
+-   Bij OTR-geoBAG-basis element vlakGeometrie nillable="true" verwijderd
 
--   Attribuut nillable="true" verwijderd bij element vlakGeometrie van
-    OGO-geoBAG-basis en OGO-geoBAG-basis-geometrieLevering
+-   Bij PND-geoBAG-basis element geometrie nillable="true" verwijderd
 
--   Attribuut nillable="true" verwijderd bij element geometrieMaaiveld van
-    PND-geoBAG-basis en PND-geoBAG-basis-geometrieLevering
+-   Bij STA-geoBAG-basis element vlakGeometrie nillable="true" verwijderd
 
--   Attribuut nillable="true" verwijderd bij element
-    inwinningswijzeGeometrieMaaiveld van PND-geoBAG-basis en
-    PND-geoBAG-basis-geometrieLevering
+-   Bij VBO-geoBAG-basis element gbo.puntGeometrie nillable="true" verwijderd
+
+-   Bij WPL-geoBAG-basis element geometrie nillable="true" verwijderd
+
+Attributen brondocument en tijdvakGeldigheid zijn optioneel gemaakt (issue \#18
+en issue \#21):
+
+-   ComplexType LIG-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType OGO-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType OTR-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType PND-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType STA-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType VBO-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
+
+-   ComplexType WPL-geoBAG-basis-geometrieLevering toegevoegd waarin
+    brondocument en tijdvakGeldigheid een minOccurs="0" hebben.
 
 **xmlschema/1.0.1-concept/geoBAG0101/geoBAG0101\_bg0310\_msg.xsd**
 
 Bij gmlDi01 element stuurgegevens type gewijzigd naar geometrie
-"StUF:Stuurgegevens-geometrieLevering" (tevens documentation aangepast naar
+"StUF:Stuurgegevens-geometrieLevering". (tevens documentation aangepast naar
 geometrieLevering i.p.v. -Verzoek) (issue \#8)
+
+In gmlDi01 is bij de enteiten de extension gewijzigd naar het toegevoegde
+complexType in geoBAG0101\_bg0310\_ent.xsd (issue \#18 en issue \#21):
+
+-   In gmlDi01 bij element 'ligplaats' de extension gewijzigd van
+    'LIG-geoBAG-basis' naar 'LIG-geoBAG-basis-geometrieLevering'.
+
+-   In gmlDi01 bij element 'overigGebouwObject' de extension gewijzigd van
+    'OGO-geoBAG-basis' naar 'OGO-geoBAG-basis-geometrieLevering'.
+
+-   In gmlDi01 bij element 'overigTerrein' de extension gewijzigd van
+    'OTR-geoBAG-basis' naar 'OTR-geoBAG-basis-geometrieLevering'.
+
+-   In gmlDi01 bij element 'pand' de extension gewijzigd van 'PND-geoBAG-basis'
+    naar 'PND-geoBAG-basis-geometrieLevering'.
+
+-   In gmlDi01 bij element 'standplaats' de extension gewijzigd van
+    'STA-geoBAG-basis' naar 'STA-geoBAG-basis-geometrieLevering'.
+
+-   In gmlDi01 bij element 'verblijfsobject' de extension gewijzigd van
+    'VBO-geoBAG-basis' naar 'VBO-geoBAG-basis-geometrieLevering'
+
+-   In gmlDi01 bij element 'woonplaats' de extension gewijzigd van
+    'WPL-geoBAG-basis' naar 'WPL-geoBAG-basis-geometrieLevering'
 
 De pattern voor de foutcodes in een afkeuringsbericht is aangepast conform de
 koppelvlakspecificaties (issue \#27)
