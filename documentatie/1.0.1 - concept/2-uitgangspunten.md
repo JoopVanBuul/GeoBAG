@@ -145,7 +145,7 @@ Het opnemen van de technische systeemsleutels StUF:sleutelVerzendend en StUF:sle
 * na een geometrieVerzoek van BAG wordt technische systeemsleutel van BAG en Geo in een geometrieLevering teruggegeven aan BAG, 
 * na een geometrieLevering van Geo wordt de technische systeemsleutel van Geo samen met de BAG-identificatie in een goedkeuringsbericht teruggegeven aan Geo. 
 
-In zijn algemeenheid geldt dat als de functionele BAG-identificatie bekend is deze wordt meegestuurd in een geometrieVerzoek, geometrieLevering of goedkeuringsbericht. Als de functionele BAG-identificatie niet bekend is, worden de technische sleutels van Geo en/of BAG meegeleverd, voor zover bekend. Dus de uitwisseling van idenfiticaties is als volgt: 
+In zijn algemeenheid geldt dat als de functionele BAG-identificatie bekend is deze wordt meegestuurd in een geometrieVerzoek, geometrieLevering of goedkeuringsbericht. Als de functionele BAG-identificatie niet bekend is, worden de technische sleutels van Geo en/of BAG meegeleverd, voor zover bekend. Dus de uitwisseling van identificaties is als volgt: 
 
 1. Indien wel BAG-identificatie bij BAG bekend, stuurt BAG de BAG-identificatie mee en optioneel de technische systeemsleutel van BAG. 
 2. Indien geen BAG-identificatie bij BAG bekend, stuurt BAG de technische systeemsleutel van BAG mee. 
