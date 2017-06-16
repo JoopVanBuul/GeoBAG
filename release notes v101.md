@@ -58,7 +58,7 @@ In 3.7.2 Aanpassing volgorde basisscenario Constatering eo signalering door Geo
 
 **bijlage1-gebeurtenissen.md**
 
-Gebeurtenis BGR-MAV aangepast naar BGR-MAB (issue \#10)
+Gebeurtenis BGR-MAV verwijderd (issue \#10)
 
 Gebeurtenis BGR-HMO verwijderd (issue \#10)
 
