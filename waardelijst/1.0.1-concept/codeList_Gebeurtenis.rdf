@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <!-- Wijzigingen t.o.v. 1.0-versie:
-- Aanpassing
+- Aanpassing SSVSAMEN en SSVSPLITS
 -->
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:geoBAG="http://www.geostandaarden.nl/geoBAG/def/1.0#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
  <ConceptScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis">
