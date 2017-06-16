@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
+<!-- Wijzigingen t.o.v. 1.0-versie:
+- Aanpassing
+-->
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:geoBAG="http://www.geostandaarden.nl/geoBAG/def/1.0#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
  <ConceptScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis">
   <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -47,13 +50,13 @@
  </Concept>
  <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-SSV">
   <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSV</prefLabel>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSVSAMEN</prefLabel>
   <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Samenvoegen verblijfsobjecten*</definition>
   <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
  </Concept>
  <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BGR-SSV">
   <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSV</prefLabel>
+  <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BGR-SSVSPLITS</prefLabel>
   <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Splitsen verblijfsobjecten*</definition>
   <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
  </Concept>
