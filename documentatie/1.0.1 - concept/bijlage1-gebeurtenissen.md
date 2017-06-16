@@ -12,23 +12,23 @@ voor-dit-koppelvlak relevante gebeurtenissen toegevoegd.
 In de kolom ‘BGT-mutatie’ wordt aangegeven of een gebeurtenis aanleiding geeft
 tot een bepaalde mutatie in de BGT:
 
-1.  Toevoegen BGT Pand als planinformatie
+A.  Toevoegen BGT Pand als planinformatie
 
-2.  Beëindigen BGT Pand als planinformatie
+B.  Beëindigen BGT Pand als planinformatie
 
-3.  Toevoegen BGT Pand
+C.  Toevoegen BGT Pand
 
-4.  Wijzigen geometrie BGT Pand
+D.  Wijzigen geometrie BGT Pand
 
-5.  Wijzigen nummeraanduidingreeks van BGT Pand
+E.  Wijzigen nummeraanduidingreeks van BGT Pand
 
-6.  Beëindigen BGT Pand
+F.  Beëindigen BGT Pand
 
-7.  Toevoegen OpenbareRuimte(Label)
+G.  Toevoegen OpenbareRuimte(Label)
 
-8.  Wijzigen naam OpenbareRuimte(Label)
+H.  Wijzigen naam OpenbareRuimte(Label)
 
-9.  Beëindigen OpenbareRuimte(Label)
+I.  Beëindigen OpenbareRuimte(Label)
 
 | **Code**      | **Gebeurtenis**                                                 | **Ontstaat bij** | **Aanleiding tot** | **BGT-mutatie** |
 |---------------|-----------------------------------------------------------------|------------------|--------------------|-----------------|
