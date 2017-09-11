@@ -61,7 +61,8 @@ I.  Beëindigen OpenbareRuimte(Label)
 | BRA-HNU       | Hernummeren adresseerbaar object                                | BAG              | BAG-kennisgeving   | E               |
 | BRA-OHN       | Hoofdadres en nevenadres van een adresseerbaar object omdraaien | BAG              | BAG-kennisgeving   | E               |
 | BGR-MGS       | Melding sloop afgerond                                          | BAG              | BAG-kennisgeving   | E,F             |
-| BGR-VOC       | Geheel verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | E,F             |
+| BGR-VOCDEEL       | Gedeeltelijk verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | E,F             |
+| BGR-VOCHEEL       | Geheel verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | E,F             |
 | BGR-ISLSP     | Intrekken standplaats                                           | BAG              | BAG-kennisgeving   |                 |
 | BGR-ISLLP     | Intrekken ligplaats                                             | BAG              | BAG-kennisgeving   |                 |
 | BRA-BOR       | Benoemen openbare ruimte                                        | BAG              | BAG-kennisgeving   | G               |
