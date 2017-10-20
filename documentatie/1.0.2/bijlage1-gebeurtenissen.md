@@ -57,7 +57,6 @@ I.  Beëindigen OpenbareRuimte(Label)
 | GEO-NEG       | Negeer eerder gestuurd geometrielevering                        | GEO              | geometrielevering  |                 |
 | BGR-MAB       | Afzien van bouw                                                 | BAG              | BAG-kennisgeving   | F               |
 | BGR-IBV       | Intrekken bouwvergunning                                        | BAG              | BAG-kennisgeving   | F               |
-|
 | BRA-HNU       | Hernummeren adresseerbaar object                                | BAG              | BAG-kennisgeving   | E               |
 | BRA-OHN       | Hoofdadres en nevenadres van een adresseerbaar object omdraaien | BAG              | BAG-kennisgeving   | E               |
 | BGR-MGS       | Melding sloop afgerond                                          | BAG              | BAG-kennisgeving   | E,F             |
