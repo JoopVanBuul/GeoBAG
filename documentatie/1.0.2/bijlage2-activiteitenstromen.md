@@ -32,9 +32,7 @@ Indien een verzoek of levering tijdens een activiteitenstroom niet verwerkbaar[^
 
 | **Stap** | **Omschrijving** | **Scenario** |
 | --- | --- | --- |
-|   |   |
-1. A)**/ B)**
- | **C) / D)** |
+|   |   | A)**/ B)** | **C) / D)** |
 | BF1. | BAG stuurt geometrieVerzoek aan GEO | X |   |
 | BF2. | Geo start verwerking geometrieVerzoek | X |   |
 | BF3. | Geo stuurt geometrieLevering aan BAG | X | X |
