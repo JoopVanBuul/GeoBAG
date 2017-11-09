@@ -1,4 +1,4 @@
-Bijlage: Gebeurtenissen
+Bijlage 1: Gebeurtenissen
 ========================
 
 De tabel in deze bijlage geeft een overzicht van de voor het Geo-BAG
