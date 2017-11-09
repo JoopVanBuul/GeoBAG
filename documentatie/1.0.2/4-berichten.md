@@ -82,21 +82,7 @@ Naast de standaard StUF-foutcodes worden voor dit sectormodel de volgende foutco
 ## BAG-kennisgevingen 
 De BAG-kennisgevingsberichten uit StUF-BG worden in dit koppelvlak toegepast om mutaties van BAG door te geven aan Geo. Voor nummeraanduidingen en openbare ruimtenamen geeft BAG elke mutatie door, en Geo neemt de gegevens uit deze kennisgevingsberichten over in de eigen applicatie. 
 
-BAG stuurt na elke mutatie een kennisgevingsbericht aan Geo[^37]. Geo filtert en neemt de gegevens over indien het BAG-kennisgevingsbericht verstuurd wordt na een van de volgende gebeurtenissen[^38]: 
-* BGR-MAB Afzien van bouw 
-* BGR-IBV Intrekken bouwvergunning 
-* BRA-HNU Hernummeren adresseerbaar object 
-* BRA-OHN Hoofdadres en nevenadres van een adresseerbaar object omdraaien 
-* BGR-MGS Melding sloop afgerond 
-* BGR-VOC Geheel verdwijnen objecten door calamiteit 
-* BGR-ISLSP Intrekken standplaats 
-* BGR-ISLLP Intrekken ligplaats 
-* BRA-BOR Benoemen openbare ruimte 
-* BRA-HOR Hernoemen openbare ruimte 
-* BRA-IOR Intrekken openbare ruimte 
-* BRA-GHO Gedeeltelijk hernoemen openbare ruimte 
-* BAG-AOC Archivering bestaand object na constatering 
-* BAG-AGO Archivering geconstateerd object 
+BAG stuurt na elke mutatie een kennisgevingsbericht aan Geo[^37]. In bijlage 1: Gebeurtenissen is een tabel opgenomen met daarin welke mutaties relevante informatie voor de BGT bevatten.
 
 [^37] En ook naar andere afnemers in de organisatie.
 
