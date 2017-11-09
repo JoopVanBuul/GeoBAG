@@ -1,4 +1,4 @@
-# Bijlage 4 Ontwerpbeslissingen en keuzes verStUFfing 
+# Bijlage 4: Ontwerpbeslissingen en keuzes verStUFfing 
 
 Het koppelvlak geoBAG is gedefinieerd met een eigen berichtenset en een eigen namespace. 
 
