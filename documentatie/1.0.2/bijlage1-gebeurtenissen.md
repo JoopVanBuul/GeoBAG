@@ -35,12 +35,12 @@ I.  Beëindigen OpenbareRuimte(Label)
 | BGR-OBA       | Ontvangst bouwaanvraag                                          | BAG              | geometrieVerzoek   |                 |
 | BGR-VBN       | Verlenen bouwvergunning                                         | BAG              | geometrieVerzoek   | A               |
 | BGR-MGB       | Melding gebruiksgereed                                          | BAG              | geometrieVerzoek   |                 |
-| BGR-KVO       | Kleine verbouwing object                                        | BAG              | geometrieVerzoek   | A               |
-| BGR-VBI       | Verlenen bouwvergunning ingrijpende verbouwing                  | BAG              | geometrieVerzoek   | A               |
-| BAG-VTP       | Verblijfsobject toevoegen aan pand\*                            | BAG              | geometrieVerzoek   | E               |
+| BGR-KVO       | Kleine verbouwing object                                        | BAG              | geometrieVerzoek   | D               |
+| BGR-VBI       | Verlenen bouwvergunning ingrijpende verbouwing                  | BAG              | geometrieVerzoek   | D,E               |
+| BAG-VTP       | Verblijfsobject toevoegen aan pand                            | BAG              | geometrieVerzoek   | E               |
 | BAG-VG        | Verbouwing gereed                                               | BAG              | geometrieVerzoek   | C               |
-| BGR-SSVSAMEN  | Samenvoegen verblijfsobjecten\*                                 | BAG              | geometrieVerzoek   | E               |
-| BGR-SSVSPLITS | Splitsen verblijfsobjecten\*                                    | BAG              | geometrieVerzoek   | E               |
+| BGR-SSVSAMEN  | Samenvoegen verblijfsobjecten                                 | BAG              | geometrieVerzoek   | E               |
+| BGR-SSVSPLITS | Splitsen verblijfsobjecten                                    | BAG              | geometrieVerzoek   | E               |
 | BGR-BSLSP     | Benoemen standplaats                                            | BAG              | geometrieVerzoek   |                 |
 | BGR-BSLLP     | Benoemen ligplaats                                              | BAG              | geometrieVerzoek   |                 |
 | BRA-BWP       | Benoemen woonplaats                                             | BAG              | geometrieVerzoek   |                 |
@@ -60,7 +60,7 @@ I.  Beëindigen OpenbareRuimte(Label)
 | BRA-HNU       | Hernummeren adresseerbaar object                                | BAG              | BAG-kennisgeving   | E               |
 | BRA-OHN       | Hoofdadres en nevenadres van een adresseerbaar object omdraaien | BAG              | BAG-kennisgeving   | E               |
 | BGR-MGS       | Melding sloop afgerond                                          | BAG              | BAG-kennisgeving   | E,F             |
-| BGR-VOCDEEL       | Gedeeltelijk verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | E,F             |
+| BGR-VOCDEEL       | Gedeeltelijk verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | D             |
 | BGR-VOCHEEL       | Geheel verdwijnen objecten door calamiteit                      | BAG              | BAG-kennisgeving   | E,F             |
 | BGR-ISLSP     | Intrekken standplaats                                           | BAG              | BAG-kennisgeving   |                 |
 | BGR-ISLLP     | Intrekken ligplaats                                             | BAG              | BAG-kennisgeving   |                 |
@@ -70,7 +70,12 @@ I.  Beëindigen OpenbareRuimte(Label)
 | BRA-GHO       | Gedeeltelijk hernoemen openbare ruimte                          | BAG              | BAG-kennisgeving   | H               |
 | BAG-AOC       | Archivering bestaand object na constatering                     | BAG              | BAG-kennisgeving   | E,F               |
 | BAG-AGO       | Archivering geconstateerd object                                | BAG              | BAG-kennisgeving   | E,F               |
+| BAG-IO | In onderzoek plaatsen | BAG | geometrieVerzoek | B,D,E,F, H,I | 
+| BAG- BN | Benoemen nevenadres | BAG | BAG-kennisgeving   | E |
+| BAG-FGO | Formalisering geconstateerd object | BAG | BAG-kennisgeving   | E |
+| BAG-IN | Intrekken adres | BAG | BAG-kennisgeving   | E|
+| BGR-BIG | Beschikbaar gekomen ingemeten geometrie | BAG | BAG-kennisgeving   | D |
 
-[\^40] In werksessies met betrokken Geo- en BAG-leveranciers is een lijst
+[^40] In werksessies met betrokken Geo- en BAG-leveranciers is een lijst
 samengesteld met de voor dit koppelvlak relevant geachte gebeurtenissen op basis
 van de vigerende versie van het landelijk vastgestelde BAG-Processenhandboek.
