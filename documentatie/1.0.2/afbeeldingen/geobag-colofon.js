@@ -13,8 +13,8 @@ var respecConfig = {
     }  
   ],
   //shortName: "shortname",
-  pubDomain: "http://www.geonovum.nl/wegwijzer/standaarden/gegevenscatalogus-bgt-111",
-  github: "https://github.com/Geonovm/geobag",
+  pubDomain: "geobag",
+  github: "https://github.com/Geonovum/geobag",
   //previousPublishDate: "2017-01-01",
   //previousStatus: "GN-CV",
   //localBiblio: {
