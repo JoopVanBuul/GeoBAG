@@ -1,4 +1,4 @@
-# Bijlage: Activiteitenstroom koppelvlak Geo-BAG 
+# Bijlage 2: Activiteitenstroom koppelvlak Geo-BAG 
 
 Hieronder staat een overzicht van de verschillende activiteitenstromen inclusief aanleiding en gebeurteniscode voor het koppelvlak Geo-BAG. 
 
