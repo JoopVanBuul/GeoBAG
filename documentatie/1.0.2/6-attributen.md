@@ -1,9 +1,9 @@
-# Hoofdstuk 6 Attributen 
+# Attributen 
 Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectkennisgevingen. 
 
-## 6.1 Parameters
+## Parameters
 
-### 6.1.1 idVerzoek
+### idVerzoek
 
 | Naam attribuut | idVerzoek |
 | --- | --- |
@@ -14,7 +14,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.2 idLevering
+### idLevering
 
 | Naam attribuut | idLevering |
 | --- | --- |
@@ -25,7 +25,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.3 gerelateerdVerzoek
+### gerelateerdVerzoek
 
 | Naam attribuut | gerelateerdVerzoek |
 | --- | --- |
@@ -36,7 +36,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.4 gebeurtenisCode
+### gebeurtenisCode
 
 | Naam attribuut | gebeurteniscode |
 | --- | --- |
@@ -47,7 +47,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling | codeGebeurtenisList |
 | Toelichting | Zie bijlage 1 voor de waardenlijst.  |
 
-### 6.1.5 documentverwijzing
+### documentverwijzing
 
 | Naam attribuut | documentverwijzing |
 | --- | --- |
@@ -58,7 +58,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |     |
 
-### 6.1.6 toelichting
+### toelichting
 
 | Naam attribuut | Toelichting |
 | --- | --- |
@@ -69,7 +69,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.7 foutcode
+### foutcode
 
 | Naam attribuut | Foutcode |
 | --- | --- |
@@ -80,7 +80,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.8 foutomschrijving
+### foutomschrijving
 
 | Naam attribuut | foutomschrijving |
 | --- | --- |
@@ -91,7 +91,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-### 6.1.9 plek
+### plek
 
 | Naam attribuut | plek |
 | --- | --- |
@@ -102,7 +102,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling | &quot;client&quot;, &quot;server&quot; |
 | Toelichting |    |
 
-### 6.1.10 details
+### details
 
 | Naam attribuut | details |
 | --- | --- |
@@ -114,8 +114,8 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Toelichting |    |
 
 
-## 6.2 Elementen in entiteiten
-### 6.2.1 identificatie
+## Elementen in entiteiten
+### identificatie
 
 | Naam attribuut | identificatie |
 | --- | --- |
@@ -126,7 +126,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |   |
 
-6.2.2typering
+### typering
 
 | Naam attribuut | typering |
 | --- | --- |
@@ -137,7 +137,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | Bijv. Nummeraanduiding, Verblijfobject etc. |
 
-6.2.3adresAanduiding
+### adresAanduiding
 
 | Naam attribuut | adresAanduidingGrp |
 | --- | --- |
@@ -148,7 +148,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | Binnen het element adresAanduidingGrp zijn uitsluitend de namen opgenomen van de woonplaats en de openbare ruimte en niet ook hun identificaties. Alle elementen zijn verplicht, ook aoa.woonplaatsWaarinGelegen /wpl.woonplaatsnaam. Indien het object ligt in de woonplaats aangeduid door wpl.woonplaatsnaam, dan dient in aoa.woonplaatsWaarinGelegen /wpl.woonplaatsnaam dezelfde waarde te worden opgenomen als inwpl.woonplaatsnaam, zo niet dan wordt woonplaats opgenomen waarin het adresseerbaar object feitelijk ligt. |
 
-6.2.4 geometrie
+### geometrie
 
 | Naam attribuut | Geometrie |
 | --- | --- |
@@ -159,7 +159,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | De geometrie is de vlakgeometrie van een Pand of Woonplaats.  |
 
-6.2.5 puntGeometrie
+### puntGeometrie
 
 | Naam attribuut | puntGeometrie |
 | --- | --- |
@@ -170,7 +170,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | De geometrie is de puntgeometrie van een overigGebouwdObject of Verblijfsobject.  |
 
-6.2.6 vlakGeometrie
+### vlakGeometrie
 
 | Naam attribuut | vlakGeometrie |
 | --- | --- |
@@ -181,7 +181,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | De geometrie is de vlakgeometrie van een Stand/Ligplaats of overigTerrein, of optioneel van een overigGebouwdObject of Verblijfsobject.  |
 
-6.2.7 status
+### status
 
 | Naam attribuut | status |
 | --- | --- |
@@ -192,7 +192,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-6.2.8 geconstateerd
+### geconstateerd
 
 | Naam attribuut | geconstateerd |
 | --- | --- |
@@ -203,7 +203,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |    |
 
-6.2.9brondocument
+### brondocument
 
 | Naam attribuut | Brondocument |
 | --- | --- |
@@ -214,7 +214,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting | Bevat de identificatie en datum van het brondocument.  |
 
-6.2.10 tijdvakGeldigheid
+### tijdvakGeldigheid
 
 | Naam attribuut | beginGeldigheid |
 | --- | --- |
@@ -225,7 +225,7 @@ Dit hoofdstuk beschrijft de attributen van de StUF-Geo BAG berichten en objectke
 | Waardenverzameling |   |
 | Toelichting |   |
 
-6.2.11 maaktDeelUitVan
+### maaktDeelUitVan
 
 | Naam attribuut | maaktDeelUitVan |
 | --- | --- |
