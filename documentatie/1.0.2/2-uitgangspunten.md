@@ -176,12 +176,12 @@ In een StUF-Geo BAG bericht komt het element indicatorOvername niet voor, omdat 
 
 [^24] Dit omdat alleen de actuele stand van een object wordt uitgewisseld en geen WAS/WORDT structuur.
 
-###2.8.3 Volgorde van verzenden en verwerken 
+### 2.8.3 Volgorde van verzenden en verwerken 
 Het verzenden van een bericht wordt geïnitieerd door zender en is eenrichtingsverkeer (push-mechanisme). De zendende applicatie kan meerdere berichten achter elkaar versturen, waarbij een volgend bericht niet per sé verzonden wordt na bevestiging van ontvangst van het vorige bericht. 
 
 De ontvanger bevestigt te allen tijde de ontvangst van een bericht met een technisch synchrone respons t.b.v. de logistiek (Bv03/Bv04 of Fo03). Als op een bericht binnen een bepaalde termijn geen bevestiging van ontvangst is teruggekomen, mag de zender veronderstellen dat het bericht niet is aangekomen. Omdat het de verantwoordelijkheid van zender is dat berichten ‘aankomen’, dient de zender opnieuw het bericht te versturen aan ontvanger. 
 
 De afhandeling van het bericht door ontvanger is asynchroon, d.w.z. dat het ontvangen bericht op later moment (dus niet gelijk = synchroon) verwerkt wordt. De berichten in de wachtrij van de ontvangende applicatie worden conform StUF verwerkt, ofwel: op volgorde van tijdstipBericht. 
 
-###2.8.4 Synchroniteit 
+### 2.8.4 Synchroniteit 
 Op bepaalde momenten kunnen de gegevens van BAG-objecten in de applicaties van BAG en Geo tijdelijk uit elkaar lopen (bijv. na afwijzing van een nieuw geconstateerd Pand in een levering van Geo welke na beoordeling door BAG een niet-relevant BAG-object blijkt te zijn, dus geen BAG-Pand). Geo is verantwoordelijk voor de synchronisatie van de eigen applicatie met BAG voor o.a. overname van gegevens bij het BGT-object Pand. 
