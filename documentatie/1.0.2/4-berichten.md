@@ -1,15 +1,15 @@
-# Hoofdstuk 4 Berichten 
+# Berichten 
 
 Dit hoofdstuk beschrijft de berichten in het berichtenverkeer tussen BAG en Geo. Enerzijds wordt hergebruik gemaakt van bestaande StUF-BAG kennisgevingsberichten en StUF bevestigings- en foutberichten, anderzijds zijn eigen voor dit koppelvlak specifieke StUF-Geo BAG gedefinieerd. 
 
-## 4.1 StUF-Geo BAG berichten 
+## StUF-Geo BAG berichten 
 De StUF-Geo BAG berichten geometrieVerzoek en geometrieLevering zijn eigen voor dit koppelvlak specifieke berichten. De berichten bevatten de volgende elementen: 
 
 * Logistieke gegevens: standaard StUF-stuurgegevens bevatten o.a. de logistieke identificatie en gegevens van zender/ontvanger. 
 * Procesgegevens: bevatten o.a. de functionele identificatie, een toelichting en verwijzing naar een gerelateerde (bron)document. 
 * Inhoud: een objectkennisgeving met de gegevens van een BAG-object. Een objectkennisgeving bevat alleen de verplichte gegevens van een van de BAG-objecten. 
 
-### 4.1.1 GeometrieVerzoek 
+### GeometrieVerzoek 
 
 | Naam bericht  | geometrieVerzoek | 
 |---------------|------------------|
@@ -23,7 +23,7 @@ De StUF-Geo BAG berichten geometrieVerzoek en geometrieLevering zijn eigen voor 
 | Parameters | <ul><li>idVerzoek [1-1]</li><li>gebeurtenisCode [1-1]</li><li>documentVerwijzing [0-1]</li><li>toelichting [0-1]</li></ul> |
 | Inhoud | Keuze uit één of meer entiteiten (choice [1..n]):<ul><li>ligplaats [1-1]</li><li>overigGebouwdObject [1-1]</li><li>overigTerrein [1-1]</li><li>pand [1-1]</li><li>standplaats [1-1]</li><li>verblijfsobject [1-1]</li><li>woonplaats [1-1]</li></ul> |
 
-### 4.1.2 GeometrieLevering 
+### GeometrieLevering 
 | Naam bericht  | geometrieLevering | 
 |---------------|-------------------| 
 | Afkorting bericht | gmlDi01 |
@@ -38,7 +38,7 @@ De StUF-Geo BAG berichten geometrieVerzoek en geometrieLevering zijn eigen voor 
 
 [^35] Bij levering op initiatief van Geo, wordt vooralsnog verondersteld dat geconstateerd object een relevant BAG-object is. 
 
-### 4.1.3 Goedkeuringsbericht 
+### Goedkeuringsbericht 
 | Naam bericht  | goedkeuringsbericht  | 
 |---------------|-------------------| 
 | Afkorting bericht | bevestigingDu01 |
@@ -51,7 +51,7 @@ De StUF-Geo BAG berichten geometrieVerzoek en geometrieLevering zijn eigen voor 
 | Parameters | <ul><li>identificatie [1-1]</li></ul>
 | Inhoud |  Keuze uit één of meer entiteiten (choice [1..n]):<ul><li>ligplaats [1-1]</li><li>overigGebouwdObject [1-1]</li><li>overigTerrein [1-1]</li><li>pand [1-1]</li><li>standplaats [1-1]</li><li>verblijfsobject [1-1]</li><li>woonplaats [1-1]</li></ul> |
 
-### 4.1.4 Afkeuringsbericht 
+### Afkeuringsbericht 
 | Naam bericht | afkeuringsbericht |
 |--------------|-------------------| 
 | Afkorting bericht | foutDu01 |
@@ -79,7 +79,7 @@ Naast de standaard StUF-foutcodes worden voor dit sectormodel de volgende foutco
 
 [^36] <StUF:details> kunnen door zender worden toegevoegd, bijvoorbeeld met identificaties, of andere fout bevonden gegevens. 
 
-## 4.2 BAG-kennisgevingen 
+## BAG-kennisgevingen 
 De BAG-kennisgevingsberichten uit StUF-BG worden in dit koppelvlak toegepast om mutaties van BAG door te geven aan Geo. Voor nummeraanduidingen en openbare ruimtenamen geeft BAG elke mutatie door, en Geo neemt de gegevens uit deze kennisgevingsberichten over in de eigen applicatie. 
 
 BAG stuurt na elke mutatie een kennisgevingsbericht aan Geo[^37]. Geo filtert en neemt de gegevens over indien het BAG-kennisgevingsbericht verstuurd wordt na een van de volgende gebeurtenissen[^38]: 
