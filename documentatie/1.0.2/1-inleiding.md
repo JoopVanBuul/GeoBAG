@@ -17,7 +17,7 @@ De voordelen van deze koppelvlakstandaard zijn o.a. dat
 ## Leeswijzer 
 Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG en het registratiesysteem Geo (hierna respectievelijk BAG en Geo). Deze koppelvlakspecificatie beschrijft de uitwisseling van geometrie voor BAG-objecten, waarbij BAG de partij is die een verzoek doet om geometrie en Geo de partij is die geometrie levert. BAG houdt Geo verder op de hoogte van wijzigingen (o.a. status en attribuutgegevens) op de BAG-objecten via notificaties (BAG-kennisgevingen) (zie Figuur 1). 
 
-![Alt text](afbeeldingen/fig-schema-geo-bag-berichtenverkeer.png)
+![Schema Geo-BAG berichtenverkeer](media/fig-schema-geo-bag-berichtenverkeer.png)
 
 *Figuur 1.1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer.* 
 
