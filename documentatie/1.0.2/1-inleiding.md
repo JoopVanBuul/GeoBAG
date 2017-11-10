@@ -30,7 +30,7 @@ De GEMMA Informatiearchitectuur[^1] geeft inrichting aan de informatiehuishoudin
 
 Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten[^2] in gedeeld op beleidsthema’s zoals Milieu & Mobiliteit en Ruimtelijke Ordening & Wonen. De referentiecomponenten die relevant zijn voor het geoBAG-koppelvlak zijn omcirkeld in rood. In onderstaande tabel wordt een vertaling gegeven tussen de naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA. 
 
-![GEMMA Referentiecomponenten](afbeeldingen/fig-overzicht-gemma-referentiecomponenten.png)
+![GEMMA Referentiecomponenten](media/fig-overzicht-gemma-referentiecomponenten.png)
 
  *Figuur 1.2: Gemma Referentiecomponenten*
 
