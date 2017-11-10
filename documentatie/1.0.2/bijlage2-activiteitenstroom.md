@@ -42,4 +42,4 @@ Indien een verzoek of levering tijdens een activiteitenstroom niet verwerkbaar[^
 
 De activiteitenstromen zijn gevisualiseerd in het activiteitendiagram Geo-BAG koppelvlak. 
 
-![Activiteitenstromen Geo-BAG koppelvlak](media/fig-activiteitenstroom-geo-bag-koppelvlak.png) 
+![Activiteitenstroom Geo-BAG koppelvlak](media/fig-activiteitenstroom-geo-bag-koppelvlak.png) 
