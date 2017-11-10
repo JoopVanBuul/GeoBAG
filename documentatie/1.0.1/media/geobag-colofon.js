@@ -1,5 +1,3 @@
-
-
 var respecConfig = {
   specStatus: "GN-DEF",
   specType: "ST",
