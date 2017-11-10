@@ -12,12 +12,12 @@ var respecConfig = {
       note: ""    
     }  
   ],
-  //shortName: "Geo-BAG berichtenverkeer v1.0.1",
+  shortName: "standaard",
   pubDomain: "geobag", 
   github: "https://github.com/Geonovum/geobag",
-  previousURI: "https://www.geonovum.nl/wegwijzer/standaarden/berichtenverkeer-stuf-geo-bag-geo-bag-berichtenverkeer-v10",
-  previousPublishDate: "2015-12-10",
-  previousStatus: "GN-DEF",
+  //previousURI: "https://www.geonovum.nl/wegwijzer/standaarden/berichtenverkeer-stuf-geo-bag-geo-bag-berichtenverkeer-v10",
+ // previousPublishDate: "2015-12-10",
+ // previousStatus: "GN-DEF",
   //localBiblio: {
   //  "ISO19136": {
   //    "href": "https://www.iso.org/standard/32554.html",
