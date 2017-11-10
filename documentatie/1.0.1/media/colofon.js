@@ -16,7 +16,7 @@ var respecConfig = {
   pubDomain: "geobag", 
   previousURI: "https://www.geonovum.nl/wegwijzer/standaarden/berichtenverkeer-stuf-geo-bag-geo-bag-berichtenverkeer-v10",
   github: "https://github.com/Geonovum/geobag",
-  //previousPublishDate: "2015-12-10",
+  previousPublishDate: "2015-12-10",
   previousStatus: "GN-DEF",
   //localBiblio: {
   //  "ISO19136": {
