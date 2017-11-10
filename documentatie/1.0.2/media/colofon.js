@@ -12,7 +12,7 @@ var respecConfig = {
       note: ""    
     }  
   ],
-  shortName: "standaard-berichtenverkeer",
+  shortName: "berichtenverkeer",
   pubDomain: "geobag", 
   //previousURI: "https://docs.geostandaarden.nl/geobag/Geo-BAG berichtenverkeer v1.0.2/",
   github: "https://github.com/Geonovum/geobag",
