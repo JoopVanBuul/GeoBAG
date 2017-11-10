@@ -1,5 +1,5 @@
 var respecConfig = {
-  specStatus: "GN-VV",
+  specStatus: "GN-DEF",
   specType: "ST",
   //canonicalURI: "WV",
   publishDate: "2017-11-10",
@@ -12,12 +12,12 @@ var respecConfig = {
       note: ""    
     }  
   ],
-  shortName: "Geo-BAG berichtenverkeer v1.0.2",
+  //shortName: "Geo-BAG berichtenverkeer v1.0.2",
   pubDomain: "geobag", 
-  //previousURI: "https://www.geonovum.nl/wegwijzer/standaarden/berichtenverkeer-stuf-geo-bag-geo-bag-berichtenverkeer-v10",
+  previousURI: "https://docs.geostandaarden.nl/geobag/Geo-BAG berichtenverkeer v1.0.2/",
   github: "https://github.com/Geonovum/geobag",
-  //previousPublishDate: "2017-01-01",
-  //previousStatus: "GN-DEF",
+  previousPublishDate: "2017-08-01",
+  previousStatus: "GN-DEF",
   //localBiblio: {
   //  "ISO19136": {
   //    "href": "https://www.iso.org/standard/32554.html",
