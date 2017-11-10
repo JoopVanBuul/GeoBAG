@@ -1,7 +1,7 @@
-# Hoofdstuk 1 Inleiding 
+# Inleiding 
 Dit hoofdstuk geeft een inleiding op het StUF-Geo BAG berichtenverkeer. 
 
-## 1.1 Waarom dit koppelvlak? 
+## Waarom dit koppelvlak? 
 Voor het automatisch uitwisselen van gegevens tussen twee afdelingen binnen de organisatie zijn afspraken nodig welke worden vastgelegd in een koppelvlak-specificatie. Een koppelvlak is een interface die volgens een bepaalde standaard de uitwisseling van gegevens tussen informatiesystemen verzorgt. Een koppelvlak werkt met standaarden. Het aanleverende systeem is verantwoordelijk voor de vertaling van gegevens naar die standaard en het afnemende systeem zorgt voor omzetting naar haar eigen ‘taal’. 
 
 Dit koppelvlak beschrijft de gegevensuitwisseling tussen het registratiesysteem BAG en het registratiesysteem Geo binnen een gemeente. In het registratiesysteem BAG worden gebouw- en adresgegevens bijgehouden in het kader van de wet Basisregistraties Adressen en Gebouwen (BAG). In het registratiesysteem Geo worden de geometrie en attribuutgegevens van topografische objecten bijgehouden in het kader van de Basisregistratie Grootschalige Topografie (BGT) en ten behoeve van intern gebruik (o.a. beheer openbare ruimte). Voor het registratiesysteem Geo wordt ook geometrie van objecten in het registratiesysteem BAG ingewonnen en bijgehouden. 
@@ -14,10 +14,10 @@ De voordelen van deze koppelvlakstandaard zijn o.a. dat
 * het de onderlinge consistentie en de kwaliteit van de gegevens in de twee administraties vergroot wat tot betere informatievoorziening bij besluiten en fraudedetectie leidt. 
 * het zorgt voor een helder inzicht in de werkvoorraad aan beide zijden en de stroomlijning van de processen: zaken kunnen niet meer onzichtbaar lang blijven liggen; geometrie wordt niet vaker dan noodzakelijk ingemeten. 
 
-## 1.2 Leeswijzer 
+## Leeswijzer 
 Dit document beschrijft het berichtenverkeer tussen het registratiesysteem BAG en het registratiesysteem Geo (hierna respectievelijk BAG en Geo). Deze koppelvlakspecificatie beschrijft de uitwisseling van geometrie voor BAG-objecten, waarbij BAG de partij is die een verzoek doet om geometrie en Geo de partij is die geometrie levert. BAG houdt Geo verder op de hoogte van wijzigingen (o.a. status en attribuutgegevens) op de BAG-objecten via notificaties (BAG-kennisgevingen) (zie Figuur 1). 
 
-![Alt text](afbeeldingen/fig-schema-geo-bag-berichtenverkeer.png)
+![Alt text](media/fig-schema-geo-bag-berichtenverkeer.png)
 
 *Figuur 1.1 Schematische weergave componenten StUF-Geo BAG berichtenverkeer.* 
 
@@ -25,12 +25,12 @@ De standaard van berichten waarmee de gegevens tussen BAG en Geo worden uitgewis
 
 De structuur van dit document is als volgt: o.b.v. een aantal uitgangspunten o.a. verantwoordelijkheden en taken in Hoofdstuk 2 worden een drietal algemene scenario’s van de werkprocessen tussen BAG en Geo geschetst in Hoofdstuk 3. In deze scenario’s worden bepaalde berichten zoals verzoeken en leveringen verstuurd. De inhoud van de berichten zijn nader gedefinieerd in Hoofdstuk 4 en Hoofdstuk 5. 
 
-## 1.3 Verbinding met de GEMMA Informatiearchitectuur 
+## Verbinding met de GEMMA Informatiearchitectuur 
 De GEMMA Informatiearchitectuur[^1] geeft inrichting aan de informatiehuishouding van gemeenten. De informatiehuishouding betreft de referentiecomponenten en applicatiefunctionaliteit waarmee de gegevens kunnen worden opgeslagen, geraadpleegd en processen kunnen worden ondersteund etc. Ook de informatiemodellen (RSGB, RGBZ, ImZTC, etc.) en berichtenstandaarden (StUF, StUF-BG, StUF-ZKN, etc.) die zorgen voor een efficiënte en gestandaardiseerde manier van informatie-uitwisseling, zijn onderdeel van de informatiearchitectuur. 
 
 Figuur 2 geeft een overzicht van de GEMMA Referentiecomponenten[^2] in gedeeld op beleidsthema’s zoals Milieu & Mobiliteit en Ruimtelijke Ordening & Wonen. De referentiecomponenten die relevant zijn voor het geoBAG-koppelvlak zijn omcirkeld in rood. In onderstaande tabel wordt een vertaling gegeven tussen de naamgeving van de referentiecomponenten in dit koppelvlak en GEMMA. 
 
-![GEMMA Referentiecomponenten](afbeeldingen/fig-overzicht-gemma-referentiecomponenten.png)
+![GEMMA Referentiecomponenten](media/fig-overzicht-gemma-referentiecomponenten.png)
 
  *Figuur 1.2: Gemma Referentiecomponenten*
 
@@ -47,7 +47,7 @@ De GEMMA Softwarecatalogus[^3] is een online informatiesysteem dat het (verwacht
 [^2] http://www.gemmaonline.nl/index.php/GEMMA_Applicatielandschap 
 [^3] https://www.softwarecatalogus.nl 
 
-## 1.4 Referenties 
+## Referenties 
 Deze koppelvlakspecificatie voor het Geo-BAG berichtenverkeer is gebaseerd op de volgende standaarden: 
 
 | Afkorting | Document | Versie | Datum | Auteur c.q. beheerder |

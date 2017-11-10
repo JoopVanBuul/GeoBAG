@@ -1,7 +1,7 @@
-# Hoofdstuk 2 Uitgangspunten 
+# Uitgangspunten 
 Dit hoofdstuk beschrijft de uitgangspunten voor uitwisseling van gegevens tussen BAG en Geo via StUF-Geo BAG berichtenverkeer. 
 
-# 2.1 Actoren en verantwoordelijkheden: Geo en BAG 
+# Actoren en verantwoordelijkheden: Geo en BAG 
 Het StUF-Geo BAG berichtenverkeer kent twee actoren[^4}: (het registratiesysteem[^5] van) BAG en (het registratiesysteem van) Geo, hierna respectievelijk BAG en Geo. 
 
 BAG is eindverantwoordelijk voor de volledigheid van de BAG-objecten, het op een correcte manier afbakenen van BAG-objecten en de vastlegging en distributie van de juiste BAG-gegevens volgens de hiervoor geldende wettelijke eisen. 
@@ -14,7 +14,7 @@ De beheerder van Geo[^6] kan vanuit BAG gemandateerd zijn voor de vaststelling v
 [^5] Registratiesysteem wordt hierna “applicatie” genoemd. 
 [^6] In praktijk zijn dit de medewerkers van Geo, danwel de ambtenaar die belast is me de uitbesteding van inwinning van de geometrie voor Geo. 
 
-## 2.2 Berichten 
+## Berichten 
 Het berichtenverkeer tussen Geo en BAG maakt gebruik van de volgende typen berichten: 
 
 * StUF-Geo BAG berichten: specifiek voor dit koppelvlak gedefinieerde dienstberichten t.w. 
@@ -36,10 +36,10 @@ is dan ook verder niet opgenomen in de uitwerking van het berichtenverkeer.
 
 De StUF-Geo BAG berichten zijn gespecifieerd in §4.1. 
 
-## 2.3 Uitwisselen van gegevens van BAG-objecten 
+## Uitwisselen van gegevens van BAG-objecten 
 In het StUF-Geo BAG berichtenverkeer worden gegevens uitgewisseld van BAG-objecten. 
 
-### 2.3.1 Objecttypen 
+### Objecttypen 
 De volgende BAG-objecttypen worden ondersteund in het Geo-BAG berichtenverkeer: 
 * Pand 
 * Verblijfsobject 
@@ -54,7 +54,7 @@ Dit berichtschema’s van van het Geo-BAG koppelvlak zijn daarnaast uitgebreid m
 
 [^11] Alleen in BAG-kennisgeving, niet in geometrieVerzoek of geometrieLevering. 
 
-### 2.3.2 Geometrie 
+### Geometrie 
 Voor dit koppelvlak geldt dat de geometrie conform de inwinningsregels ten aanzien van nauwkeurigheid en inwinningswijze van de BAG wordt opgenomen. Een BAG-object kan een vlak- of puntgeometrie hebben. 
 
 De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaanzicht. In het kader van de BGT is Geo ook verantwoordelijk voor de geometrische inwinning van grootschalige topografie. Voor de BGT is de keuze gemaakt om van een pand de geometrie op maaiveldniveau op te nemen. Door modernere bouwvormen komt het daarbij steeds vaker voor dat de geometrie van een pand op maaiveldniveau aanzienlijk kan afwijken van de geometrie van een pand op een ander niveau. De geometrie op maaiveld van een Pand kan in de StUF-BG kennisgevingsberichten als optionele geometrie bij dit object worden opgenomen naast de verplichte geometrie van bovenaanzicht. 
@@ -67,7 +67,7 @@ De verplichte geometrie voor een Pand in de BAG is een vlakgeometrie in bovenaan
 
 [^13] M.u.v. Nummeraanduiding en OpenbareRuimte, deze objecttypen hebben geen geometrie. 
 
-### 2.3.3 Samengesteld uitwisselen en alleen actuele stand 
+### Samengesteld uitwisselen en alleen actuele stand 
 In de StUF-Geo BAG berichten worden de gegevens van objecten samengesteld uitgewisseld, d.w.z. een geometrieVerzoek of geometrieLevering bevat de gegevens van één of meerdere BAG-objecten welke tot één bepaalde transactie of gebeurtenis behoren. Bijvoorbeeld, indien een door Geo uitgevoerde mutatiesignalering uit luchtfoto’s mutaties oplevert op meerdere objecten, worden een of meer mutaties van deze objecten in een bericht (geometrieLevering) door Geo aan BAG verstuurd. 
 
 In dit Geo-BAG berichtenverkeer wordt in een StUF-Geo BAG dienstbericht[^14] alleen de actuele stand (WORDT) van een BAG-object uitgewisseld, en niet in combinatie met de vorige stand (WAS) van het BAG-object[^15]. Zowel BAG als Geo hebben de gegevens van een vorige stand van een object niet nodig voor het overnemen van de gegevens uit een bericht. In het bijzonder geval dat op enig moment de gegevens van een bepaald object bij Geo en BAG verschillen (asynchroniteit), zijn de gegevens van de actuele stand in de applicatie van BAG leidend voor dit object. 
@@ -77,7 +77,7 @@ In dit Geo-BAG berichtenverkeer wordt in een StUF-Geo BAG dienstbericht[^14] all
 [^15] Dit in afwijking van het StUF-BG en StUF-Geo IMGeo berichtenverkeer waar in een bericht WAS én WORDT van een 
 object wordt uitgewisseld. 
 
-## 2.4 Gebeurtenissen als aanleiding voor berichtenverkeer 
+## Gebeurtenissen als aanleiding voor berichtenverkeer 
 Het berichtenverkeer tussen BAG en Geo ontstaat naar aanleiding van een bepaalde gebeurtenis aan de kant van BAG of Geo. In Bijlage 1 is een overzicht met alle gebeurtenissen[^16] van Geo en BAG opgenomen en tot welke berichten zij leiden. 
 
 Naar aanleiding van een BAG-gebeurtenis (bijv. verlenen vergunning) stuurt BAG aan Geo een verzoek om geometrie aan te leveren, ofwel een geometrieVerzoek. 
@@ -94,7 +94,7 @@ Naar aanleiding van een doorgevoerde mutatie op een BAG-object , stuurt BAG een 
 
 [^18] Geo krijgt de BAG-identificatie van een geconstateerd nieuw pand retour na overname van BAG via een BAG-kennisgevingsbericht. 
 
-## 2.5 Identificaties van en relaties tussen berichten 
+## Identificaties van en relaties tussen berichten 
 De StUF-Geo BAG berichten hebben een logistieke identificatie en functionele identificatie, resp. het <StUF:referentienummer> in de <StUF:stuurgegevens> en <BG:identificatie> in de entiteittypen <BG:parameters>. 
 
 Indien een geometrieLevering een respons is op een geometrieVerzoek bevat de geometrieLevering een eigen unieke logistieke identificatie en een verwijzing naar de functionele identificatie van het geometrieVerzoek. 
@@ -111,7 +111,7 @@ Daarnaast bevat de geometrieLevering in de eigen functionele identificatie <BG:i
 | StUF:crossRefnummer | | BAG12345678 | 
 | BG:identificatie | GMV09876543 | GMV09876543 |
 
-## 2.6 Corrigeren en intrekken van berichten 
+## Corrigeren en intrekken van berichten 
 In het StUF-Geo BAG berichtenverkeer kan het voorkomen dat BAG of Geo een eerder verstuurd StUF-Geo BAG bericht wil corrigeren of intrekken. Een bericht kan door zender worden gecorrigeerd of ingetrokken indien deze nog niet door ontvanger is afgehandeld, d.w.z. dat er nog niet door 
 * BAG een goed- of afkeuringsbericht als respons op een geometrieLevering, of 
 * Geo een geometrieLevering of afkeuringsbericht als respons op een geometrieVerzoek 
@@ -131,7 +131,7 @@ Voor het corrigeren van een StUF-Geo BAG bericht wordt eerst het vorige bericht 
 
 [^20] Idem voor geometrieLevering met gebeurtenissen resp. GEO-***, GEO-CEG, en GEO-NEG. 
 
-## 2.7 Identificaties van en relaties tussen objecten 
+## Identificaties van en relaties tussen objecten 
 Een BAG-object in een StUF-Geo BAG bericht heeft functionele en technische identificaties, t.w. 
 * BAG-identificatie: de functionele identificatie van een BAG-object zijnde een 16-cijferige code welke wordt toegewezen door de applicatie van BAG nadat het object in de registratie van BAG is opgenomen. Met dit nummer is het object ook bekend in de Landelijke Voorziening BAG zodra het authentiek is verklaard. 
 * sleutelVerzendend: de technische systeemsleutel van het BAG-object in de applicatie van de verzender van het bericht (dus BAG of Geo) 
@@ -159,15 +159,15 @@ Ofwel: Geo stuurt altijd de technische systeemsleutel mee.
 
 [^22] Deze situatie komt voor indien een object geconstateerd wordt door Geo. 
 
-## 2.8 Verzenden en verwerken van berichten 
+## Verzenden en verwerken van berichten 
 In StUF-Geo BAG berichtenverkeer kunnen berichten in willekeurige volgorde worden verzonden en verwerkt. 
 
-### 2.8.1 Transacties en bundeling van berichten 
+### Transacties en bundeling van berichten 
 Bij bepaalde gebeurtenissen (bijv. bij het verlenen van een bouwvergunning voor een pand met meerdere verblijfsobjecten en nummeraanduidingen) komt het voor dat gegevens van meerdere objecten uitgewisseld gaan worden. Per transactie[^23] wordt een StUF-Geo BAG bericht met een eigen logistieke identificatie en een gemeenschappelijke functionele identificatie (betreffende de gebeurtenis ‘bouwvergunning verleend’) voor deze transactie samengesteld en in willekeurige volgorde verstuurd. Het is niet de bedoeling om bijvoorbeeld in één geometrieverzoek voor alle objecten die op die dag zijn opgevoerd in het hele gebied van een gemeente de geometrie te vragen. De eenheid van werk dient zo klein mogelijk gehouden te worden aan de ontvangende kant, om snelle afhandeling van een verzoek of levering mogelijk te maken. 
 
 [^23] Een transactie is een samenstelling / bundeling van (gewijzigde) gegevens van één of meer objecten wat tot een bepaalde gebeurtenis of eenheid van werk toebehoord. 
 
-### 2.8.2 Verplichte of niet-verplichte overname 
+### Verplichte of niet-verplichte overname 
 De gegevens van een object in het StUF-Geo BAG berichtenverkeer welke worden uitgewisseld met asynchrone kennisgevingsberichten kunnen verplicht zijn om te verwerken in de ontvangende applicatie of informatief bedoeld zijn. Of een BAG-kennisgeving in een bericht verplicht of informatief is, wordt opgenomen in de parameter <StUF:indicatorOvername> met resp. “V” (Verplicht) of “I” (Informatief). 
 
 Voor het Geo-BAG berichtenverkeer heeft een BAG-kennisgeving een indicatorOvername “V” (Verplicht), omdat BAG eindverantwoordelijk is voor de (kwaliteit van) gegevens van de BAG-objecten. Geo neemt de gegevens van BAG verplicht over in de eigen registratie. 
@@ -176,12 +176,12 @@ In een StUF-Geo BAG bericht komt het element indicatorOvername niet voor, omdat 
 
 [^24] Dit omdat alleen de actuele stand van een object wordt uitgewisseld en geen WAS/WORDT structuur.
 
-###2.8.3 Volgorde van verzenden en verwerken 
+### Volgorde van verzenden en verwerken 
 Het verzenden van een bericht wordt geïnitieerd door zender en is eenrichtingsverkeer (push-mechanisme). De zendende applicatie kan meerdere berichten achter elkaar versturen, waarbij een volgend bericht niet per sé verzonden wordt na bevestiging van ontvangst van het vorige bericht. 
 
 De ontvanger bevestigt te allen tijde de ontvangst van een bericht met een technisch synchrone respons t.b.v. de logistiek (Bv03/Bv04 of Fo03). Als op een bericht binnen een bepaalde termijn geen bevestiging van ontvangst is teruggekomen, mag de zender veronderstellen dat het bericht niet is aangekomen. Omdat het de verantwoordelijkheid van zender is dat berichten ‘aankomen’, dient de zender opnieuw het bericht te versturen aan ontvanger. 
 
 De afhandeling van het bericht door ontvanger is asynchroon, d.w.z. dat het ontvangen bericht op later moment (dus niet gelijk = synchroon) verwerkt wordt. De berichten in de wachtrij van de ontvangende applicatie worden conform StUF verwerkt, ofwel: op volgorde van tijdstipBericht. 
 
-###2.8.4 Synchroniteit 
+### Synchroniteit 
 Op bepaalde momenten kunnen de gegevens van BAG-objecten in de applicaties van BAG en Geo tijdelijk uit elkaar lopen (bijv. na afwijzing van een nieuw geconstateerd Pand in een levering van Geo welke na beoordeling door BAG een niet-relevant BAG-object blijkt te zijn, dus geen BAG-Pand). Geo is verantwoordelijk voor de synchronisatie van de eigen applicatie met BAG voor o.a. overname van gegevens bij het BGT-object Pand. 
