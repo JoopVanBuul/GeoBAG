@@ -95,7 +95,7 @@ Naar aanleiding van een doorgevoerde mutatie op een BAG-object , stuurt BAG een 
 [^18] Geo krijgt de BAG-identificatie van een geconstateerd nieuw pand retour na overname van BAG via een BAG-kennisgevingsbericht. 
 
 ## Identificaties van en relaties tussen berichten 
-De StUF-Geo BAG berichten hebben een logistieke identificatie en functionele identificatie, resp. het '<StUF:referentienummer>' in de <StUF:stuurgegevens> en <BG:identificatie> in de entiteittypen <BG:parameters>. 
+De StUF-Geo BAG berichten hebben een logistieke identificatie en functionele identificatie, resp. het `<StUF:referentienummer>` in de <StUF:stuurgegevens> en <BG:identificatie> in de entiteittypen <BG:parameters>. 
 
 Indien een geometrieLevering een respons is op een geometrieVerzoek bevat de geometrieLevering een eigen unieke logistieke identificatie en een verwijzing naar de functionele identificatie van het geometrieVerzoek. 
 
