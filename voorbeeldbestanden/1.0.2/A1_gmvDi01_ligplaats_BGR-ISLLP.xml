@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<geoBAG:gmvDi01 xmlns:StUF="http://www.egem.nl/StUF/StUF0301"
+    xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:sch="http://www.ascc.net/xml/schematron"
+    xmlns:geoBAG="http://register.geostandaarden.nl/xmlschema/geobag/1.0"
+    xmlns:smil20="http://www.w3.org/2001/SMIL20/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smil20lang="http://www.w3.org/2001/SMIL20/Language"
+    xsi:schemaLocation="http://register.geostandaarden.nl/xmlschema/geobag/1.0 geoBAG0100_msg.xsd">
+    <BG:stuurgegevens>
+        <StUF:berichtcode>Di01</StUF:berichtcode>
+        <StUF:zender>
+            <StUF:organisatie>Geonovum</StUF:organisatie>
+            <StUF:applicatie>GeoBAG berichten generator</StUF:applicatie>
+            <StUF:administratie>Geo</StUF:administratie>
+        </StUF:zender>
+        <StUF:ontvanger>
+            <StUF:organisatie>%organisatie%</StUF:organisatie>
+            <StUF:applicatie>%applicatie%</StUF:applicatie>
+            <StUF:administratie>%administratie%</StUF:administratie>
+        </StUF:ontvanger>
+        <StUF:referentienummer>00000372</StUF:referentienummer>		
+        <StUF:tijdstipBericht>20171204131515</StUF:tijdstipBericht>
+        <!--StUF:crossRefnummer-->
+        <StUF:functie>verzoek</StUF:functie>
+    </BG:stuurgegevens>
+    <BG:parameters>
+        <BG:idVerzoek>29418fff6eea4e798134c142875e85d0</BG:idVerzoek>
+        <BG:gebeurtenisCode codeSpace="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis">BGR-BSLLP</BG:gebeurtenisCode>	
+    </BG:parameters>
+    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="0363020001023820">
+        <BG:identificatie>0363020001023820</BG:identificatie>
+        <BG:typering>Ligplaats</BG:typering>
+        <BG:adresAanduidingGrp>
+            <BG:num.identificatie>0363200000509364</BG:num.identificatie>
+            <BG:wpl.identificatie>3594</BG:wpl.identificatie>
+            <BG:wpl.woonplaatsNaam>Amsterdam</BG:wpl.woonplaatsNaam>
+            <BG:opr.identificatie>0363300000004154</BG:opr.identificatie>
+            <BG:gor.openbareRuimteNaam>Leidsekade</BG:gor.openbareRuimteNaam>
+            <BG:aoa.postcode>1016CW</BG:aoa.postcode>
+            <BG:aoa.huisnummer>12</BG:aoa.huisnummer>
+            <BG:aoa.huisletter StUF:noValue="geenWaarde" xsi:nil="true" ></BG:aoa.huisletter>
+                <BG:aoa.huisnummertoevoeging StUF:noValue="geenWaarde" xsi:nil="true" ></BG:aoa.huisnummertoevoeging>
+        </BG:adresAanduidingGrp>
+        <BG:vlakGeometrie>
+            <gml:Polygon srsName="EPSG:28992"><gml:exterior><gml:LinearRing><gml:posList srsDimension="2">120406.126 486516.415 120401.951 486515.476 120406.093 486497.043 120410.268 486497.982 120406.126 486516.415</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>
+        </BG:vlakGeometrie>
+        <BG:aot.status>Plaats aangewezen</BG:aot.status>
+        <BG:aot.geconstateerd>N</BG:aot.geconstateerd>
+        <BG:brondocument StUF:metagegeven="true">
+            <BG:identificatie>GV00000407</BG:identificatie>
+            <BG:datum>20100909</BG:datum>
+        </BG:brondocument>
+        <StUF:tijdvakGeldigheid>
+            <StUF:beginGeldigheid>20100909</StUF:beginGeldigheid>
+            <StUF:eindGeldigheid StUF:noValue="geenWaarde" xsi:nil="true"></StUF:eindGeldigheid>
+        </StUF:tijdvakGeldigheid>
+    </BG:ligplaats>
+</geoBAG:gmvDi01>
