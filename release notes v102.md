@@ -30,7 +30,7 @@ In paragraaf BAG-kennisgevingen de gebeurtenissen verwijderd met verwijzing naar
 
 **xmlschema/1.0.1-concept/geoBAG0101/geoBAG0101\_bg0310\_msg.xsd**
 
-	- Pattern value bij FoutCode-geoBAG gewijzigd van [a-zA-Z0-9]{7} naar [a-zA-Z0-9]{1,7} (issue #27)
+- Pattern value bij FoutCode-geoBAG gewijzigd van [a-zA-Z0-9]{7} naar [a-zA-Z0-9]{1,7} (issue #27)
 
 **GeoBAG/waardelijst/1.0.2/codeList\_Gebeurtenis.rdf**
 
