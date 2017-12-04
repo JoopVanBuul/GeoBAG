@@ -12,11 +12,11 @@ De volgende issues zijn opgelost:
 
 **1-inleiding.md**
 
-URL-verwijzing naar GEMMA referentiecomponenten gerepareerd.
+- URL-verwijzing naar GEMMA referentiecomponenten gerepareerd.
 
 **4-berichten.md**
 
-In paragraaf BAG-kennisgevingen de gebeurtenissen verwijderd met verwijzing naar bijlage 1.
+- In paragraaf BAG-kennisgevingen de gebeurtenissen verwijderd met verwijzing naar bijlage 1.
 
 **bijlage1-gebeurtenissen.md**
 
