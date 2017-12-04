@@ -5,10 +5,10 @@ De 1.0.2-release is een bug-fix release van de StUF-Geo BAG berichtenstandaard.
 
 De volgende issues zijn opgelost:
 
-#27 Veldlengte voor foutcode-geoBAG te kort.
-#33 een geometriën toegestaan in GeoBAG1.0.1
-#34 Kennisgevingen van invloed op BGT
-#35 BGR-VOC vervangen door BGR-VOCDEEL en BGR-VOCHEEL
+- #27 Veldlengte voor foutcode-geoBAG te kort.
+- #33 een geometriën toegestaan in GeoBAG1.0.1
+- #34 Kennisgevingen van invloed op BGT
+- #35 BGR-VOC vervangen door BGR-VOCDEEL en BGR-VOCHEEL
 
 **1-inleiding.md**
 
