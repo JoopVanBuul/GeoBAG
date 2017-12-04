@@ -24,11 +24,11 @@ De volgende issues zijn opgelost:
 - Toegevoegd concepten/waarden: BAG-IO, BAG-BN, BAG-FGO, BAG-IN, BGR-BIG (issue #34)
 - Sortering waarden alfabetisch
 
-**xmlschema/1.0.1-concept/geoBAG0101/geoBAG0101\_bg0310\_ent.xsd**
+**xmlschema/1.0.2/geoBAG0100/geoBAG0100\_bg0310\_ent.xsd**
 
 - ComplexType BG:GeometrieVlak-geoBAG en BG:GeometriePunt-geoBAG verwijderd; verwijzing bij elementen gewijzigd van BG:GeometrieVlak-geoBAG naar BG:GeometrieVlak-e en BG:GeometriePunt-geoBAG naar BG:GeometrieVlak-e (issue #33)
 
-**xmlschema/1.0.1-concept/geoBAG0101/geoBAG0101\_bg0310\_msg.xsd**
+**xmlschema/1.0.2/geoBAG0101/geoBAG0101\_bg0310\_msg.xsd**
 
 - Pattern value bij FoutCode-geoBAG gewijzigd van [a-zA-Z0-9]{7} naar [a-zA-Z0-9]{1,7} (issue #27)
 
