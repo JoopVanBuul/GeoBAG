@@ -2,7 +2,7 @@ var respecConfig = {
   specStatus: "GN-DEF",
   specType: "PR",
   //canonicalURI: "WV",
-  publishDate: "2018-06-11",
+  publishDate: "2018-06-05",
   editors: [    
     {
       name: "Arnoud de Boer",
@@ -16,7 +16,7 @@ var respecConfig = {
   pubDomain: "GeoBAG",
   //previousURI: "https://www.geonovum.nl/BRO",
   github: "https://github.com/Geonovum/GeoBAG",
-  previousPublishDate: "2018-06-11",
+  previousPublishDate: "2017-01-01",
   //previousStatus: "GN-WV",
   //localBiblio: {
   //  "ISO19136": {
