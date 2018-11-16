@@ -1,33 +1,71 @@
-Aanleiding
-==========
+Bijlage Toelichting identificaties in Geo-BAG berichten
+=======================================================
 
-In het Geo-BAG berichtenverkeer wordt onderscheid gemaakt tussen functionele (of
-logische) identificaties en logistieke identificaties in berichten.
+In het Geo-BAG berichtenverkeer wordt onderscheid gemaakt tussen logistieke
+identificaties en functionele (of logische) identificaties in berichten.
+
+**Logistieke identificatie** is de unieke identificatie van een bericht. De
+logistieke identificatie wordt opgenomen in het element ‘referentienummer’ in de
+‘stuurgegevens’ van vrije berichten, en in het element ‘crossRefNummer’ van
+responsberichten.
 
 Een **functionele identificatie** is een identificerend kenmerk dat hoort bij
 meerdere berichten behorende bij één mutatie/transactie bundelt. De functionele
-identificatie wordt opgenomen:
+identificatie wordt opgenomen het element ‘idLevering’, ‘idVerzoek’ of
+‘identificatie’ van de ‘parameters’.
 
-in \<bg:idLevering\<bg:identificatie\> van de \<bg:parameters\>.
+De functionele identificatie wordt gebruikt om berichten die bij een zelfde
+gebeurtenis (vergunning of signalering) horen te bundelen. Bijvoorbeeld, bij het
+verlenen van een bouwvergunning door BAG zijn er meerdere berichten voor het
+opvoeren van een pand en verblijfsobject. Of na mutatiesignalering door Geo
+worden meerdere berichten met constateringen van panden verstuurd. Deze
+berichten hebben een eigen unieke logistieke identificatie, maar worden
+gebundeld door eenzelfde functionele identificatie.
 
-**Logistieke identificatie** is de unieke identificatie van een bericht. De
-logistieke identificatie wordt opgenomen in het \<StUF:referentienummer\> in de
-\<StUF:stuurgegevens\>.
+Daarnaast heeft ieder BAG(+)-**object** een eigen unieke aanduiding in het
+element **identificatie** (objectnummer) en **versie**. De technische (system of
+database)sleutels van de zender en ontvanger worden uitgewisseld in de
+attributen **sleutelVerzendend** en **sleutelOntvangend**.
+
+![](media/56d3aa1adf0b89e9f29a581468181553.png)
+
+Invullen van identificaties
+---------------------------
+
+Voor het invullen van identificaties in de Geo-BAG berichten gelden de volgende
+uitgangspunten.
+
+**Logistiek:**
+
+-   Een afkeuringsbericht of goedkeuringsbericht (=responsbericht Du01) heeft in
+    het crossRefNummer de logistieke identificatie van het geometrieverzoek of
+    de geometrielevering.
+
+**Functioneel:**
+
+-   De identificatie van een geometrieverzoek wordt in de geometrielevering
+    opgenomen in het element ‘idGerelateerdVerzoek’, als de levering is
+    aangemaakt naar aanleiding van een verzoek door BAG.
+
+-   Het element ‘idGerelateerdVerzoek’ blijft lee gals de geometrielevering
+    wordt geïnitieerd door Geo, bijvoorbeeld naar aanleiding van een
+    constatering/signalering uit een luchtfoto.
+
+Object:
+
+-   Als er geen BAG-identificatie bekend is van het object, wordt altijd de
+    sleutelVerzendend meegestuurd bij het object.
+
+-   Als er wel een BAG-identificatie bekend is van het object
+
+De identificaties worden
+
+![](media/7bbb3a43ca5c676fd2bcb563f15df080.png)
 
 De gerelateerde identificatie kan worden opgenomen in
 
-Bijvoorbeeld, bij het verlenen van een bouwvergunning door BAG zijn er meerdere
-berichten voor het opvoeren van een pand en verblijfsobject. Of na
-mutatiesignalering door Geo worden meerdere berichten met constateringen van
-panden verstuurd. Deze berichten hebben een eigen unieke logistieke
-identificatie, maar worden gebundeld door eenzelfde functionele identificatie.
-
-Deze praktijkrichtlijn geeft extra toelichting op het invullen van functionele
-identificaties en logistieke identificaties in Geo-BAG berichten voor bepaalde
-scenario’s.
-
-Scenario’s
-==========
+Bijzondere scenario’s
+=====================
 
 Intrekken van een levering
 --------------------------
@@ -94,6 +132,6 @@ intrekking zou moeten hebben:**
 
 Het is nu onduidelijk of deze goedkeuring de levering of de intrekking betreft.
 Het crossrefnummer lijkt op de levering te duiden (de identificatie is in dit
-scenario onbruikbaar?).  
-  
+scenario onbruikbaar?).
+
 Hoe zou dit scenario moeten verlopen?

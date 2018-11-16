@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 (x64) (http://www.altova.com) by Maarten van den Broek (messageDesign B.V.) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:StUF="http://www.egem.nl/StUF/StUF0301"
+	xmlns:gml="http://www.opengis.net/gml" xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310"
+	targetNamespace="http://www.egem.nl/StUF/sector/bg/0310" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="1.1">
+	<annotation>
+		<documentation xml:lang="nl"> Vergeleken met versie 1.0.2 zijn de volgende wijzigingen doorgevoerd: 
+			- namespace wijzigt van geobag0100 naar geobag0101
+			- ***-geoBAG-basis en **-geoBAG-identificatie is niet langer als restriction base op BG0310 gedefinieerd.
+			- element versie toegevoegd aan LIG, OTR, OGO, STA, PND, VBO met type versie-BAG20 			
+			- DocumentNummering-BAG20 met restricion maxLength=40 toegevoegd en opgenomen in nieuw complexType Brondocument-BAG20 en toegevoegd als type aan element brondocument in de ***-geoBAG-basis complexTypes	
+			- BG:StatusPand is uitgebreid met twee BAG2.0 enumeraties en in union in nieuw simpletype StatusPand-geoBAG-BAG20 opgenomen als type van element status in complexType PND-geoBAG-basis 
+			- BG:StatusVerblijfobject is uitgebreid met twee BAG2.0 enumeraties en in union in nieuw simpletype StatusVerblijfsobject-geoBAG-BAG20 opgenomen als type van element aot.status in complexType VBO-geoBAG-basis  
+			- GeometrieVlakOfMultiVlak-geoBAG-BAG20 met choice tussen vlak of multivlak opgenomen als type van element geometrie in complexType WPL-geoBAG-basis				
+		</documentation>
+	</annotation>
+	
+	<include schemaLocation="../bg0310/entiteiten/bg0310_ent_basis.xsd"/>
+	<include schemaLocation="../bg0310/entiteiten/bg0310_simpleTypes.xsd"/>
+
+	<import namespace="http://www.egem.nl/StUF/StUF0301"
+		schemaLocation="../bg0310/entiteiten/bg0310_stuf_simpleTypes.xsd"/>
+	<import namespace="http://www.opengis.net/gml"
+		schemaLocation="../gml-3.1.1.2/gml/3.1.1/base/gml.xsd"/>
+	
+	<complexType name="AdrGrp-geoBAG">
+		<complexContent>
+			<restriction base="BG:AdrGrp-basis">
+				<sequence>
+					<sequence>
+						<choice>
+							<element name="num.identificatie" type="BG:ObjectNummering-e"
+								nillable="true"/>
+						</choice>
+					</sequence>
+					<element name="wpl.identificatie" type="BG:WoonplaatsCodering-e" nillable="true"/>
+					<element name="wpl.woonplaatsNaam" type="BG:WoonplaatsNaam-e" nillable="true"/>
+					<element name="aoa.woonplaatsWaarinGelegen"
+						type="BG:WoonplaatsWaarinGelegenGrp-geoBAG" minOccurs="0"/>
+					<element name="opr.identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+					<element name="gor.openbareRuimteNaam" type="BG:NaamgevingObject-e"
+						nillable="true"/>
+					<element name="aoa.postcode" type="BG:Postcode-e" nillable="true"/>
+					<element name="aoa.huisnummer" type="BG:Huisnummering-e" nillable="true"/>
+					<element name="aoa.huisletter" type="BG:Huislettering-e" nillable="true"/>
+					<element name="aoa.huisnummertoevoeging" type="BG:Huisnummertoevoeging-e"
+						nillable="true"/>
+				</sequence>
+			</restriction>
+		</complexContent>
+	</complexType>
+
+	<complexType name="WoonplaatsWaarinGelegenGrp-geoBAG">
+		<complexContent>
+			<restriction base="BG:WoonplaatsWaarinGelegenGrp">
+				<sequence>
+					<element name="wpl.identificatie" type="BG:WoonplaatsCodering-e" nillable="true"/>
+					<element name="wpl.woonplaatsNaam" type="BG:NaamgevingObject-e" nillable="true"
+					/>
+				</sequence>
+			</restriction>
+		</complexContent>
+	</complexType>
+
+	<complexType name="ObjectNummering-geoBAG">
+		<simpleContent>
+			<restriction base="BG:ObjectNummering-e">
+				<attribute ref="StUF:noValue"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+
+
+	<!-- SimpleTypes en ComplexTypes voor BAG 2.0 -->
+	<simpleType name="versie-BAG20">
+		<restriction base="integer">
+			<minInclusive value="1"/>
+		</restriction>
+	</simpleType>
+	
+	<complexType name="versie-BAG20-e">
+		<simpleContent>
+			<extension base="BG:versie-BAG20">
+				<attributeGroup ref="StUF:element"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	
+
+	<simpleType name="DocumentNummering-BAG20">
+		<restriction base="string">
+			<maxLength value="40"/>
+		</restriction>
+	</simpleType>
+
+	<complexType name="DocumentNummering-BAG20-e">
+		<simpleContent>
+			<extension base="BG:DocumentNummering-BAG20">
+				<attributeGroup ref="StUF:element"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+
+	<complexType name="Brondocument-BAG20">
+		<sequence>
+			<element name="identificatie" type="BG:DocumentNummering-BAG20-e" nillable="true"/>
+			<element name="datum" type="StUF:Datum-e" nillable="true"/>
+		</sequence>
+		<attribute ref="StUF:metagegeven" use="required"/>
+		<attribute name="groepsnaam" type="StUF:Groepsnaam" use="prohibited"/>
+	</complexType>
+
+	<simpleType name="StatusPand-extra-BAG20">
+		<restriction base="string">
+			<maxLength value="80"/>
+			<enumeration value="Verbouwing pand"/>
+			<enumeration value="Pand ten onrechte opgevoerd"/>
+		</restriction>
+	</simpleType>
+	<simpleType name="StatusPand-geoBAG-BAG20">
+		<union memberTypes="BG:StatusPand BG:StatusPand-extra-BAG20"> </union>
+	</simpleType>
+
+	<complexType name="StatusPand-geoBAG-BAG20-e">
+		<simpleContent>
+			<extension base="BG:StatusPand-geoBAG-BAG20">
+				<attributeGroup ref="StUF:element"/>
+			</extension>
+		</simpleContent>
+	</complexType>	
+
+	<simpleType name="StatusVerblijfsobject-extra-BAG20">
+		<restriction base="string">
+			<maxLength value="80"/>
+			<enumeration value="Verbouwing verblijfsobject"/>
+			<enumeration value="Verblijfsobject ten onrechte opgevoerd"/>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="StatusVerblijfsobject-geoBAG-BAG20">
+		<union memberTypes="BG:StatusVerblijfsobject BG:StatusVerblijfsobject-extra-BAG20"> </union>
+	</simpleType>
+	
+	<complexType name="StatusVerblijfsobject-geoBAG-BAG20-e">
+		<simpleContent>
+			<extension base="BG:StatusVerblijfsobject-geoBAG-BAG20">
+				<attributeGroup ref="StUF:element"/>
+			</extension>
+		</simpleContent>
+	</complexType>	
+
+	<complexType name="GeometrieMultiVlak-extra-BAG20-e">
+		<complexContent>
+			<extension base="gml:MultiSurfacePropertyType">
+				<attributeGroup ref="StUF:element"/>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="GeometrieVlakOfMultiVlak-geoBAG-BAG20">
+		<choice>
+			<element name="vlak" type="BG:GeometrieVlak-e"/>
+			<element name="multivlak" type="BG:GeometrieMultiVlak-extra-BAG20-e"/>
+		</choice>
+	</complexType>
+
+	<!--ComplexTypes voor gespecialiseerde entiteittypen-->
+	<complexType name="LIG-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingLIG"/>
+			<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
+			<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true"/>
+			<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
+			<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="LIG-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingLIG"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="OGO-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingOGO"/>
+			<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
+			<element name="gbo.puntGeometrie" type="BG:GeometriePunt-e" nillable="true"/>
+			<element name="vlakGeometrie" type="BG:GeometrieVlak-e" minOccurs="0"/>
+			<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+			<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="OGO-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingOGO"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="OTR-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingOTR"/>
+			<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
+			<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true"/>
+			<element name="aot.status" type="BG:StatusTGO-e" nillable="true"/>
+			<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="OTR-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingOTR"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="PND-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="geometrie" type="BG:GeometrieVlak-e" nillable="true"/>
+			<element name="inwinningswijzeGeometrieBovenaanzicht"
+				type="BG:InwinningswijzeGeometrie-e" minOccurs="0"/>
+			<element name="geometrieOpMaaiveld" type="BG:GeometrieVlak-e" minOccurs="0"/>
+			<element name="inwinningswijzeGeometrieMaaiveld" type="BG:InwinningswijzeGeometrie-e"
+				minOccurs="0"/>
+			<element name="status" type="BG:StatusPand-geoBAG-BAG20-e" nillable="true"/>
+			<element name="geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="PND"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="PND-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"
+			/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="PND"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="STA-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingSTA"/>
+			<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
+			<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true"/>
+			<element name="aot.status" type="BG:StatusLigplaatsStandplaats-e" nillable="true"/>
+			<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="STA-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingSTA"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="VBO-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-geoBAG" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingVBO"/>
+			<element name="adresAanduidingGrp" type="BG:AdrGrp-geoBAG"/>
+			<element name="gbo.puntGeometrie" type="BG:GeometriePunt-e" nillable="true"/>
+			<element name="vlakGeometrie" type="BG:GeometrieVlak-e" nillable="true" minOccurs="0"/>
+			<element name="aot.status" type="BG:StatusVerblijfsobject-geoBAG-BAG20-e" nillable="true"/>
+			<element name="aot.geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+			<element name="vbo.maaktDeelUitVan" type="BG:TGOPND-geoBAG-basis" nillable="true"
+				maxOccurs="unbounded"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="VBO-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:ObjectNummering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="typering" type="BG:TyperingVBO"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<complexType name="TGOPND-geoBAG-basis">
+		<sequence>
+			<element name="gerelateerde" type="BG:PND-geoBAG-identificatie" nillable="true"/>
+		</sequence>
+		<attribute ref="StUF:noValue" use="optional"/>
+		<attribute ref="StUF:entiteittype" use="required" fixed="VBOPND"/>
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+		<attribute ref="StUF:aantalVoorkomens" use="prohibited"/>
+		<attribute ref="StUF:aardAantal" use="prohibited"/>
+	</complexType>
+
+	<complexType name="WPL-geoBAG-basis">
+		<sequence>
+			<element name="identificatie" type="BG:WoonplaatsCodering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"/>
+			<element name="woonplaatsNaam" type="BG:NaamgevingObject-e" nillable="true"/>
+			<element name="geometrie" type="BG:GeometrieVlakOfMultiVlak-geoBAG-BAG20"
+				nillable="true"/>
+			<element name="status" type="BG:StatusWoonplaats-e" nillable="true"/>
+			<element name="geconstateerd" type="BG:Indicatie-e" nillable="true"/>
+			<element name="brondocument" type="BG:Brondocument-BAG20"/>
+			<element ref="StUF:tijdvakGeldigheid"/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="WPL"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+	<complexType name="WPL-geoBAG-identificatie">
+		<sequence>
+			<element name="identificatie" type="BG:WoonplaatsCodering-e" nillable="true"/>
+			<element name="versie" type="BG:versie-BAG20-e" nillable="true"
+			/>
+		</sequence>
+		<attribute ref="StUF:entiteittype" use="required" fixed="WPL"/>
+		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
+		<attribute ref="StUF:noValue" use="prohibited"/>
+		<attribute ref="StUF:scope" use="prohibited"/>
+		<attribute ref="StUF:verwerkingssoort" use="prohibited"/>
+	</complexType>
+
+	<!--ComplexTypes tbv Typering-->
+	<complexType name="TyperingLIG">
+		<simpleContent>
+			<restriction base="BG:TyperingTGO-e">
+				<simpleType>
+					<restriction base="BG:TyperingTGO">
+						<enumeration value="Ligplaats"/>
+					</restriction>
+				</simpleType>
+				<attribute ref="StUF:noValue" use="prohibited"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+	<complexType name="TyperingOGO">
+		<simpleContent>
+			<restriction base="BG:TyperingTGO-e">
+				<simpleType>
+					<restriction base="BG:TyperingTGO">
+						<enumeration value="Overig gebouwd object"/>
+					</restriction>
+				</simpleType>
+				<attribute ref="StUF:noValue" use="prohibited"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+	<complexType name="TyperingOTR">
+		<simpleContent>
+			<restriction base="BG:TyperingTGO-e">
+				<simpleType>
+					<restriction base="BG:TyperingTGO">
+						<enumeration value="Overig terrein"/>
+					</restriction>
+				</simpleType>
+				<attribute ref="StUF:noValue" use="prohibited"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+	<complexType name="TyperingSTA">
+		<simpleContent>
+			<restriction base="BG:TyperingTGO-e">
+				<simpleType>
+					<restriction base="BG:TyperingTGO">
+						<enumeration value="Standplaats"/>
+					</restriction>
+				</simpleType>
+				<attribute ref="StUF:noValue" use="prohibited"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+	<complexType name="TyperingVBO">
+		<simpleContent>
+			<restriction base="BG:TyperingTGO-e">
+				<simpleType>
+					<restriction base="BG:TyperingTGO">
+						<enumeration value="Verblijfsobject"/>
+					</restriction>
+				</simpleType>
+				<attribute ref="StUF:noValue" use="prohibited"/>
+			</restriction>
+		</simpleContent>
+	</complexType>
+</schema>
