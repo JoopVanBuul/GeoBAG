@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<geoBAG:foutDu01 xmlns:StUF="http://www.egem.nl/StUF/StUF0301"
+    xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:sch="http://www.ascc.net/xml/schematron"
+    xmlns:geoBAG="http://register.geostandaarden.nl/xmlschema/geobag/1.1"
+    xmlns:smil20="http://www.w3.org/2001/SMIL20/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smil20lang="http://www.w3.org/2001/SMIL20/Language"
+    xsi:schemaLocation="http://register.geostandaarden.nl/xmlschema/geobag/1.1 geoBAG0101/geoBAG0101_msg.xsd">
+    <BG:stuurgegevens>
+        <StUF:berichtcode>Du01</StUF:berichtcode>
+        <StUF:zender>
+            <StUF:organisatie>Geonovum</StUF:organisatie>
+            <StUF:applicatie>GeoBAG berichten generator</StUF:applicatie>
+            <StUF:administratie>Geo</StUF:administratie>
+        </StUF:zender>
+        <StUF:ontvanger>
+            <StUF:organisatie>%organisatie%</StUF:organisatie>
+            <StUF:applicatie>%applicatie%</StUF:applicatie>
+            <StUF:administratie>%administratie%</StUF:administratie>
+        </StUF:ontvanger>
+        <StUF:referentienummer>00000400</StUF:referentienummer>		
+        <StUF:tijdstipBericht>20181115123456</StUF:tijdstipBericht>
+        <StUF:crossRefnummer>00000393</StUF:crossRefnummer>
+        <StUF:functie>afkeuring</StUF:functie>
+    </BG:stuurgegevens>
+    <BG:parameters>
+        <BG:identificatie>956acc6ce5aa453494db3fb11503e31e</BG:identificatie>
+        <BG:foutcode>GB010</BG:foutcode>
+        <BG:foutomschrijving>geometrieLevering is afgekeurd</BG:foutomschrijving>
+        <BG:plek>client</BG:plek>
+        <BG:details>Verblijfsobject in levering is afgekeurd</BG:details>	
+    </BG:parameters>
+    <BG:verblijfsobject StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="0363010012070312">
+        <BG:identificatie>0363010012070312</BG:identificatie>
+        <BG:versie>1</BG:versie>
+        <BG:typering>Verblijfsobject</BG:typering>
+    </BG:verblijfsobject>
+</geoBAG:foutDu01>

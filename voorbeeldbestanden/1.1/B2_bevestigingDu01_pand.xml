@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<geoBAG:bevestigingDu01 xmlns:StUF="http://www.egem.nl/StUF/StUF0301"
+    xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:sch="http://www.ascc.net/xml/schematron"
+    xmlns:geoBAG="http://register.geostandaarden.nl/xmlschema/geobag/1.1"
+    xmlns:smil20="http://www.w3.org/2001/SMIL20/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smil20lang="http://www.w3.org/2001/SMIL20/Language"
+    xsi:schemaLocation="http://register.geostandaarden.nl/xmlschema/geobag/1.1 geoBAG0101/geoBAG0101_msg.xsd">
+    <BG:stuurgegevens>
+        <StUF:berichtcode>Du01</StUF:berichtcode>
+        <StUF:zender>
+            <StUF:organisatie>Geonovum</StUF:organisatie>
+            <StUF:applicatie>GeoBAG berichten generator</StUF:applicatie>
+            <StUF:administratie>Geo</StUF:administratie>
+        </StUF:zender>
+        <StUF:ontvanger>
+            <StUF:organisatie>%organisatie%</StUF:organisatie>
+            <StUF:applicatie>%applicatie%</StUF:applicatie>
+            <StUF:administratie>%administratie%</StUF:administratie>
+        </StUF:ontvanger>
+        <StUF:referentienummer>00000403</StUF:referentienummer>		
+        <StUF:tijdstipBericht>20181115123456</StUF:tijdstipBericht>
+        <StUF:crossRefnummer>00000401</StUF:crossRefnummer>
+        <StUF:functie>goedkeuring</StUF:functie>
+    </BG:stuurgegevens>
+    <BG:parameters>
+        <BG:identificatie>85e0a4dab48f4b3ba6d4a53fa3550109</BG:identificatie>
+    </BG:parameters>
+    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelVerzendend="e826d67db4f3425585f72e3e6c3fd52f">
+        <BG:identificatie StUF:noValue="geenWaarde" xsi:nil="true"></BG:identificatie>
+        <BG:versie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:versie>        
+        <!--BG:typering-->
+    </BG:pand>
+</geoBAG:bevestigingDu01>
