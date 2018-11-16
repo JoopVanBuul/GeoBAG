@@ -1,4 +1,4 @@
-Release notes StUF-Geo BAG versie 1.1 (Geo-BAG koppelvlak)
+# Release notes StUF-Geo BAG versie 1.1 (Geo-BAG koppelvlak)
 
 In BAG 2.0 zijn een aantal wijzingen doorgevoerd die ook horizontaal in het
 Geo-BAG berichtenverkeer uitgewisseld gaan worden. Om die reden is het StUF-Geo
