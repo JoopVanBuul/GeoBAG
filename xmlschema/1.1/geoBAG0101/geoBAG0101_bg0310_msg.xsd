@@ -332,7 +332,7 @@
 			<element name="idLevering" type="StUF:Sleutel"/>
 			<element name="idGerelateerdVerzoek" type="StUF:Sleutel" minOccurs="0"/>
 			<element name="gebeurtenisCode" type="BG:CodeType-geoBAG"/>
-			<element name="documentVerwijzing" type="BG:Url" minOccurs="0"/>
+			<element name="documentVerwijzing" type="BG:GeoBAGUrl" minOccurs="0"/>
 			<element name="toelichting" type="BG:Toelichting-geoBAG" minOccurs="0"/>
 		</sequence>
 	</complexType>
@@ -340,7 +340,7 @@
 		<sequence>
 			<element name="idVerzoek" type="StUF:Sleutel"/>
 			<element name="gebeurtenisCode" type="BG:CodeType-geoBAG"/>
-			<element name="documentVerwijzing" type="BG:Url" minOccurs="0"/>
+			<element name="documentVerwijzing" type="BG:GeoBAGUrl" minOccurs="0"/>
 			<element name="toelichting" type="BG:Toelichting-geoBAG" minOccurs="0"/>
 		</sequence>
 	</complexType>

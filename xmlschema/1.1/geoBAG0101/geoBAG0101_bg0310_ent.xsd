@@ -5,14 +5,15 @@
 	targetNamespace="http://www.egem.nl/StUF/sector/bg/0310" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="1.1">
 	<annotation>
-		<documentation xml:lang="nl"> Vergeleken met versie 1.0.2 zijn de volgende wijzigingen doorgevoerd: 
+		<documentation xml:lang="nl"> Vergeleken met versie 1.1 zijn de volgende wijzigingen doorgevoerd: 
 			- namespace wijzigt van geobag0100 naar geobag0101
 			- ***-geoBAG-basis en **-geoBAG-identificatie is niet langer als restriction base op BG0310 gedefinieerd.
 			- element versie toegevoegd aan LIG, OTR, OGO, STA, PND, VBO met type versie-BAG20 			
 			- DocumentNummering-BAG20 met restricion maxLength=40 toegevoegd en opgenomen in nieuw complexType Brondocument-BAG20 en toegevoegd als type aan element brondocument in de ***-geoBAG-basis complexTypes	
 			- BG:StatusPand is uitgebreid met twee BAG2.0 enumeraties en in union in nieuw simpletype StatusPand-geoBAG-BAG20 opgenomen als type van element status in complexType PND-geoBAG-basis 
 			- BG:StatusVerblijfobject is uitgebreid met twee BAG2.0 enumeraties en in union in nieuw simpletype StatusVerblijfsobject-geoBAG-BAG20 opgenomen als type van element aot.status in complexType VBO-geoBAG-basis  
-			- GeometrieVlakOfMultiVlak-geoBAG-BAG20 met choice tussen vlak of multivlak opgenomen als type van element geometrie in complexType WPL-geoBAG-basis				
+			- GeometrieVlakOfMultiVlak-geoBAG-BAG20 met choice tussen vlak of multivlak opgenomen als type van element geometrie in complexType WPL-geoBAG-basis
+			- in complexType -geoBAG-identificatie is de 'use' van attributen StUF:sleutelVerzendend en StUF:sleutelOntvangend gewijzigd naar resp. 'optional' en 'required' (#46)
 		</documentation>
 	</annotation>
 	
@@ -193,8 +194,8 @@
 			<element name="typering" type="BG:TyperingLIG"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -229,8 +230,8 @@
 			<element name="typering" type="BG:TyperingOGO"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -264,8 +265,8 @@
 			<element name="typering" type="BG:TyperingOTR"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -279,7 +280,7 @@
 			<element name="geometrie" type="BG:GeometrieVlak-e" nillable="true"/>
 			<element name="inwinningswijzeGeometrieBovenaanzicht"
 				type="BG:InwinningswijzeGeometrie-e" minOccurs="0"/>
-			<element name="geometrieOpMaaiveld" type="BG:GeometrieVlak-e" minOccurs="0"/>
+			<element name="geometrieOpMaaiveld" type="BG:GeometrieVlakOfMultiVlak-geoBAG-BAG20" minOccurs="0"/>
 			<element name="inwinningswijzeGeometrieMaaiveld" type="BG:InwinningswijzeGeometrie-e"
 				minOccurs="0"/>
 			<element name="status" type="BG:StatusPand-geoBAG-BAG20-e" nillable="true"/>
@@ -302,8 +303,8 @@
 			/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="PND"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -336,8 +337,8 @@
 			<element name="typering" type="BG:TyperingSTA"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -360,8 +361,8 @@
 				maxOccurs="unbounded"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -374,7 +375,7 @@
 			<element name="typering" type="BG:TyperingVBO"/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="TGO"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -421,8 +422,8 @@
 			/>
 		</sequence>
 		<attribute ref="StUF:entiteittype" use="required" fixed="WPL"/>
-		<attribute ref="StUF:sleutelVerzendend" use="required"/>
-		<attribute ref="StUF:sleutelOntvangend" use="optional" />
+		<attribute ref="StUF:sleutelVerzendend" use="optional"/>
+		<attribute ref="StUF:sleutelOntvangend" use="required" />
 		<attribute ref="StUF:sleutelSynchronisatie" use="prohibited"/>
 		<attribute ref="StUF:noValue" use="prohibited"/>
 		<attribute ref="StUF:scope" use="prohibited"/>
@@ -490,4 +491,9 @@
 			</restriction>
 		</simpleContent>
 	</complexType>
+	<simpleType name="GeoBAGUrl">
+		<restriction base="string">
+			<maxLength value="2000"/>
+		</restriction>
+	</simpleType>
 </schema>
