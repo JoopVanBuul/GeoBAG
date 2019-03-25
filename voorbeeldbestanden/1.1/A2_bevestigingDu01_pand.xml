@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>f4d866a77a994e2387cdb46b3fd09a8f</BG:identificatie>
     </BG:parameters>
-    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelVerzendend="0363100012216872">
+    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelOntvangend="0363100012216872">
         <BG:identificatie>0363100012216872</BG:identificatie>
         <BG:versie>1</BG:versie>
         <!--BG:typering-->

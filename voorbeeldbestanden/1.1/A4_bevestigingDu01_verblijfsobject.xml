@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>956acc6ce5aa453494db3fb11503e31e</BG:identificatie>
     </BG:parameters>
-    <BG:verblijfsobject StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="0363010012070312">
+    <BG:verblijfsobject StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="0363010012070312">
         <BG:identificatie>0363010012070312</BG:identificatie>
         <BG:versie>1</BG:versie>
         <BG:typering>Verblijfsobject</BG:typering>

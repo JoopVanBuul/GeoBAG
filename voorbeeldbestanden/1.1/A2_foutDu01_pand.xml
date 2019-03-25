@@ -33,7 +33,7 @@
         <BG:plek>client</BG:plek>
         <BG:details>Pand in verzoek is afgekeurd</BG:details>	
     </BG:parameters>
-    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelVerzendend="0363100012216872">
+    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelOntvangend="0363100012216872">
         <BG:identificatie>0363100012216872</BG:identificatie>
         <BG:versie>1</BG:versie>
         <!--BG:typering-->

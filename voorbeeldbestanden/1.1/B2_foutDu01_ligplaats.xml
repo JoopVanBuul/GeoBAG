@@ -33,7 +33,7 @@
         <BG:plek>client</BG:plek>
         <BG:details>Ligplaats in levering is afgekeurd</BG:details>	
     </BG:parameters>
-    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="c86f7c36959d41bcb2fc2bda435521df">
+    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="c86f7c36959d41bcb2fc2bda435521df">
         <BG:identificatie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:identificatie>
         <BG:versie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:versie>        
         <BG:typering>Ligplaats</BG:typering>

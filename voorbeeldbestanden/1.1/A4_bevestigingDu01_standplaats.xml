@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>b2a5cb75aaf34e98a32528b041c7ca1c</BG:identificatie>
     </BG:parameters>
-    <BG:standplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="0363030011957705">
+    <BG:standplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="0363030011957705">
         <BG:identificatie>0363030011957705</BG:identificatie>
         <BG:versie>1</BG:versie>
         <BG:typering>Standplaats</BG:typering>

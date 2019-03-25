@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>85e0a4dab48f4b3ba6d4a53fa3550109</BG:identificatie>
     </BG:parameters>
-    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelVerzendend="e826d67db4f3425585f72e3e6c3fd52f">
+    <BG:pand StUF:functie="entiteit" StUF:entiteittype="PND" StUF:sleutelOntvangend="e826d67db4f3425585f72e3e6c3fd52f">
         <BG:identificatie StUF:noValue="geenWaarde" xsi:nil="true"></BG:identificatie>
         <BG:versie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:versie>        
         <!--BG:typering-->

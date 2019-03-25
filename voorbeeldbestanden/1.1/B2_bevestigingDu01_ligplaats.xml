@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>5e476d932b1f455aa8898831e117d428</BG:identificatie>
     </BG:parameters>
-    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="c86f7c36959d41bcb2fc2bda435521df">
+    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="c86f7c36959d41bcb2fc2bda435521df">
         <BG:identificatie StUF:noValue="geenWaarde" xsi:nil="true"></BG:identificatie>
         <BG:versie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:versie>
         <BG:typering>Ligplaats</BG:typering>

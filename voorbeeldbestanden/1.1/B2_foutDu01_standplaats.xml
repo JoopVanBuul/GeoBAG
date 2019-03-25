@@ -33,7 +33,7 @@
         <BG:plek>client</BG:plek>
         <BG:details>Standplaats in levering is afgekeurd</BG:details>	
     </BG:parameters>
-    <BG:standplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="d187c98772614d43a8c0c7f4ad46a55a">
+    <BG:standplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="d187c98772614d43a8c0c7f4ad46a55a">
         <BG:identificatie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:identificatie>
         <BG:versie StUF:noValue="geenWaarde" xsi:nil="true" ></BG:versie>
         <BG:typering>Standplaats</BG:typering>

@@ -29,7 +29,7 @@
     <BG:parameters>
         <BG:identificatie>c7f3cab1c45745aa8f027972e975e7a5</BG:identificatie>
     </BG:parameters>
-    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelVerzendend="0363020001023820">
+    <BG:ligplaats StUF:functie="entiteit" StUF:entiteittype="TGO" StUF:sleutelOntvangend="0363020001023820">
         <BG:identificatie>0363020001023820</BG:identificatie>
         <BG:versie>1</BG:versie>
         <BG:typering>Ligplaats</BG:typering>
