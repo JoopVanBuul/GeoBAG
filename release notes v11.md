@@ -90,6 +90,8 @@ StUF:sleutelOntvangend gewijzigd naar resp. 'optional' en 'required'.
 [\#39](https://github.com/Geonovum/GeoBAG/issues/39) Opnemen samengestelde
 attributen in H6
 
+--- wordt nog opgelost ---
+
 [\#38](https://github.com/Geonovum/GeoBAG/issues/38) Inconsistentie tussen
 vullen woonplaatsWaarinGelegen in Geo-BAG en BAG
 
