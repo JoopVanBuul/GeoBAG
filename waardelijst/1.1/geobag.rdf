@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<!-- Wijzigingen t.o.v. 1.0.1-versie:
-- BGR-VOC gesplitst in BGR-VOCDEEL en BGR-VOCHEEL (issue #35)
-- Toegevoegd concepten/waarden: BAG-IO, BAG-BN, BAG-FGO, BAG-IN, BGR-BIG (issue #34)
+<!-- Wijzigingen t.o.v. 1.0.2-versie:
+- Toegevoegd BAG-AO Onderzoek afgerond (issue #48)
+- 
 - Sortering waarden alfabetisch
 -->
 <?xml version="1.0" encoding="Windows-1252"?>
@@ -48,13 +48,19 @@
    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-IN">
       <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
       <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-IN</prefLabel>
-      <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken adres</definition>
+      <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Intrekken nevenadres</definition>
       <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
    </Concept>
    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-IO">
       <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
       <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-IO</prefLabel>
       <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">In onderzoek plaatsen</definition>
+      <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
+   </Concept>
+    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-AO">
+      <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-AO</prefLabel>
+      <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Onderzoek afgerond</definition>
       <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
    </Concept>
    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-MUT">
