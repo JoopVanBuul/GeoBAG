@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <!-- Wijzigingen t.o.v. 1.0.2-versie:
-- Toegevoegd BAG-AO Onderzoek afgerond (issue #48)
+- Toegevoegd BAG-OA Onderzoek afgerond (issue #48)
 - 
 - Sortering waarden alfabetisch
 -->
@@ -57,9 +57,9 @@
       <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">In onderzoek plaatsen</definition>
       <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
    </Concept>
-    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-AO">
+    <Concept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis_BAG-OA">
       <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-AO</prefLabel>
+      <prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">BAG-OA</prefLabel>
       <definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="nl">Onderzoek afgerond</definition>
       <inScheme rdf:resource="http://www.geostandaarden.nl/geoBAG/def/1.0#Gebeurtenis"/>
    </Concept>
