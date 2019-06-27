@@ -1,5 +1,5 @@
-Bijlage Mapping StUF BG ExtraElementen BAG 2.0 en StUF-Geo BAG
-==============================================================
+Bijlage Mapping BAG 2.0: StUF BG ExtraElementen vs. StUF-Geo BAG
+================================================================
 
 Hieronder staat een vertaling (mapping) tussen de BAG 2.0 elementen zoals
 uitgewisseld in de ExtraElementen van StUF BG, en in de elementen bij de
