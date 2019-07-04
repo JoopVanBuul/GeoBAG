@@ -36,7 +36,7 @@ In bestand **geoBAG0101/geoBAG0101_bg0310_ent.xsd**
 2.  \*\*\*-geoBAG-basis en \*\*-geoBAG-identificatie is niet langer als
     restriction base op BG0310 gedefinieerd.
 
-3.  element versie toegevoegd aan LIG, OTR, OGO, STA, PND, VBO met type
+3.  element versie toegevoegd aan LIG, OTR, OGO, STA, PND, VBO, en WPL met type
     versie-BAG20
 
 4.  DocumentNummering-BAG20 met restricion maxLength=40 toegevoegd en opgenomen
