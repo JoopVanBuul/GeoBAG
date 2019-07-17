@@ -39,7 +39,7 @@ tot een bepaalde mutatie in de BGT:
 | BAG-FGO       | Formalisering geconstateerd object                              | BAG              | BAG-kennisgeving   | 5               |
 | BAG-HLG       | Heropname legitiem gegeven                                      | BAG              | geometrieVerzoek   | 3,5             |
 | BAG-IN        | Intrekken nevenadres                                            | BAG              | BAG-kennisgeving   | 5               |
-| BAG-IO        | In onderzoek plaatsen                                           | BAG              | geometrieVerzoek   | 2,4,5,6, 8,9    |
+| BAG-AIO        | Attribuut in onderzoek plaatsen                                | BAG              | geometrieVerzoek   | 2,4,5,6, 8,9    |
 | BAG-OA        | Onderzoek afgerond                                              | BAG              | geometrieVerzoek   | 2,4,5,6, 8,9    |
 | BAG-MUT       | Mutatie naar aanleiding van een signalering                     | BAG              | geometrieVerzoek   | 3,4,5,6         |
 | BAG-NEG       | Negeer eerder gestuurd GeometrieVerzoek                         | BAG              | geometrieVerzoek   |                 |
